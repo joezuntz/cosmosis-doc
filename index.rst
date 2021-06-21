@@ -9,21 +9,47 @@ It is a framework for structuring cosmological parameter estimation in a way tha
 
 It consolidates and connects together existing code for predicting cosmic observables, and makes mapping out experimental likelihoods with a range of different techniques much more accessible
 
-CosmoSIS is described in `Zuntz et al <http://arxiv.org/abs/1409.3409>` - if you make use of it in your research, please cite that paper and include the URL of this repository in your acknowledgments. Thanks!
+CosmoSIS is described in `Zuntz et al <http://arxiv.org/abs/1409.3409>`_ - if you make use of it in your research, please cite that paper and include the URL of this repository in your acknowledgments. Thanks!
+
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Introduction:
 
    overview/overview
    installation/installation
    tutorials/tutorials
-   features/features
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: CosmoSIS Features:
+
+   features/sampler_features
+   features/pipeline_features
+   features/parameter_features
    debugging/debugging
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Writing modules:
+
+   api
+   api/api_python
+   api/api_c
+   api/api_cpp
+   api/api_f90
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Misc:
+
+   scripting/scripting
    reference/samplers/samplers
    reference/parameter_files
-   help/help
+   help/faq
+
 
 
 

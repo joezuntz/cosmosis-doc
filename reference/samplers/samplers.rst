@@ -51,7 +51,7 @@ Grid Samplers
 
 
 Specialist Samplers
-===============
+===================
 
 .. toctree::
     :maxdepth: 1

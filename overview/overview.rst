@@ -3,6 +3,15 @@ CosmoSIS Concepts
 
 
 
+Concepts Notebook
+=================
+
+
+You can explore the concepts described here in the 
+`CosmoSIS intro notebook <https://github.com/joezuntz/cosmosis/blob/main/examples/cosmosis-introduction.ipynb>`_.
+
+
+
 What CosmoSIS does
 ==================
 

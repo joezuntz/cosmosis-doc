@@ -11,4 +11,5 @@ The CosmoSIS demos show you the basics of running cosmosis to do different thing
     tutorials/tutorial3
     tutorials/tutorial4
     tutorials/tutorial5
+    tutorials/tutorial6
 
