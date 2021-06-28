@@ -4,7 +4,7 @@ Parameter Features
 CosmoSIS has several features for modifying the values read from parameter and other files.
 
 
-Command Line Environment Variables
+Environment Variables
 **********************************
 
 Parameter files in CosmoSIS can replace environment variables used in parameter files with their vaules.  Use curly brackets like this to do so:
@@ -55,7 +55,9 @@ CosmoSIS parameter files can use this command to incorporate another file into t
     %include path_to_other.ini
     ...
 
-This has the effect of "pasting" in the other file into the current one.  If you use a parameter in an ini file twice the later value will take precedence, so you depending where you put the include directive you can override previous parameters.
+This has the effect of "pasting" in the other file into the current one.  
+
+In general if you use a parameter in an ini file twice the later value will take precedence, so you depending where you put the include directive you can override previous parameters.
 
 The path is looked up relative to the current working directory, not to the first parameter file.
 

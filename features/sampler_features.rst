@@ -23,7 +23,7 @@ You can activate fast/slow sampling using these parameters:
     ; one will be chosen automatically
     first_fast_module = name_of_module
 
-The Fisher, Grid, Metropolis, Polychord, and Star samplers can take advantage of fast/slow sampling.
+The Fisher, Grid, Metropolis, Multinest, Polychord, and Star samplers can take advantage of fast/slow sampling.
 
 
 Resuming Sampling
@@ -71,4 +71,4 @@ to:
 - compute the fisher matrix approximation to the covariance at that point
 - initialise emcee walkers from that covariance
 
-Currently only a best-fit estimate and covariance estimate are passed to the next sampler; please open an issue if you can think of more then please open an issue.
+Currently only a best-fit estimate and covariance estimate are passed to the next sampler; if you can think of more then please open an issue.
