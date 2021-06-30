@@ -1,7 +1,6 @@
 Frequently Asked Questions
 --------------------------
 
---------------------------------------
 
 **When I run under MPI my output file comes out wrong with some lines too short and some repeated**
 

@@ -21,15 +21,24 @@ CosmoSIS is described in `Zuntz et al <http://arxiv.org/abs/1409.3409>`_ - if yo
    installation/installation
    tutorials/tutorials
 
+.. toctree:: 
+   :maxdepth: 1
+   :caption: Using CosmoSIS:
+
+   reference/samplers/samplers
+   reference/parameter_files
+   reference/standard_library_overview
+   reference/standard_library_complete
 
 .. toctree::
    :maxdepth: 1
-   :caption: CosmoSIS Features:
+   :caption: Bonus Features:
 
    features/sampler_features
    features/pipeline_features
    features/parameter_features
    debugging/debugging
+
 
 .. toctree::
    :maxdepth: 1
@@ -41,15 +50,13 @@ CosmoSIS is described in `Zuntz et al <http://arxiv.org/abs/1409.3409>`_ - if yo
    api/api_cpp
    api/api_f90
 
+
 .. toctree::
    :maxdepth: 1
    :caption: Misc:
 
    scripting/scripting
-   reference/samplers/samplers
-   reference/parameter_files
    help/faq
-
 
 
 
