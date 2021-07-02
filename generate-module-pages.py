@@ -94,9 +94,12 @@ likelihoods = {
 
 misc = {
     "BBN-Consistency",
-    "consistent_parameters",
+    "consistency",
     "sigma8_rescale",
     "stop",
+    "delete",
+    "copy",
+    "rename",
 }
 
 

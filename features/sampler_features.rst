@@ -4,6 +4,27 @@ Sampler Features
 CosmoSIS has several features that can help you out in building and running pipelines
 
 
+Derived Parameters
+------------------
+
+Often you want to sample in one parameter but plot results in a different, derived parameter.
+
+In CosmoSIS, you add a listing of any parameters you want in the :code:`extra_output` parameter:
+
+.. code-block:: ini
+
+    [pipeline]
+    extra_output = distances/age
+
+This will add a new output column, containing the value found in the :code:`age` value in the :code:`distances` section of the datablock.  If it is not found, :code:`NaN` will be shown.
+
+If the value you want is a vector, then you need to find out first how long the vector is, and then specify that with a :code:`#` in the parameter, for example:
+
+.. code-block:: ini
+
+    [pipeline]
+    extra_output = data_vector/2pt_theory#457
+
 Fast / Slow Sampling
 --------------------
 

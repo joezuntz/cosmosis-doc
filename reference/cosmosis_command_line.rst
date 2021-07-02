@@ -27,11 +27,11 @@ Most of the cosmosis samplers can use SMP, but not the Multinest or Polychord sa
 Debugging
 =========
 
-CosmoSIS has two commands that help with debugging, :code:`--pdb` and :code:`--experimental-fault-handling`.
+CosmoSIS has two commands that help with debugging, :code:`--pdb` and :code:`--segfaults`.
 
 If your code fails and crashes while running any python module (not C, C++, or Fortran) then the :code:`--pdb` flag will mean rather than just crashing the code will stop at the point of the error and you will enter the python debugger, PDB.  You can read about how to use this debugger here: https://docs.python.org/3/library/pdb.html
 
-The :code:`--experimental-fault-handling` requires the python module :code:`faulthandler` to be installed on your system, for example with :code:`pip install faulthandler`.  This command means that if your code crashes during a C, C++, or Fortran module you will get a traceback listing which functions were being run at the time.
+The :code:`--segfaults` flag means that if your code crashes during a C, C++, or Fortran module you will get a traceback listing which functions were being run at the time.
 
 
 Overriding Parameter Files
@@ -52,3 +52,6 @@ The :code:`-v` command is used exactly the same way but for the values file, for
     cosmosis demos/demo5.ini  -v cosmological_parameters.omega_m="0.2 0.3 0.5"
 
 Note the quotations marks above, which are needed when there are spaces in the parameter value. 
+
+
+You can also use the flag :code:`--only section--name` to fix all parameters except for the one called :code:`name` in :code:`section` to their default values.

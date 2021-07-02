@@ -1,4 +1,4 @@
-consistent_parameters
+consistency
 ================================================
 
 Deduce missing cosmological parameters and check consistency

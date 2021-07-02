@@ -8,12 +8,12 @@ A section called :code:`[runtime]` must be present in the parameter file.  It ha
 
 The :code:`sampler` parameter must be one of the CosmoSIS samplers.  It determines how the parameter space is explored.
 
-The :code:`root` parameter changes how paths to modules in the parameter file are looked for.  All paths are defined relative to the root.  By default this is just the CosmoSIS directory::
+The :code:`root` parameter changes how paths to modules in the parameter file are looked for.  All paths are defined relative to the root::
 
     [runtime]
     sampler = metropolis
     ; This is the default value of root:
-    root = ${COSMOSIS_SRC_DIR}
+    root = .
 
 
 Sampler Options

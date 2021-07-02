@@ -4,7 +4,7 @@ Python API
 
 Overview
 --------
-**class cosmosis.datablock.DataBlock(ptr=None, own=None)**
+**class cosmosis.datablock.DataBlock**
 
   A map of (section,name)->value of parameters.
 

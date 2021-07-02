@@ -46,19 +46,14 @@ You will need the pygraphviz tool to use this feature.  On Conda, you can instal
 
     conda install -c conda-forge pygraphviz
 
-Create your graph from a complete data block like this:
 
-.. code-block:: python
-
-    import cosmosis
-    p = cosmosis.LikelihoodPipeline("./examples/des-y1.ini")
-    data = p.run_parameters(p.start_vector())
-    p.make_graph(data, "des-y1.dot")
-
-
-and then you can use the ``dot`` prgoram from the shell to make an image:
+Then you can create a graph from the command line using the ``--graph`` flag and then the graphviz ``dot`` command::
 
 .. code-block:: bash
 
-    dot -Tpng -o des.png des-y1.dot
+    cosmosis --graph des-y1.dot  examples/des-y1.ini
+    dot -Tpng -o des-y1.png des-y1.dot
 
+And example is shown below:
+
+.. image:: /images/des-y1.png

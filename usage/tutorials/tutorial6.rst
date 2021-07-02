@@ -1,4 +1,4 @@
-Tutorial 5: Writing new modules
+Tutorial 6: Writing new modules
 ===============================
 
 So far we've used modules from the CosmoSIS standard library to build our pipeline.  This works fine for many projects, where using or modifying the standard library will be enough.  But we can go further by creating entirely new modules to calculate new observables or include new physics effects in them.

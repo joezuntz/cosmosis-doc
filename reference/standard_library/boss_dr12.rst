@@ -12,9 +12,9 @@ Compute the likelihood of the supplied expansion and growth history against BOSS
    * - URL
      - https://www.sdss3.org/science/boss_publications.php
    * - Citation
-     - 
+     - arxiv: 1607.03155
    * - Rules
-     -
+     - You can do what you want with the python code here
 
 
 "This module gives a likelihood of the comoving angular diameter distance D_m, the Hubble parameter H(z) and f*sigma_8. It uses the sound horizon at last-scatter rs_zdrag.
@@ -25,8 +25,8 @@ A correlated Gaussian likelihood is then returned."
 Assumptions
 -----------
 
- - 
- - 
+ - LCDM Model
+ - Details of BOSS reconstruction
 
 
 
