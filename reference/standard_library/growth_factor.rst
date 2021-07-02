@@ -17,10 +17,9 @@ returns linear growth factor and growth rate for flat cosmology with either cons
      - If you use a file from a particular survey you should cite that survey
 
 
-"This simple module calculates the linear growth factor D, and linear growth rate, f, for flat cosmology with either const w or variable DE eos w(a) = w + (1-a)*wa. 
+This simple module calculates the linear growth factor D, and linear growth rate, f, for flat cosmology with either const w or variable DE eos w(a) = w + (1-a)*wa. 
 Where D, f are defined by the growth of a
-linear perturbation, delta, with scale factor a: delta(a') = delta(a)*(D(a')/D(a)) and f = dlnD/dlna"
-
+linear perturbation, delta, with scale factor a: delta(a') = delta(a)*(D(a')/D(a)) and f = dlnD/dlna
 
 
 Assumptions

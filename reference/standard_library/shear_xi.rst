@@ -17,7 +17,7 @@ Compute the likelihood of a tomographic shear correlation function data set
      -
 
 
-"
+
 DEPRECATED: This module is not recommended for use any more; use the 2pt_like likelihood instead.
 
 Several surveys are measuring the cosmic shear 2-pt correlation functions xi_+(theta) 
@@ -29,7 +29,6 @@ complexities are:
    selecting exactly which data to use - angular ranges, whether to use xi_minus
    if the covariance matrix came from simulations this
      adds noise to the covariance matrix - this the number of sims can be set
-"
 
 
 

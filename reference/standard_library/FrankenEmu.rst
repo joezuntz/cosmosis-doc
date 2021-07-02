@@ -39,7 +39,7 @@ Emulate N-body simulations to compute nonlinear matter power
      -
 
 
-"
+
 FrankenEmu is an emulator designed to interpolate among a collection
 of numerical N-body simulations called the Coyote Universe.
 
@@ -52,7 +52,6 @@ reasonable (1% accuracy) value of P(k,z) for the given parameters.
 
 The simulations and the whole process are explained in detail in the papers
 above.
-"
 
 
 

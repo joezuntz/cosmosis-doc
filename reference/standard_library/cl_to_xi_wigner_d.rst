@@ -19,7 +19,7 @@ Compute correlation functions from power spectra
      -
 
 
-"
+
 This module creates and stores transformation matrices to convert power
 spectra to correlation functions.
 
@@ -45,7 +45,6 @@ d-function values are calculated. However, after the first time, each
 cl-to-xi conversion is a cheap n_theta x n_ell matrix multiplication, so
 one might come out ahead over a long run. These matrices could in principle
 even be stored to disk for given settings of ell and theta.
-"
 
 
 

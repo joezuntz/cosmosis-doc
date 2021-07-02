@@ -23,7 +23,7 @@ Use this module to copy one section to another section.  This is only needed in 
 Assumptions
 -----------
 
-
+None
 
 
 
@@ -47,13 +47,13 @@ Setup Parameters
 Input values
 ----------------
 
-No inputs
+None
 
 
 Output values
 ----------------
 
 
-No outputs
+None
 
 

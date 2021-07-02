@@ -23,7 +23,7 @@ Enters python debugger.
 Assumptions
 -----------
 
-
+None
 
 
 
@@ -47,13 +47,13 @@ Setup Parameters
 Input values
 ----------------
 
-No inputs
+None
 
 
 Output values
 ----------------
 
 
-No outputs
+None
 
 

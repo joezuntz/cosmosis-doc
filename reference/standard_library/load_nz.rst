@@ -17,9 +17,8 @@ Load a number density n(z) for weak lensing from a file
      - If you use a file from a particular survey you should cite that survey
 
 
-"This simple module just loads a set of n(z) for different bins from a
-fixed file and provides it as-is.  The n(z) are normalized before being saved."
-
+This simple module just loads a set of n(z) for different bins from a
+fixed file and provides it as-is.  The n(z) are normalized before being saved.
 
 
 Assumptions
@@ -61,7 +60,7 @@ Setup Parameters
 Input values
 ----------------
 
-No inputs
+None
 
 
 Output values

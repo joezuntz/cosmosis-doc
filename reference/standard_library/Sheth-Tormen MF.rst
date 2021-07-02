@@ -17,8 +17,7 @@ Code to compute the Sheth-Tormen mass function given Pk from CAMB, based on Koma
      -
 
 
-"This module calculates the Sheth-Tormen mass function given the linear matter power spectrum."
-
+This module calculates the Sheth-Tormen mass function given the linear matter power spectrum.
 
 
 Assumptions

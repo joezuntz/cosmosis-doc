@@ -19,7 +19,7 @@ Likelihood of hubble parameter H0 from Riess et al 2.4% supernova sample
      - None.
 
 
-"This small module was written for CosmoSIS.
+This small module was written for CosmoSIS.
 
 Supernova type IA measurements are a standard(izable) candle 
 that can be used to probe the relation between luminosity distance 
@@ -27,7 +27,6 @@ and redshift.  At low redshifts this directly probes the Hubble parameter,
 H0.
 
 The Riess et al 2.4% solution measurement of H0 is used in this module.
-"
 
 
 

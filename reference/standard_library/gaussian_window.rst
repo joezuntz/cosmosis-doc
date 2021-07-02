@@ -17,10 +17,9 @@ Compute Gaussian n(z) window functions for weak lensing bins
      - You can do what you want with this file
 
 
-"This very simple module sets up fixed redshift n(z) bins for weak lensing.
+This very simple module sets up fixed redshift n(z) bins for weak lensing.
  We should probably upgrade it to take the redshift and sigma from the 
- sampling instead of the ini file."
-
+ sampling instead of the ini file.
 
 
 Assumptions
@@ -54,7 +53,7 @@ Setup Parameters
 Input values
 ----------------
 
-No inputs
+None
 
 
 Output values

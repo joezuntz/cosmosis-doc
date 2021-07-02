@@ -23,16 +23,15 @@ Likelihood of z=1.59 Cluster mass from Santos et al. 2011
      -
 
 
-"This small module was written for CosmoSIS.
+This small module was written for CosmoSIS.
     The Extreme Value statistics module (evs) should be run in the pipeline prior to this module.
-"
 
 
 
 Assumptions
 -----------
 
-
+None
 
 
 

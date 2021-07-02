@@ -27,7 +27,6 @@ Jullo et al made measurements of galaxy bias for high and low mass samples.
 This module compares a predicted b(z) or b(k,z) from theory to these measurements.
 
 
-
 Assumptions
 -----------
 

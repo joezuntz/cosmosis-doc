@@ -19,14 +19,13 @@ Massively simplified WMAP9 likelihood reduced to just shift parameter
      -
 
 
-"The full WMAP likelihood is slow and requires a full Boltzmann
+The full WMAP likelihood is slow and requires a full Boltzmann
 integration (also slow) to get the CMB spectra.
 
 This module uses a lightweight alternative - the CMB shift parameter,
 which can be calculated from background evolution alone.
 
 This does not provide as much information as the full likelihood.
-"
 
 
 
@@ -41,7 +40,7 @@ Assumptions
 Setup Parameters
 ----------------
 
-No parameters
+None
 
 
 Input values

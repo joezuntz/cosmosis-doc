@@ -220,14 +220,14 @@ def make_page_text(info):
     info['citation_lines'] = make_list_lines(info['cite'])
     info['rule_lines'] = make_list_lines(info['rules'])
 
-    if info['assumptions']:
-        info['assumption_lines'] = "\n".join([f" - {a}" for a in info['assumptions']])
+    if (not info['assumptions']) or (len(info['assumptions']) == 1 and not info['assumptions'][0].strip()):
+        info['assumption_lines'] = 'None'
     else:
-        info['assumption_lines'] = ''
+        info['assumption_lines'] = "\n".join([f" - {a}" for a in info['assumptions']])
 
-    info['param_head'] = param_head1 if info['params'] else "No parameters"
-    info['input_head'] = input_head1 if info['inputs'] else "No inputs"
-    info['output_head'] = output_head1 if info['outputs'] else "No outputs"
+    info['param_head'] = param_head1 if info['params'] else "None"
+    info['input_head'] = input_head1 if info['inputs'] else "None"
+    info['output_head'] = output_head1 if info['outputs'] else "None"
 
     param_lines = ""
     for name, p in info['params'].items():
@@ -272,6 +272,7 @@ def make_page_text(info):
     info['input_lines'] = input_lines
     info['output_lines'] = output_lines
 
+    info['explanation'] = info['explanation'].strip().strip("\"'")
 
     return page_template.format(**info)
 
@@ -312,13 +313,13 @@ def make_overview(purposes):
             if purpose is None:
                 print(f"Did not find yaml for module: {name}")
                 continue
-            link = f":doc:`{name} <standard_library/{name}>` "
+            link = f":doc:`{name} <../reference/standard_library/{name}>` "
             module_lines.append(f"   * - {link}")
             module_lines.append(f"     - {purpose}")
         module_lines = "\n".join(module_lines)
         out.append(template.format(cat=cat, module_lines=module_lines, blurb=blurb))
 
-    with open("reference/standard_library_overview.rst", "w") as f:
+    with open("usage/standard_library_overview.rst", "w") as f:
         f.write(overview_template)
         f.write("\n\n".join(out))
 

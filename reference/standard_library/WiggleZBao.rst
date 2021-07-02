@@ -19,14 +19,13 @@ Compute the likelihood of the supplied expansion history against WiggleZ BAO dat
      -
 
 
-"This module gives a likelihood of the redshift-distance and redshift-Hubble
+This module gives a likelihood of the redshift-distance and redshift-Hubble
 relations in combined form D_v = (da**2 * (1+z)**2 * dr)**(1./3.) 
 where dr = z / H. It uses the sound horizon at last-scatter rs_zdrag and 
 the predicted expansion since last scattering to predict the BAO size
 at the redshifts at which the WiggleZ survey measured them.
 
-A correlated Gaussian likelihood is then returned."
-
+A correlated Gaussian likelihood is then returned.
 
 
 Assumptions

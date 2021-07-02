@@ -44,7 +44,6 @@ The CosmoSIS team wrote the interface here, so if you have any issues
 running it here please ask us first.
 
 
-
 Assumptions
 -----------
 

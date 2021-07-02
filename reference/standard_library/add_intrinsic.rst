@@ -24,7 +24,6 @@ accounting for the fact that C_GI != C_IG for two bins
 It may be replaced at some point with changes to the shear computation modules.
 
 
-
 Assumptions
 -----------
 
@@ -35,7 +34,7 @@ Assumptions
 Setup Parameters
 ----------------
 
-No parameters
+None
 
 
 Input values

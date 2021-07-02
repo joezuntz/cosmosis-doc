@@ -21,7 +21,7 @@ Compute the terms P_II and P_GI which go into intrinsic aligment calculations
      -
 
 
-"
+
 Intrinsic alignment refers to the extent to which galaxies align in the sky,
 before any alignment induced by gravitational lensing.  It is a systematic
 error contribution to cosmic shear measurements and is predicted here in the form
@@ -47,7 +47,6 @@ of one of the other ones.  Our models are:
 
 See these papers for details of these models.
 
-"
 
 
 

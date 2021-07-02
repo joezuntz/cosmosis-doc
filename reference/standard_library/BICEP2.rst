@@ -19,7 +19,7 @@ Compute the likelihood of the supplied CMB power spectra
      -
 
 
-"The 2014 BICEP2 results are a detection of cosmological B-modes
+The 2014 BICEP2 results are a detection of cosmological B-modes
 on the scales that indicate a primordial gravitational wave bump.
 
 This module wraps the likelihood code released by the BICEP2 team.
@@ -27,7 +27,6 @@ This module wraps the likelihood code released by the BICEP2 team.
 WARNING: The BICEP 2014 results are generally considered to be incorrect;
 this module is for historical interest only.
 
-"
 
 
 
@@ -42,7 +41,7 @@ Assumptions
 Setup Parameters
 ----------------
 
-No parameters
+None
 
 
 Input values

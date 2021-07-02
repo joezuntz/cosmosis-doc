@@ -19,7 +19,7 @@ Compute various weak lensing C_ell from P(k,z) with the Limber integral
      -
 
 
-"
+
 DEPRECATED: You should use the module cosmosis-standard-library/structure/projection/project_2d.py instead.
 
 The Limber approximation integrates a 3D power spectrum over the radial
@@ -36,7 +36,6 @@ kernel functions W depend on the redshift bins being used and the geometry.
 
 Parts of this code and the underlying implementation of limber are based on cosmocalc:
 https://bitbucket.org/beckermr/cosmocalc-public
-"
 
 
 

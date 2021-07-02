@@ -17,12 +17,11 @@ balmes
      - Please cite the relevant papers if you use this module.
 
 
-"
+
 Balmes & Corasaniti measured H0 using strong lensing systems.
 
 This module uses a likelihood tabulated from their paper.
- "
-
+ 
 
 
 Assumptions

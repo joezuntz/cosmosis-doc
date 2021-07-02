@@ -46,7 +46,6 @@ model 5 : Chameleon ( introduced in arXiv:0909.2045 )
 model 6 : Linder's gamma (introduced in arXiv:0507263 )
 
 
-
 Assumptions
 -----------
 

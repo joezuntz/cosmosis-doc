@@ -19,7 +19,7 @@ Compute weak lensing C_ell from P(k,z) and MG D(k,z) with the Limber integral
      -
 
 
-"
+
 DEPRECATED: You should use the module cosmosis-standard-library/structure/projection_ppf/project_2d_ppf.py instead.
 
 
@@ -45,7 +45,6 @@ kernel functions W depend on the redshift bins being used and the geometry.
 
 Parts of this code and the underlying implementation of limber are based on cosmocalc:
 https://bitbucket.org/beckermr/cosmocalc-public
-"
 
 
 

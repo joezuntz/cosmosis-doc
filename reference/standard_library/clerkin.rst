@@ -19,7 +19,7 @@ Compute galaxy bias as function of k, z for 3-parameter Clerkin et al 2014 model
      - Please cite the relevant papers if you use this module.
 
 
-"The GTD bias model provides a benchmark expression for 
+The GTD bias model provides a benchmark expression for 
 the redshift evolution of galaxy bias on large scales. 
 This is crucial for rigorous comparison or combination 
 of results. Choice of biasing model has a significant 
@@ -44,7 +44,6 @@ depending on the chosen  options
 
 The version of this model without redshift dependence is from Cole et al.
 
-"
 
 
 

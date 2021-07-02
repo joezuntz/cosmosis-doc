@@ -17,13 +17,12 @@ strong_lens_time_delays
      -
 
 
-"
+
 The likelihood of a strong lensing time-delay system as
 modelled in http://arxiv.org/pdf/1306.4732v2.pdf
 and http://arxiv.org/pdf/0910.2773v2.pdf
 
- "
-
+ 
 
 
 Assumptions

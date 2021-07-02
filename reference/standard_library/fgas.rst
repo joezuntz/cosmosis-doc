@@ -24,11 +24,10 @@ to the cosmic baryon mass fraction and whose apparent evolution depends
 on the expansion of the Universe.
 
 
-
 Assumptions
 -----------
 
-
+None
 
 
 

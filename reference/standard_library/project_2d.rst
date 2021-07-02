@@ -17,7 +17,6 @@ Project 3D power spectra to 2D tomographic bins using the Limber approximation
      -
 
 
-
 The Limber approximation integrates a 3D power spectrum over the radial
 direction to get a 2D angular power spectrum.  It is an approximation
 which is only valid on smaller scales.
@@ -71,7 +70,6 @@ Parts of this code and the underlying implementation of limber are based on cosm
 https://bitbucket.org/beckermr/cosmocalc-public
 This is a python version of the shear/spectra module with some attempt made to rationalize
 the names of modules.
-
 
 
 Assumptions

@@ -17,7 +17,7 @@ Load, rank, and sample a set of density n(z) realisations from a FITS file
      - If you use a file from a particular survey you should cite that survey
 
 
-"This module is designed to work with the number density part of the FITS
+This module is designed to work with the number density part of the FITS
 files described in:
 http://github.com/joezuntz/2point/
 
@@ -41,7 +41,6 @@ It then ranks the realisations depending on the selected mode and maps it to a c
 hyper-parameter which can be sampled in the pipeline.
 The ranking is intended to provide a meaningful metric in the n(z) space, allowing
 for better sampling efficiency over random sampling of the realisations.
-"
 
 
 

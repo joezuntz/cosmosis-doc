@@ -18,7 +18,7 @@ Likelihood function of CMB from WMAP
 
 
 
-"The Wilkinson Microwave Anisotropy Probe measured the temperature
+The Wilkinson Microwave Anisotropy Probe measured the temperature
 and polarization of the CMB over the full sky in the K, Ka, Q, V, and W
 microwave bands.  
 
@@ -27,7 +27,6 @@ for TT, EE, BB, and TE spectra and compares it to WMAP data.
 
 The method used for the likelihood is different in different ell regimes
 and for different spectra.
-"
 
 
 
@@ -41,7 +40,7 @@ Assumptions
 Setup Parameters
 ----------------
 
-No parameters
+None
 
 
 Input values

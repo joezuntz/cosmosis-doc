@@ -35,7 +35,6 @@ and sigma_8 for the fiducial amplitude calculated, the CMB and matter power spec
 are scaled by (sigma8_input**2)/(sigma8_boltzmann**2), and sigma_8 is overwritten.
 
 
-
 Assumptions
 -----------
 
@@ -46,7 +45,7 @@ Assumptions
 Setup Parameters
 ----------------
 
-No parameters
+None
 
 
 Input values

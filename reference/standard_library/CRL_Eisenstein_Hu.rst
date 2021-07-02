@@ -19,13 +19,12 @@ Komatsu's CRL code to compute the power spectrum using EH fitting formula.
      -
 
 
-"This module uses Eiichiro Komatsu's CRL code to calculate the power spectrum
+This module uses Eiichiro Komatsu's CRL code to calculate the power spectrum
 without BAO in it following Eisenstein and Hu, ApJ, 496, 605 (1998). 
 This is faster but less accurate than a Boltzmann code like CAMB.
 
 The CosmoSIS seam modified this slightly to remove some copyrighted 
 N*merical R*cipes code.
-"
 
 
 

@@ -17,7 +17,7 @@ Compute consistent Helium fraction from baryon density given BBN
      -
 
 
-"
+
 The Big Bang Nucleosynthesis model describes how the 
 light elements were generated in the primordial universe.  For a given
 value of Omega_b h**2 and number of neutrinos the theory can predict
@@ -29,7 +29,6 @@ and number of neutrinos (delta_neff), based on a table interpolation from those 
 This module should go into the pipeline after consistency and
 before any physics modules. It's effectively an optional consistency module.
 
-"
 
 
 

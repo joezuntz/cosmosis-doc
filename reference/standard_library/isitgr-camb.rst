@@ -52,7 +52,6 @@ The CosmoSIS team packaged this module into cosmosis form so any issues
 running it here please ask us first.
 
 
-
 Assumptions
 -----------
 

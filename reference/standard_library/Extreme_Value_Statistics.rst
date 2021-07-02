@@ -27,7 +27,6 @@ Requires the mass function calculated from M_min to M_max, for example
 by mf_tinker module, run withwith redshift_zero=0 to generate dndlnm. 
 
 Optionally, can also generate a full PDF with output_pdf=T
-"
 
 
 

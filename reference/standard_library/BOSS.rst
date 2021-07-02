@@ -17,10 +17,9 @@ Compute the likelihood of supplied fsigma8(z=0.57), H(z=0.57), D_a(z=0.57), omeg
      -
 
 
-"This module calculates the likelihood using the CMASS only results from 
+This module calculates the likelihood using the CMASS only results from 
 Chuang et al. 2013 for fsigma8(z=0.57), H(z=0.57), D_a(z=0.57), omegamh2, bsigma8(z=0.57).
-There are two modes: mode=0 give the fsigma8(z=0.57) likelihood only; mode=1 give the more general BOSS likelihood."
-
+There are two modes: mode=0 give the fsigma8(z=0.57) likelihood only; mode=1 give the more general BOSS likelihood.
 
 
 Assumptions

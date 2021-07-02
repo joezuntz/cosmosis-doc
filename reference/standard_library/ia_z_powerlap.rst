@@ -19,7 +19,7 @@ ia_z_powerlap
      -
 
 
-"
+
 Basic models of intrinsic alignments assume a specific simple evolution with redshift.
 This module takes an existing model of the IA power spectra and modifies them by giving
 them additional evolution in z.
@@ -30,7 +30,6 @@ and modifies them to:
 P_II(k,z) -> (1+z)^alpha P_II(k,z)
 P_GI(k,z) -> (1+z)^alpha P_GI(k,z)
 
-"
 
 
 

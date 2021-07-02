@@ -35,14 +35,13 @@ h0licow
      -
 
 
-"
+
 The likelihood of a suite of time delay system from strong lenses,
 as collected in Wong et al., 2019, arXiv:1907.04869
 
 Various different pieces of the likelihood can be switched on and off
 using the data_ parameters.  The default configuration matches that
 in the released MontePython code.
-"
 
 
 

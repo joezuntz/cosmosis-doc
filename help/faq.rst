@@ -20,15 +20,12 @@ https://bitbucket.org/joezuntz/cosmosis/wiki/modules
 
 ---------------------------------------
 
-**Where can I find a list of modules?**
 
-https://bitbucket.org/joezuntz/cosmosis/wiki/default_modules
+**How does my new calculation or likelihood code call CosmoSIS?**
 
----------------------------------------
+It usually doesn't.  CosmoSIS calls your code.  Physics or likelihood calculations are wrapped as CosmoSIS modules, a pipeline element that can plug together, and from there into other modules.
 
-**How does my code call CosmoSIS?**
-
-It doesn't.  CosmoSIS calls your code.  Physics or likelihood calculations are wrapped as CosmoSIS modules, a pipeline element that can plug together, and from there into other modules.
+You can call CosmoSIS from other code if you like - see :doc:`../reference/scripting`
 
 ---------------------------------------
 
@@ -49,9 +46,9 @@ to:
 ------------------------------------------------
 
 
-**I used git to update cosmosis and now things don't work**
+**I used git to update the cosmosis standard library and now things don't work**
 
-There are two repositories, cosmosis and the subdirectory cosmosis-standard-library.  Make sure you update both and then do make clean and make afterwards.
+You may need to run ``make clean`` before running ``make``.
 
 ---------------------------------------
 
@@ -77,7 +74,7 @@ Make a new file with the parameters names in called a new file something like ``
     m_max = M_\mathrm{max}
 
 
-Then run the postprocess command with the flag ```--more-latex=my-latex.ini```
+Then run the ``cosmosis-postprocess`` command with the flag ```--more-latex=my-latex.ini```
 
 ---------------------------------------
 
@@ -120,7 +117,7 @@ Put this text in a file ``contour_tweaks.py`` and then run your postprocess comm
 
 If you have an extra parameter that is derived from your chain, for example one marginalized analytically or derived from other parameters, you can save it in the output chains along with the sampled parameters
 
-In the pipeline section of your parameter ini file, set:
+In the pipeline section of your parameter ini file, set::
 
     [pipeline]
     extra_output = section_name/param_name   section_name2/param_name2
@@ -134,7 +131,7 @@ This would save a parameter ``param_name`` that you write to the data block in t
 
 One quick check for convergence of emcee is to plot each parameter the chain as points.  If it has converged then the various chains should all gradually diffuse out from the starting position and then all come to a similar deviation from the mean.  If the chains all still have a gradual drift across the chain, for example if they are all still moving outwards by the end of the chain, then that indicates non-convergence.
 
-If you'd like you can also use the acor module to test convergence as in emcee.  Install acor using ``pip install acor`` and then you can use ``acor.acor(data)`` from python - you will need to reshape the chain to make it ``nwalker * nsample`` (or possibly the other way around!).
+If you'd like you can also use the acor module to test convergence as in emcee.  Install acor using ``pip install acor`` and then you can use ``acor.acor(data)`` from python - you will need to reshape the chain to make it ``nwalker * nsample``.
 
 
 ---------------------------------------

@@ -17,14 +17,13 @@ Apply smoothing function to cross-correlations with CMB kappa in harmonic space.
      - You can do what you want with this file.
 
 
-"It is often useful to convolve an estimated CMB lensing map with a Gaussian beam before measuring correlation functions with galaxies and shears.  If such smoothing is applied, we must account for it on the modeling side.  This module accounts for such smoothing by multiplying the theoretical power spectra by the necessary beam factors."
-
+It is often useful to convolve an estimated CMB lensing map with a Gaussian beam before measuring correlation functions with galaxies and shears.  If such smoothing is applied, we must account for it on the modeling side.  This module accounts for such smoothing by multiplying the theoretical power spectra by the necessary beam factors.
 
 
 Assumptions
 -----------
 
- - 
+None
 
 
 

@@ -51,8 +51,8 @@ You will see a lot of output showing:
 
 * The set-up phase for each step (module) in the calculation, e.g.::
 
-    -- Setting up module camb --
-Looking for clik Planck likelihood file 1: likelihood/planck2018/baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik
+        -- Setting up module camb --
+    Looking for clik Planck likelihood file 1: likelihood/planck2018/baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik
 
      ...
 
@@ -72,6 +72,14 @@ Looking for clik Planck likelihood file 1: likelihood/planck2018/baseline/plc_3.
     Om_c h^2             =  0.123356
     Om_nu h^2            =  0.000644
     ...
+
+Outputs
+=======
+
+At the end of the pipeline the code will print out the likelihood of the Planck 2018 data given the chosen parameters.
+
+It will also save a directory ``output/planck`` full of all the quantities it calculated throughout the pipeline.  You can explore that to learn more about the specific calculations done in the pipeline.
+
 
 Defining a sampler
 ===================

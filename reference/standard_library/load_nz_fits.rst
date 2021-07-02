@@ -17,7 +17,7 @@ Load a number density n(z) from a FITS file
      - If you use a file from a particular survey you should cite that survey
 
 
-"This module is designed to work with the number density part of the FITS
+This module is designed to work with the number density part of the FITS
 files described in:
 http://github.com/joezuntz/2point/
 
@@ -41,7 +41,6 @@ look much closer.
 A proper solution to this, where we use splines the parts of the code that actually
 use the n(z) that understand the histogram form, is in our roadmap.
 
-"
 
 
 
@@ -89,7 +88,7 @@ Setup Parameters
 Input values
 ----------------
 
-No inputs
+None
 
 
 Output values

@@ -19,7 +19,7 @@ Prior on sigma_8 * Omega_M ** 0.3 from Planck SZ cluster counts
      - None.
 
 
-"This small module was written for CosmoSIS.
+This small module was written for CosmoSIS.
 
 CMB data like that from Planck can be used to make counts of clusters using
 the Sunyaev-Zeldovich effect, in which hot gas in the clusters scatters
@@ -30,7 +30,6 @@ mass density and the overall amount structure in the universe.  The full calcula
 is very involved, but in a LCDM universe with some assumptions about Halo behaviour
 it can be reduced to a constraint on sigma_8 * Omega_M ** 0.3
 
-"
 
 
 

@@ -21,16 +21,15 @@ Output cosmological distance measures for dynamical dark energy
      - None.
 
 
-"This small module was written for CosmoSIS. This module computes the angular diameter distance, luminosity distance,
+This small module was written for CosmoSIS. This module computes the angular diameter distance, luminosity distance,
 and distance modulus for three different parametrisations of dark energy. w = w0 +(1-a)wa, w = w0+(ap-a)wa and and 2 parameter
-EDE w(a) model from Wetterich 2004."
-
+EDE w(a) model from Wetterich 2004.
 
 
 Assumptions
 -----------
 
-
+None
 
 
 

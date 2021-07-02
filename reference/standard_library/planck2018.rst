@@ -18,7 +18,7 @@ Likelihood function of CMB from Planck 2015 data
 
 
 
-"The Planck space telescope has provided the most powerful current
+The Planck space telescope has provided the most powerful current
  CMB data from quadrupole to sub-degree scales.
 
  The Planck Collaboration released a likelihood code (the PLC) to which one passes
@@ -41,7 +41,6 @@ Likelihood function of CMB from Planck 2015 data
  https://wiki.cosmos.esa.int/planck-legacy-archive/index.php/CMB_spectrum_%26_Likelihood_Code
 
  This version contains a different version of the same fix developed for the 3.01 release.
-"
 
 
 

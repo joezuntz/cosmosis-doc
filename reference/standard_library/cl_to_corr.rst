@@ -17,7 +17,7 @@ Compute correlation functions xi+, xi-, w, and gamma_t from C_ell
      -
 
 
-"
+
 The correlation functions are related to the spectra via Bessel functions:
 \xi_{+}(theta) = \int_0^\infty C^{ss}_\ell J_{0}(\ell \theta) \ell d\ell / 2\pi
 \xi_{-}(theta) = \int_0^\infty C^{ss}_\ell J_{4}(\ell \theta) \ell d\ell / 2\pi
@@ -26,7 +26,6 @@ The correlation functions are related to the spectra via Bessel functions:
 
 where s=shear and g=galaxy position.
 In this module that integral is done via a Hankel Transform.
-"
 
 
 

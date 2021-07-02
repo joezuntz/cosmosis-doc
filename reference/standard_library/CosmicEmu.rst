@@ -37,7 +37,7 @@ Emulate N-body simulations to compute nonlinear matter power
      -
 
 
-"
+
 CosmicEmu is an emulator designed to interpolate among a collection
 of numerical N-body simulations called Mira-Titan.
 
@@ -50,7 +50,6 @@ reasonable (1% accuracy) value of P(k,z) for the given parameters.
 
 The simulations and the whole process are explained in detail in the paper
 above.
-"
 
 
 

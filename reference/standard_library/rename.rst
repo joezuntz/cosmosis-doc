@@ -23,7 +23,7 @@ Use this module to rename one section to a new name.  This is only needed in qui
 Assumptions
 -----------
 
-
+None
 
 
 
@@ -51,13 +51,13 @@ Setup Parameters
 Input values
 ----------------
 
-No inputs
+None
 
 
 Output values
 ----------------
 
 
-No outputs
+None
 
 

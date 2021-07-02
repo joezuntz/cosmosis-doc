@@ -19,7 +19,7 @@ Generic 2-point measurement Gaussian likelihood
      - None.
 
 
-"This module implements a general likelihood of tomographic 2-point measuremnts
+This module implements a general likelihood of tomographic 2-point measuremnts
 of various quantities, including galaxy density, cosmic shear, intrinsic alignments,
 CMB lensing, and the various cross powers between these.
 
@@ -34,7 +34,6 @@ of measurement is used. To add more data types to the file please see type_table
 
 
 
-"
 
 
 

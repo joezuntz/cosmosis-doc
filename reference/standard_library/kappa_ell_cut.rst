@@ -17,14 +17,13 @@ Apply minimum and maximum ell to cross-power spectra with CMB kappa.
      - You can do what you want with this file.
 
 
-"It is often useful to apply a maximum or minimum ell cut to a CMB lensing map before measuring correlation functions with galaxies and shears.  If such an ell-cut is applied, we must account for it on the modeling side.  This module applies the lmin/lmax cut to the relevant cross-power spectra."
-
+It is often useful to apply a maximum or minimum ell cut to a CMB lensing map before measuring correlation functions with galaxies and shears.  If such an ell-cut is applied, we must account for it on the modeling side.  This module applies the lmin/lmax cut to the relevant cross-power spectra.
 
 
 Assumptions
 -----------
 
- - 
+None
 
 
 

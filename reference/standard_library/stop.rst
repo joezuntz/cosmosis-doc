@@ -17,33 +17,32 @@ Enters python debugger.
      - You can do what you want with this file.
 
 
-"Use this module to enter the python debugger at the desired point in a cosmosis module list."
-
+Use this module to enter the python debugger at the desired point in a cosmosis module list.
 
 
 Assumptions
 -----------
 
- - 
+None
 
 
 
 Setup Parameters
 ----------------
 
-No parameters
+None
 
 
 Input values
 ----------------
 
-No inputs
+None
 
 
 Output values
 ----------------
 
 
-No outputs
+None
 
 

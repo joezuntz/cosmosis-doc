@@ -17,7 +17,7 @@ Generate galaxy power P(k) as though galaxies were unbiased DM tracers
      -
 
 
-"Galaxy bias relates the distribution of galaxies to the underlying (dark) matter
+Galaxy bias relates the distribution of galaxies to the underlying (dark) matter
 field whose skeleton they trace.
 
 The matter power spectrum of galaxies is related to that of matter by a bias:
@@ -36,7 +36,6 @@ observables later, for example.
 
 Optionally, if it finds you have generated the matter-intrinsic alignment cross-power,
 it will calculate the galaxy-intrinsic cross power from it.
-"
 
 
 
@@ -50,7 +49,7 @@ Assumptions
 Setup Parameters
 ----------------
 
-No parameters
+None
 
 
 Input values

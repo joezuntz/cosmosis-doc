@@ -21,12 +21,11 @@ Simple prior on Omega_b h^2 from light element abundances
      - None.
 
 
-"This small module was written for CosmoSIS.
+This small module was written for CosmoSIS.
 
 Measurements of the abundances of light elements D, 3He, 4He, and 7Li
 constrain the density budget at the epoch of nucleosynthesis in the first
 three minutes after the big bang.
-"
 
 
 

@@ -19,8 +19,7 @@ Code to compute the Tinker et al. mass function given Pk from CAMB, based on Kom
      -
 
 
-"This module calculates the Tinker et al. mass function given the linear matter power spectrum."
-
+This module calculates the Tinker et al. mass function given the linear matter power spectrum.
 
 
 Assumptions

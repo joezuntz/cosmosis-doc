@@ -17,14 +17,13 @@ Supernova likelihood for SDSS-II/SNLS3
      -
 
 
-"This JLA code uses 731 supernovae from the JLA SDSS-II/SNLS3 sample 
+This JLA code uses 731 supernovae from the JLA SDSS-II/SNLS3 sample 
 to get a likelihood of a given theory mu(z).
 
 Systematic error propagation is done with a collection of separate 
 covariance matrices for the various light-curve parameters.
 
 You can copy the standard parameters to use for this from demos/demo5.ini
-"
 
 
 

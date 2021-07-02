@@ -19,12 +19,11 @@ Calculate the gradient of the galaxy luminosity function at the limiting magnitu
      -
 
 
-"
+
 The gradient of the cumulative galaxy luminosity function \alpha is sensitive to both redshift and magnitude limit of the survey 
 considered. Joachimi & Bridle (2010) extend the fitting function of Blake & Bridle (2005) to obtain a polynomial \alpha(z, r_lim) 
 at a range of redshifts, where z_i is the median in redshift bin i and r_lim is the r-band magnitude limit. Note that the fitting is based on ground-based
 data from the COMBO-17 survey. See Joachimi & Bridle (2010) for discussion of its applicability. 
-"
 
 
 

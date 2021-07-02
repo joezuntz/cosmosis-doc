@@ -33,7 +33,6 @@ The mode is:
 n(z) -> n(z-b) or n(z*(1-b))
 
 
-
 Assumptions
 -----------
 

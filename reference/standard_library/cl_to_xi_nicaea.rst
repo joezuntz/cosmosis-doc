@@ -19,7 +19,7 @@ Compute WL correlation functions xi+, xi- from C_ell
      -
 
 
-"
+
 The correlation functions are related to the spectra via Bessel functions:
 xi_{(+/-)}(theta) = \int_0^\infty C_\ell J_{(0,4)}(\ell \theta) \ell d\ell / 2\pi
 
@@ -34,7 +34,6 @@ only in part of that regime, from about 1 to a few hundred arcmin, will the resu
 be numerically valid.  The input ell must include the corresponding range, and
 will be extrapolated linearlly before that and cubically after it.
 
-"
 
 
 

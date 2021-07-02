@@ -35,7 +35,6 @@ Boltzmann and background integrator for BG, CMB, matter power, and more
      - You can use CLASS freely, provided that in your publications, you cite at least the paper CLASS II: Approximation schemes. Feel free to cite more CLASS papers!
 
 
-
 CLASS is one of the standard cosmology codes for evolving perturbations
 in the primordial universe into CMB and other power spectra, as
 well as various other quantities. This is a very preliminary interface 
@@ -53,7 +52,6 @@ more redshifts and to use the cosmosis build system.
 
 The CosmoSIS team packaged this module into cosmosis form so any issues
 running it here please ask us first.
-
 
 
 Assumptions

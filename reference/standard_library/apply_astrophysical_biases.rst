@@ -19,7 +19,7 @@ Apply various astrophysical biases to the matter power spectrum P(k,z)
      -
 
 
-"
+
 Measurement of the matter power spectrum from real data relies on the visible positions and shapes of galaxies.
 Real galaxies offer a window onto the underlying mass distribution but an imperfect one. Due to a variety of 
 astrophysical processes in their formation and interaction history, the visible mass of galaxies is offset from
@@ -27,14 +27,13 @@ the dark matter. Additionally, the precise relationship between their shapes and
 the details of how galaxies obtain intrinsic ellipticities. One can parameterise ignorance of these processes 
 using a series of scale and time dependent biases, which map the matter power spectrum onto the observable
 fields.   
-"
 
 
 
 Assumptions
 -----------
 
- - 
+None
 
 
 

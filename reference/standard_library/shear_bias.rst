@@ -29,7 +29,6 @@ including cross-spectra:
 C^{ij}_ell -> (1+m_i)(1+m_j) C^{ij}_ell
 
 
-
 Assumptions
 -----------
 

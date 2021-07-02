@@ -17,8 +17,7 @@ Code to compute the PressSchechter mass function given Pk from CAMB, based on Ko
      -
 
 
-"This module calculates the Press Schecter mass function given the linear matter power spectrum."
-
+This module calculates the Press Schecter mass function given the linear matter power spectrum.
 
 
 Assumptions

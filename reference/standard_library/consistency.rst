@@ -17,7 +17,7 @@ Deduce missing cosmological parameters and check consistency
      - Please maintain attribution.
 
 
-"There are various ways of parameterizing cosmologies with different advantages
+There are various ways of parameterizing cosmologies with different advantages
 in different contexts.  This module takes a set of cosmological parameters and
 tries to use them to deduce the remaining parameters.  For example, if you specify
 ombh2 and h then it computes omega_b.  It has a fairly full set of relations to do this.
@@ -71,8 +71,7 @@ omega_m = 1-omega_lambda-omega_k-omega_nu
 
 omega_k = 1-omega_m-omega_lambda-omega_nu
 
-omega_nu = 1-omega_m-omega_lambda-omega_k"
-
+omega_nu = 1-omega_m-omega_lambda-omega_k
 
 
 Assumptions

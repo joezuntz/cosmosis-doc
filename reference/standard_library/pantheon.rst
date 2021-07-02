@@ -19,7 +19,7 @@ Likelihood of the Pantheon supernova analysis
      - None.
 
 
-" Supernova IA can be used as standardisable candles,
+ Supernova IA can be used as standardisable candles,
 letting us estimate a redshift-distance relation.
 
 The Pantheon sample collected together a combined SN IA
@@ -40,7 +40,6 @@ in CosmoMC, but almost all of the machinery in that code was unusued,
 because the various systematic effects that it implements were subsumed
 into a single systematic covariance matrix.  This code therefore omits
 that machinery for simlicitiy.
-"
 
 
 

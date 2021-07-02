@@ -28,7 +28,6 @@ It tries both linear and non-linear spectra but does not complain if either or
 both are not present.
 
 
-
 Assumptions
 -----------
 
