@@ -64,6 +64,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - data_1
      - str
      - 
@@ -97,6 +98,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - cmb_cl
      - ell
      - int 1d
@@ -145,6 +147,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - planck_1_like
      - real

@@ -40,6 +40,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - z
      - real or real 1d
      - 
@@ -53,14 +54,7 @@ Setup Parameters
 Input values
 ----------------
 
-.. list-table::
-   :header-rows: 1
-
-   * - Section
-     - Name
-     - Type
-     - Default
-     - Description
+No inputs
 
 
 Output values
@@ -74,6 +68,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - wl_number_density
      - nz
      - int

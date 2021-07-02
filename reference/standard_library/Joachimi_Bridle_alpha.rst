@@ -46,6 +46,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - magnitude_limit
      - real
      - 24.0
@@ -67,6 +68,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - wl_num_density
      - Nz
      - int
@@ -100,6 +102,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - galaxy_luminosity_function
      - z
      - real 1d

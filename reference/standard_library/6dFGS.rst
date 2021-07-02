@@ -40,6 +40,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - feedback
      - int
      - 0
@@ -73,6 +74,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - growth_parameters
      - d_z
      - real 1d
@@ -136,6 +138,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - 6dfgs_LIKE
      - real

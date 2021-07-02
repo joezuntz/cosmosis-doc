@@ -61,6 +61,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - data_file
      - str
      - module_dir/lcparam_DS17f.txt
@@ -110,6 +111,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - distances
      - z
      - real 1d
@@ -138,6 +140,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - pantheon_like
      - real

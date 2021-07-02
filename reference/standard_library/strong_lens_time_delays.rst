@@ -43,6 +43,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - lens_name
      - str
      - None
@@ -84,6 +85,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - distances
      - z
      - real 1d
@@ -117,6 +119,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - B1608_like
      - real

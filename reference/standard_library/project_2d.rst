@@ -93,6 +93,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - verbose
      - bool
      - False
@@ -138,6 +139,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - matter_power_nl
      - k_h
      - real 1d
@@ -206,6 +208,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - shear_cl
      - nbin_a
      - int

@@ -54,6 +54,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - measured_value
      - real
      - 0.764
@@ -71,6 +72,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - cosmological_parameters
      - omega_m
      - real
@@ -94,6 +96,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - SZ_LIKE
      - real

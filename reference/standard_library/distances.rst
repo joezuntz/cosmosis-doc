@@ -44,6 +44,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - verbose
      - bool
      - False
@@ -77,6 +78,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - cosmological_parameters
      - h0
      - real
@@ -130,6 +132,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - distances
      - nz
      - int

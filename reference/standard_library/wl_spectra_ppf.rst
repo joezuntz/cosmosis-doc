@@ -66,6 +66,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - n_ell
      - int
      - 
@@ -91,6 +92,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - modified_gravity
      - k_h
      - real 1d
@@ -169,6 +171,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - shear_cl
      - ell
      - int 1d

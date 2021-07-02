@@ -47,6 +47,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - m_per_bin
      - bool
      - True
@@ -64,6 +65,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - wl_number_density
      - nbin
      - int
@@ -97,6 +99,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - shear_cl
      - bin_{i}_{j}
      - real 1d

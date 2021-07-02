@@ -45,6 +45,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - zmin
      - real
      - 
@@ -90,6 +91,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - matter_power_lin
      - k_h
      - real 1d
@@ -118,6 +120,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - sigmar
      - R
      - real 1d

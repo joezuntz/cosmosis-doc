@@ -68,6 +68,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - method
      - str
      - 
@@ -97,6 +98,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - cosmological_parameters
      - omega_m
      - real
@@ -165,6 +167,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - intrinsic_power
      - z
      - real 1d

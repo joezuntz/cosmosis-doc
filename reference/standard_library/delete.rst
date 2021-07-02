@@ -37,6 +37,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - sections
      - str
      - 
@@ -46,26 +47,13 @@ Setup Parameters
 Input values
 ----------------
 
-.. list-table::
-   :header-rows: 1
-
-   * - Section
-     - Name
-     - Type
-     - Default
-     - Description
+No inputs
 
 
 Output values
 ----------------
 
 
-.. list-table:: Output values
-   :header-rows: 1
-
-   * - Section
-     - Name
-     - Type
-     - Description
+No outputs
 
 

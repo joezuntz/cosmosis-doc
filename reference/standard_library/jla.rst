@@ -46,6 +46,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - data_dir
      - str
      - 
@@ -95,6 +96,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - distances
      - z
      - real 1d
@@ -138,6 +140,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - JLA_LIKE
      - real

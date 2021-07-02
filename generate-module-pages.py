@@ -160,39 +160,20 @@ Assumptions
 Setup Parameters
 ----------------
 
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-     - Default
-     - Description
+{param_head}
 {param_lines}
 
 Input values
 ----------------
 
-.. list-table::
-   :header-rows: 1
-
-   * - Section
-     - Name
-     - Type
-     - Default
-     - Description
+{input_head}
 {input_lines}
 
 Output values
 ----------------
 
 
-.. list-table:: Output values
-   :header-rows: 1
-
-   * - Section
-     - Name
-     - Type
-     - Description
+{output_head}
 {output_lines}
 
 """
@@ -206,8 +187,33 @@ def make_list_lines(item):
     lines += [f"   * -\n     - {a}" for a in item[1:]]
     return "\n".join(lines)
 
+param_head1 = """.. list-table::
+   :header-rows: 1
 
+   * - Name
+     - Type
+     - Default
+     - Description
+"""
 
+input_head1 = """.. list-table::
+   :header-rows: 1
+
+   * - Section
+     - Name
+     - Type
+     - Default
+     - Description
+"""
+
+output_head1 = """.. list-table:: Output values
+   :header-rows: 1
+
+   * - Section
+     - Name
+     - Type
+     - Description
+"""
 def make_page_text(info):
     author_lines = [f"     - {a}" for a in info['attribution']]
     info['attribution_lines'] = make_list_lines(info['attribution'])
@@ -218,6 +224,10 @@ def make_page_text(info):
         info['assumption_lines'] = "\n".join([f" - {a}" for a in info['assumptions']])
     else:
         info['assumption_lines'] = ''
+
+    info['param_head'] = param_head1 if info['params'] else "No parameters"
+    info['input_head'] = input_head1 if info['inputs'] else "No inputs"
+    info['output_head'] = output_head1 if info['outputs'] else "No outputs"
 
     param_lines = ""
     for name, p in info['params'].items():

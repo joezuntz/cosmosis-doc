@@ -51,6 +51,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - data_file
      - str
      - 
@@ -92,6 +93,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - shear_xi
      - theta
      - real 1d
@@ -120,6 +122,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - xipm_like
      - real

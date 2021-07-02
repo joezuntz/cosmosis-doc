@@ -45,6 +45,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - mass
      - str
      - 
@@ -62,6 +63,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - bias_field
      - z
      - real 1d
@@ -90,6 +92,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - JULLO_LIKE
      - real

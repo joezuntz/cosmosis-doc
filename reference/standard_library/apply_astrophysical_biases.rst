@@ -48,6 +48,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - intrinsic_alignments
      - bool
      - True
@@ -73,6 +74,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - matter_power_nl
      - z
      - real 1d
@@ -141,6 +143,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - ia_spectrum_ii
      - z
      - real 1d

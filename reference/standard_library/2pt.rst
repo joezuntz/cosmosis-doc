@@ -56,6 +56,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - data_file
      - str
      - 
@@ -79,7 +80,7 @@ Setup Parameters
    * - covariance_realizations
      - int
      - -1
-     - If >0, assume that the Covariance matrix was estimated from a set of MC simulations and should thus have the Anderson-Hartlapp factor applied to increase its size. If zero, assume infinite number of realizations.
+     - If >0, assume that the Covariance matrix was estimated from a set of MC simulations and should thus have the Anderson-Hartlap factor applied to increase its size. If zero, assume infinite number of realizations.
    * - sellentin
      - bool
      - False
@@ -129,6 +130,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - shear_cl
      - ell
      - real 1d
@@ -157,6 +159,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - 2pt_like
      - real

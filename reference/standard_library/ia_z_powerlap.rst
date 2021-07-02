@@ -51,6 +51,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - name
      - str
      - 
@@ -68,6 +69,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - intrinsic_alignment_parameters
      - alpha
      - real
@@ -116,6 +118,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - intrinsic_power
      - k_h
      - real 1d

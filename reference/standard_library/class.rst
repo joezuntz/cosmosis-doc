@@ -74,6 +74,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - lmax
      - int
      - 2000
@@ -99,6 +100,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - cosmological_parameters
      - ombh2
      - real
@@ -152,6 +154,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - cosmological_parameters
      - sigma_8
      - real

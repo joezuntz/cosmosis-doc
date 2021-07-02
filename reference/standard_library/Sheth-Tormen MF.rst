@@ -38,6 +38,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - feedback
      - int
      - 0
@@ -59,6 +60,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - matter_power_lin
      - k
      - real 1d
@@ -87,6 +89,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - mass_function
      - r_h
      - real 1d

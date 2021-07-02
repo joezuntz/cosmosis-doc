@@ -47,6 +47,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - nbin
      - int
      - 
@@ -72,6 +73,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - number_density_params
      - alpha
      - real
@@ -115,6 +117,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - wl_number_density
      - nz
      - int

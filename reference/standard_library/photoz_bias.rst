@@ -51,6 +51,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - mode
      - str
      - 
@@ -84,6 +85,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - wl_number_density
      - nbin
      - int
@@ -117,6 +119,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - wl_number_density
      - bin_i
      - real 1d

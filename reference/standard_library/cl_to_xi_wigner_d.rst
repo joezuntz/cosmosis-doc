@@ -66,6 +66,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - corr_type
      - int or str
      - 
@@ -91,6 +92,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - input_section_name
      - ell
      - real 1d
@@ -129,6 +131,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - output_section_name
      - theta
      - real 1d

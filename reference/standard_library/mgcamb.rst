@@ -66,6 +66,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - mode
      - str
      - 
@@ -131,6 +132,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - modified_gravity
      - grtrans
      - real
@@ -329,6 +331,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - post_friedmann_parameters
      - z
      - real 1d

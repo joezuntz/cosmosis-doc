@@ -46,6 +46,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - zmin
      - real
      - 0.0
@@ -83,6 +84,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - growth_parameters
      - d_z
      - real 1d
@@ -146,6 +148,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - matter_power_no_bao
      - z
      - real 1d

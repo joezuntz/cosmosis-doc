@@ -47,6 +47,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - data_file
      - str
      - included file
@@ -76,6 +77,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - distances
      - z
      - real 1d
@@ -109,6 +111,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - wigglez_bao_like
      - real

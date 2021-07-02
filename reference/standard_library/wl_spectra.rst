@@ -57,6 +57,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - n_ell
      - int
      - 
@@ -110,6 +111,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - cosmological_parameters
      - omega_m
      - real
@@ -203,6 +205,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - shear_cl
      - ell
      - real 1d

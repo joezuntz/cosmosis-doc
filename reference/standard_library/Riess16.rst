@@ -49,6 +49,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - mean
      - real
      - 0.7324
@@ -70,6 +71,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - cosmological_parameters
      - h0
      - real
@@ -88,6 +90,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - RIESS16_LIKE
      - real

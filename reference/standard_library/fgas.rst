@@ -42,6 +42,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - numdatasets
      - int
      - 0
@@ -87,6 +88,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - cosmological_parameters
      - baryon_fraction
      - real
@@ -175,6 +177,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - fgas_like
      - real

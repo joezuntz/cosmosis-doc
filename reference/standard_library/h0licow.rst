@@ -64,6 +64,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - data_dt_b1608
      - int
      - 0
@@ -121,6 +122,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - distances
      - z
      - real 1d
@@ -154,6 +156,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - h0licow_like
      - real

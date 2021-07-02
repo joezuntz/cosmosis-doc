@@ -35,13 +35,7 @@ Assumptions
 Setup Parameters
 ----------------
 
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-     - Default
-     - Description
+No parameters
 
 
 Input values
@@ -55,6 +49,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - shear_cl_gg
      - nbin
      - int
@@ -98,6 +93,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - shear_cl
      - nbin
      - int

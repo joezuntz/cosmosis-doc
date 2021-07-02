@@ -40,6 +40,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - input_section
      - str
      - matter_power_lin
@@ -61,6 +62,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - matter_power_nl
      - k_h
      - real 1d
@@ -89,6 +91,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - growth_parameters
      - d_z
      - real 1d

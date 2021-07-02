@@ -46,6 +46,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - kmax
      - real
      - 
@@ -79,6 +80,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - matter_power_lin
      - z
      - real 1d
@@ -122,6 +124,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - matter_power_lin
      - z
      - real 1d

@@ -62,6 +62,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - mode
      - str
      - 
@@ -103,6 +104,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - ranks
      - rank_hyperparm_i
      - real
@@ -121,6 +123,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - wl_number_density
      - nz
      - int

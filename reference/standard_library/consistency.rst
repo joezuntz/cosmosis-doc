@@ -95,10 +95,15 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - verbose
      - bool
      - False
      - Whether to print how derived parameters were calculated and what assumptions used
+   * - relations_file
+     - str
+     - 
+     - Path to an alternative parameter relations file
 
 
 Input values
@@ -112,6 +117,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - cosmological_parameters
      - omega_m
      - real
@@ -190,6 +196,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - cosmological_parameters
      - omega_m
      - real

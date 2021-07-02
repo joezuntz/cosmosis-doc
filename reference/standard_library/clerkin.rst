@@ -65,6 +65,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - bias_only
      - bool
      - False
@@ -90,6 +91,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - galaxy_bias
      - b0
      - real
@@ -143,6 +145,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - galaxy_power
      - k_h
      - real 1d

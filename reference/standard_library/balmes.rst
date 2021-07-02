@@ -42,6 +42,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - data_file
      - str
      - modue_dir/balmes.txt
@@ -59,6 +60,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - cosmological_parameters
      - h0
      - real
@@ -77,6 +79,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - balmes_sl_like
      - real 1d

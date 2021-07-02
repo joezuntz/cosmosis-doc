@@ -38,6 +38,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - shearkappa_section
      - str
      - 
@@ -67,6 +68,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - shear_cmbkappa_cl
      - ell
      - int 1d
@@ -100,6 +102,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - shear_cmbkappa_cl
      - ell
      - int 1d

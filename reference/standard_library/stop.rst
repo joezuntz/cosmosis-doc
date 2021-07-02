@@ -31,38 +31,19 @@ Assumptions
 Setup Parameters
 ----------------
 
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-     - Default
-     - Description
+No parameters
 
 
 Input values
 ----------------
 
-.. list-table::
-   :header-rows: 1
-
-   * - Section
-     - Name
-     - Type
-     - Default
-     - Description
+No inputs
 
 
 Output values
 ----------------
 
 
-.. list-table:: Output values
-   :header-rows: 1
-
-   * - Section
-     - Name
-     - Type
-     - Description
+No outputs
 
 

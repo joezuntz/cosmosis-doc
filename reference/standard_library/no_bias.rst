@@ -50,13 +50,7 @@ Assumptions
 Setup Parameters
 ----------------
 
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-     - Default
-     - Description
+No parameters
 
 
 Input values
@@ -70,6 +64,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - matter_power_nl
      - k_h
      - real 1d
@@ -113,6 +108,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - galaxy_power
      - k_h
      - real 1d

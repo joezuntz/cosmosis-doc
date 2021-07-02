@@ -46,6 +46,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - mean
      - real
      - 
@@ -67,6 +68,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - clusters
      - M_max
      - real
@@ -85,6 +87,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - MAXMASS_LIKE
      - real

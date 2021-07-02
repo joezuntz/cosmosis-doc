@@ -40,6 +40,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - mode
      - int
      - 0
@@ -77,6 +78,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - growth_parameters
      - d_z
      - real 1d
@@ -135,6 +137,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - boss_dr12_like
      - real

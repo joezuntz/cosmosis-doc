@@ -70,6 +70,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - scale_dependent
      - bool
      - 
@@ -140,6 +141,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - modified_gravity
      - d_0
      - real
@@ -293,6 +295,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - modified_gravity
      - v_0
      - real

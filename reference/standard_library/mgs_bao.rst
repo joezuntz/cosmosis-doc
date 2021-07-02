@@ -43,6 +43,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - verbose
      - bool
      - False
@@ -60,6 +61,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - distances
      - z
      - real 1d
@@ -93,6 +95,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - MGS_BAO_LIKE
      - real

@@ -41,13 +41,7 @@ Assumptions
 Setup Parameters
 ----------------
 
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-     - Default
-     - Description
+No parameters
 
 
 Input values
@@ -61,6 +55,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - distances
      - cmbshift
      - real
@@ -79,6 +74,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - shift_like
      - real

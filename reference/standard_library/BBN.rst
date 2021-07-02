@@ -47,6 +47,7 @@ Setup Parameters
      - Type
      - Default
      - Description
+
    * - mean
      - real
      - 0.023
@@ -68,6 +69,7 @@ Input values
      - Type
      - Default
      - Description
+
    * - cosmological_parameters
      - omega_b
      - real
@@ -91,6 +93,7 @@ Output values
      - Name
      - Type
      - Description
+
    * - likelihoods
      - BBN_LIKE
      - real
