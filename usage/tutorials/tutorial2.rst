@@ -22,11 +22,11 @@ If that fails straight away then you may not have MPI installed (MPI should work
 The code will take a few minutes to run, and will generate a file called :code:`output/pantheon.txt` as output.  This file will contain a Monte Carlo Markov Chain (MCMC) which you can use as samples from the posterior probability distribution of the model given the data.
 
 
-Demo 5 Parameter File
+The Parameter File
 =========================
 
 
-This time the parameter file contains these lines (plus some comments)::
+This time the parameter file, :code:`examples/pantheon.ini` contains these lines (plus some comments)::
 
     [runtime]
     sampler = emcee
