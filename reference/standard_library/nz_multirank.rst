@@ -1,4 +1,4 @@
-nz_hyperrank
+nz_multirank
 ================================================
 
 Load, rank, and sample a set of density n(z) realisations from a FITS file
@@ -6,7 +6,7 @@ Load, rank, and sample a set of density n(z) realisations from a FITS file
 .. list-table::
     
    * - File
-     - number_density/nz_hyperrank/nz_hyperrank.py
+     - number_density/nz_multirank/nz_multirank.py
    * - Attribution
      - Juan P. Cordero, Ian Harrison
    * - URL
@@ -47,7 +47,7 @@ for better sampling efficiency over random sampling of the realisations.
 Assumptions
 -----------
 
- - Realisations are provided in FITS extensions NZ_{NAME}_realisation_{NUMBER}
+ - Realisations are provided in FITS extensions NZ_{NAME}_realisation_{NUMBER} starting with NUMBER=0, in correlated order and without skips
 
 
 
@@ -64,8 +64,8 @@ Setup Parameters
 
    * - mode
      - str
-     - 
-     - Ranking mode, use to define how the realisations are mapped to the hyperparameter. It has to be one of the following: no-rank, unified, separate, inv-chi-unified, inv-chi-separate, random, external
+     - mean
+     - Ranking mode, use to define how the realisations are mapped to the hyperparameter. It has to be one of the following: mean, invchi, external
    * - nz_file
      - str
      - 
@@ -74,22 +74,30 @@ Setup Parameters
      - str
      - 
      - Names of the extensions prefixes in the FITS files to load and save to the block
-   * - n_bins
+   * - upsampling
      - int
-     - 
-     - Number of tomographic bins
-   * - n_hist
-     - int
-     - 
-     - Number of redshift histogram bins at which n(z) is evaluated
-   * - n_realisations
-     - int
-     - 
-     - Number of realisations contained in the FITS file, numbered from 0 to n_realisations-1
-   * - external_ranking_filename
+     - 1
+     - The number of sample points output for each one in the file. n(z) is assumed flat between them. See notes above.
+   * - saved_stats
      - str
      - 
-     - Path to a plain text file with a 1D array of length = n_realisations with values to be ranked
+     - Numpy npy file from which to load rankings
+   * - bin_ranks
+     - int 1d
+     - 
+     - The choice of which tomographic bins to generate statistics for
+   * - dimensions
+     - int
+     - 2
+     - The number of tomographic bins, and thus the dimensionality of map to generate
+   * - resume
+     - bool
+     - False
+     - Whether to load a pre-computed map from parameters to rank
+   * - resume_map
+     - str
+     - 
+     - Filename to load pre-computed map from
 
 
 Input values

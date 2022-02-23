@@ -84,10 +84,6 @@ Setup Parameters
      - bool
      - False
      - If set, use the Sellentin-Heavens 2016 change to the likelihood to account for this distribution of the covariance estimates. This changes the likelihood to a student's-t form. Note that this invalidates the simulated data sets used for the ABC sampler.
-   * - save_plot_to
-     - str
-     - 
-     - If set, save various plots to the named directory. May not work on all systems.
    * - like_name
      - str
      - 2pt

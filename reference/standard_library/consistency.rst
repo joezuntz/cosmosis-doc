@@ -25,6 +25,11 @@ ombh2 and h then it computes omega_b.  It has a fairly full set of relations to 
 If you specify inconsistent parameters (e.g. omega values that do not add up to 1)
 then an error status is returned.
 
+You can set an option to also calculate the Hubble parameter from the CosmoMC theta
+parameter, and vice versa.  This is off by default as it's a little slow.
+It matches the CosmoMC version to about 0.2%, which is enough for testing the
+effects of changing prior but not for precision comparison of the value itself.
+
 The following relations are used:
 
 omega_m = ommh2/h/h
@@ -73,6 +78,10 @@ omega_k = 1-omega_m-omega_lambda-omega_nu
 
 omega_nu = 1-omega_m-omega_lambda-omega_k
 
+mnu = omnuh2 * 93.14
+
+omnuh2 = mnu / 93.14
+
 
 Assumptions
 -----------
@@ -99,6 +108,10 @@ Setup Parameters
      - bool
      - False
      - Whether to print how derived parameters were calculated and what assumptions used
+   * - cosmomc_theta
+     - bool
+     - False
+     - Whether to add relations that calculate H0 from the CosmoMC theta parameter
    * - relations_file
      - str
      - 

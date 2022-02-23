@@ -5,6 +5,7 @@ import yaml
 yaml_filename = "module.yaml"
 
 
+
 background = {
     "distances",
     "growth_factor",
@@ -30,6 +31,7 @@ structure = {
     "constant_bias",
     "sigma_cpp",
     "sigma_r",
+    "NLfactor",
 }
 
 twopoint_maths = {
@@ -53,6 +55,8 @@ twopoint_sys = {
     "constant_bias",
     "no_bias",
     "clerkin",
+    "add_magnification",
+    "baryonic",
 }
 
 sample_properties = {
@@ -63,6 +67,7 @@ sample_properties = {
     "nz_hyperrank",
     "photoz_bias",
     "smail",
+    "nz_multirank",
 }
 
 likelihoods = {
@@ -88,12 +93,24 @@ likelihoods = {
     "strong_lens_time_delays",
     "wmap",
     "wmap_shift",
+    "eboss_dr16_lrg",
+    "eboss_dr16_qso",
+    "mgs",
+    "boss_dr12_lrg_reanalyze",
+    "eboss_dr16_elg",
+    "eboss_dr16_lya",
+    "Riess21",
+    "lrg",
+    "qso",
+    "eboss_dr14_lya",
 }
 
 
 
 misc = {
+    "fast_pt",
     "BBN-Consistency",
+    "w0wa_sum_prior",
     "consistency",
     "sigma8_rescale",
     "stop",

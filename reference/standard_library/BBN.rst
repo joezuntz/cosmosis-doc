@@ -17,6 +17,10 @@ Simple prior on Omega_b h^2 from light element abundances
      - http://pdg.lbl.gov/2013/reviews/rpp2013-rev-bbang-nucleosynthesis.pdf
    * - Citation
      - J. Beringer et al. (Particle Data Group), Phys. Rev. D86, 010001 (2012)
+   * -
+     - Cooke, R et al.  ApJ, 830, 2 (2016)
+   * -
+     - Pitrou, C. et al, MNRAS, 502, 2, 2474–2481, (2021)
    * - Rules
      - None.
 
@@ -26,6 +30,9 @@ This small module was written for CosmoSIS.
 Measurements of the abundances of light elements D, 3He, 4He, and 7Li
 constrain the density budget at the epoch of nucleosynthesis in the first
 three minutes after the big bang.
+
+There are various measurements of the light element abundance, and this
+module can select between different papers.
 
 
 
@@ -47,6 +54,10 @@ Setup Parameters
      - Default
      - Description
 
+   * - paper
+     - str
+     - beringer_2012
+     - Choice of which paper to use, beringer_2012, cooke_2016_i, cooke_2016_ii, cooke_2016_combined, pitrou_cooke_combined
    * - mean
      - real
      - 0.023

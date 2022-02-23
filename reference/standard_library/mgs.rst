@@ -1,31 +1,29 @@
-6dFGS
+mgs
 ================================================
 
-Compute the likelihood of supplied D_v or fsigma8(z=0.067)
+Compute the likelihood of MGS BAO and FS as distributed by eBOSS DR16
 
 .. list-table::
     
    * - File
-     - likelihood/6dfgs/6dfgs_rsd.py
+     - likelihood/eboss_dr16/mgs/mgs.py
    * - Attribution
-     - 6dFGS Team
+     - MGS team, eBOSS DR16 team
    * - URL
-     - 
+     - https://svn.sdss.org/public/data/eboss/DR16cosmo/tags/v1_0_0/likelihoods/
    * - Citation
-     - BAO MNRAS 416, 3017 3032 (2011)
-   * -
-     - fsigma8 MMNRAS 423, 3430 3444 (2012)
+     - C. Howlett et al, MNRAS 2015
    * - Rules
      -
 
 
-
+This module computes the likelihood of MGS, using f*sigma8 and  D_v/r_s measurements. 
 
 
 Assumptions
 -----------
 
- - 6dFGS dataset
+ - Gaussian likelihood
 
 
 
@@ -40,34 +38,22 @@ Setup Parameters
      - Default
      - Description
 
-   * - feedback
-     - bool
-     - False
-     - Whether to print feedback
-   * - bao_like
-     - bool
-     - True
-     - Whether to use BAO likelihood
-   * - rsd_like
-     - bool
-     - False
-     - Whether to use RSD likelihood
-   * - bao_mode
+   * - data_file
      - str
-     - rs_dv
-     - Set to "dv" to use the measurement of D_v or to "rs_dv" to use the ratio r_s/D_v
-   * - mean
+     - sdss_MGS_FSBAO_DVfs8.txt
+     - Path to file with measured D_v(zeff),fsig8(zeff) values
+   * - cov_file
+     - str
+     - sdss_MGS_FSBAO_DVfs8_covtot.txt
+     - Path to covariance matrix file
+   * - rs_fiducial
      - real
-     - 457.0 or 0.423
-     - Dv for mode 0 or fsigma8 for mode 1
-   * - sigma
-     - real
-     - 27.0 or 0.055
-     - Sigma_Dv for mode 0 or sigma_fsigma8
-   * - redshift
-     - real
-     - 0.106 or 0.067
-     - Redshift of measurements, depending on mode
+     - 147.8
+     - Fiducial value of sound horizon at last scattering used in making data
+   * - verbose
+     - bool
+     - False
+     - Whether to print extra output
 
 
 Input values
@@ -101,32 +87,27 @@ Input values
      - omega_m
      - real
      - 
-     - Baryon + cdm density fraction today
+     - Matter density fraction of critical
    * - 
      - sigma_8
      - real
      - 
      - Amplitude of linear matter power at 8/h Mpc at z=0
    * - 
-     - bias
-     - real
-     - 
-     - Galaxy bias
-   * - 
      - h0
      - real
      - 
-     - Hubble parameter H0/(100 km/s/Mpc)
+     - Hubble parameter H0 / (100 km/s/Mpc)
    * - distances
      - z
      - real 1d
      - 
      - Redshifts of samples
    * - 
-     - d_m
+     - d_a
      - real 1d
      - 
-     - Physical angular diameter distance in Mpc
+     - Angular diameter distance in Mpc
    * - 
      - h
      - real 1d
@@ -147,8 +128,8 @@ Output values
      - Description
 
    * - likelihoods
-     - 6dfgs_LIKE
+     - mgs_like
      - real
-     - Likelihood of supplied Dv(z=0.106) or fsigma8(z=0.067)
+     - Likelihood of Dv and fsigma8 at z=0.15
 
 
