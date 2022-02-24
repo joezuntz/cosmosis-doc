@@ -16,7 +16,7 @@ The easiest way to install the full CosmoSIS package is with conda-forge.
 
 You can create a new environment and install cosmosis tools in it with::
 
-    conda create -p ./env -c conda-forge cosmosis cosmosis-build-standard-library
+    conda create -p ./env -c conda-forge python==3.9 cosmosis cosmosis-build-standard-library
     conda activate ./env
     source cosmosis-configure
     cosmosis-build-standard-library
