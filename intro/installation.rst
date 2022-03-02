@@ -28,6 +28,7 @@ On Silicon Macs::
 
     wget -O Miniforge3.sh  https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
 
+Then, whichever you do, run these commands to install everything and download the standard library::
 
     chmod +x Miniforge3.sh
     ./Miniforge3.sh -b -p ./env 
