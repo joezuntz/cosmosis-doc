@@ -8,6 +8,11 @@ If you only need CosmoSIS for its core sampling tools and datablock, and don't n
 
     pip install cosmosis
 
+If you get an error including the phrase ``--single-version-externally-managed not recognized`` then you should first upgrade your setuptools package like this::
+
+    pip install -U setuptools wheel
+
+and then try again.
 
 Conda-Forge (from scratch)
 ==========================
