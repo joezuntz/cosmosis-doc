@@ -35,10 +35,10 @@ Then, whichever you do, run these commands to install everything and download th
     source ./env/bin/activate
     conda install -y python=3.9 cosmosis cosmosis-build-standard-library
     source cosmosis-configure
-    cosmosis-build-standard-library
+    cosmosis-build-standard-library main
 
 
-This will make a new directory cosmosis-standard-library with the cosmology packages in.
+This will make a new directory cosmosis-standard-library with the cosmology packages in. Explore that directory to start using CosmoSIS.
 
 Whenever you start a fresh terminal shell you need to run these commands to get set up again::
 
