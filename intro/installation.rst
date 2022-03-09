@@ -1,8 +1,8 @@
 Installing CosmoSIS
 -------------------
 
-Pip
-===
+Pip (core package only, no cosmology content)
+=============================================
 
 If you only need CosmoSIS for its core sampling tools and datablock, and don't need the cosmological likelihoods, then you can install those with pip::
 
