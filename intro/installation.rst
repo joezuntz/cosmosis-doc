@@ -69,6 +69,33 @@ Whenever you start a fresh terminal shell you need to run these commands to get 
     conda activate ./env
     source cosmosis-configure
 
+NERSC
+=====
+
+There is a globally-accessible CosmoSIS installation for the NERSC machine Cori.  You can access it by running::
+
+    source $CFS/des/zuntz/cosmosis-global/setup-cosmosis-nersc
+
+This will set all the necessary environment variables; you can then clone the cosmosis-standard-library and the make command should work::
+
+    git clone https://github.com/joezuntz/cosmosis-standard-library
+    cd cosmosis-standard-library
+    make
+
+You need source the setup script each time you want to use the system, including in batch scripts and interactive jobs.
+
+If you need your own python environment to install new dependencies, you can do that with::
+
+    conda create -p ./env --clone $CFS/des/zuntz/cosmosis-global/env
+
+That will make a new environment in the ./env directory, which you can start using by doing::
+
+    source $CFS/des/zuntz/cosmosis-global/setup-cosmosis-nersc ./env
+
+You can then pip or conda install things in your new environment.
+
+If your dependency may be generally useful please open an issue and we can install it centrally also: https://github.com/joezuntz/cosmosis/issues/
+
 Installing manually on clusters and supercomputers
 ==================================================
 
