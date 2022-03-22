@@ -27,6 +27,7 @@ For help with CosmoSIS you can `open an issue <https://github.com/joezuntz/cosmo
    usage/samplers
    usage/parameter_files
    usage/standard_library_overview
+   usage/upgrading
 
 .. toctree::
    :maxdepth: 1
