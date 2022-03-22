@@ -6,15 +6,15 @@ Compute various 1-loop perturbation theory quantities
 .. list-table::
     
    * - File
-     - structure/fast_pt/
+     - structure/fast_pt/fast_pt_interface.py
    * - Attribution
-     -
+     - Niall Maccrann
+   * -
+     - Jonathan Blazek
    * - URL
-     - 
+     - https://github.com/JoeMcEwen/FAST-PT
    * - Citation
      - https://iopscience.iop.org/article/10.1088/1475-7516/2016/09/015
-   * -
-     - 
    * - Rules
      -
 
@@ -27,12 +27,14 @@ This module runs that library to compute various terms that are useful
 for either intrinsic alignment calculations for the TATT model, and/or
 galaxy bias terms.
 
+This module is not fully documented yet
+
 
 
 Assumptions
 -----------
 
-None
+ - 1-loop perturbation theory
 
 
 
@@ -285,7 +287,7 @@ Output values
    * - 
      - Pd1d2_o
      - real 2d
-     - Perturbative quantity not yet documentedXX
+     - Perturbative quantity not yet documented
    * - 
      - Pd2d2_o
      - real 2d

@@ -34,22 +34,35 @@ be inaccurate.
 
 Depending which spectra you ask for, it will look for different input P(k) value:
 
-    Option name                      Input-3d-spectrum                  Default output name
+    Option name                       Input-3d-spectrum                 Default output name
     
     shear-shear                       matter_power_nl                   shear_cl
+    weyl-weyl                         weyl_curvature_spectrum_nl        shear_cl
     shear-intrinsic                   matter_intrinsic_power            shear_cl_gi
     intrinsic-intrinsic               intrinsic_power                   shear_cl_ii
-    position-position                 galaxy_power                      galaxy_cl
-    magnification-position            matter_galaxy_power               magnification_galaxy_cl
+    intrinsicb-intrinsicb             intrinsic_power_bb                shear_cl_bb
+    position-position                 matter_power_nl                   galaxy_cl
+    magnification-density             matter_power_nl                   magnification_density_cl
     magnification-magnification       matter_power_nl                   magnification_cl
-    position-shear                    matter_galaxy_power               galaxy_shear_cl
-    position-intrinsic                galaxy_intrinsic_power            galaxy_intrinsic_cl
+    position-shear                    matter_power_nl                   galaxy_shear_cl
+    density-intrinsic                 matter_intrinsic_power            galaxy_intrinsic_cl
     magnification-intrinsic           matter_intrinsic_power            magnification_intrinsic_cl
     magnification-shear               matter_power_nl                   magnification_shear_cl
     shear-cmbkappa                    matter_power_nl                   shear_cmbkappa_cl
     cmbkappa-cmbkappa                 matter_power_nl                   cmbkappa_cl
     intrinsic-cmbkappa                matter_intrinsic_power            intrinsic_cmbkappa_cl
-    position-cmbkappa                 matter_galaxy_power               galaxy_cmbkappa_cl
+    density-cmbkappa                  matter_power_nl                   galaxy_cmbkappa_cl
+    fast-shear-shear-ia               matter_power_nl                   shear_cl
+    fast-lingal-shear-ia              matter_power_nl                   galaxy_shear_cl
+    fast-position-shear-ia            matter_power_nl                   galaxy_shear_cl
+    lingal-lingal                     matter_power_nl                   galaxy_cl
+    lingal-shear                      matter_power_nl                   galaxy_shear_cl
+    lingal-magnification              matter_power_nl                   galaxy_magnification_cl
+    lingal-intrinsic                  matter_intrinsic_power            galaxy_intrinsic_cl
+    nlgal-nlgal                       matter_power_nl                   galaxy_cl
+    nlgal-shear                       matter_power_nl                   galaxy_shear_cl
+    nlgal-magnification               matter_power_nl                   galaxy_magnification_cl
+
 
 For each of the spectra listed above you can set a parameter in the parameter file 
 to describe whether that term should be calculated and what input n(z) and output
@@ -65,11 +78,10 @@ If no spectra are chosen at all then only "shear-shear=T" is assumed.
 The same forms can be used for all the other spectra, though note that the magnification spectra
 also require information on the luminosity function.
 
+Lingal refers to clustering spectra for a linearly-biased sample. Nlgal is for non-linearly biased samples.
 
 Parts of this code and the underlying implementation of limber are based on cosmocalc:
 https://bitbucket.org/beckermr/cosmocalc-public
-This is a python version of the shear/spectra module with some attempt made to rationalize
-the names of modules.
 
 
 Assumptions
@@ -96,22 +108,70 @@ Setup Parameters
      - bool
      - False
      - Print more output.
+   * - fatal_errors
+     - bool
+     - False
+     - Raise an error instead of returning non-zero on error loading splines. Handy for debugging.
    * - get_kernel_peaks
      - bool
      - False
      - Save peak positions for the computed kernels
-   * - ell_min
-     - real
+   * - do_exact
+     - str
      - 
-     - Minimum ell value
-   * - ell_max
-     - real
+     - Spectra for which to do exact (non-limber) calculation at low ell (space-separated)
+   * - auto_only
+     - str
      - 
-     - Maximum ell value
-   * - n_ell
+     - Spectra for which to only compute auto-correlations, not inter-bin correlations (space-separated)
+   * - clip_chi_kernels
+     - float
+     - 1e-06
+     - Fraction of the integration kernel peaks below which to set the kernel to zero
+   * - sig_over_dchi
+     - float
+     - 50.0
+     - Ratio of the kernel width to sampling. Sets the sampling of the kernels. Larger is more precise.
+   * - shear_kernel_dchi
+     - float
+     - 5.0
+     - Sample spacing for shear kernels
+   * - limber_ell_start
+     - int
+     - 300
+     - For spectra listed in do_exact, the minimum ell to switch to Limber
+   * - ell_min_logspaced
      - real
-     - 
+     - -1
+     - Minimum ell value for log-spaced values (usually higher than linear)
+   * - ell_max_logspaced
+     - real
+     - -1
+     - Maximum ell value for log-spaced values (usually higher than linear)
+   * - n_ell_logspaced
+     - real
+     - -1
      - Number of log-spaced C_ell values produced
+   * - ell_min_linspaced
+     - real
+     - -1
+     - Minimum ell value for linearly-spaced values (usually lower than log-spaced)
+   * - ell_max_linspaced
+     - real
+     - -1
+     - Maximum ell value for linearly-spaced values (usually higher than log-spaced)
+   * - n_ell_linspaced
+     - real
+     - 
+     - Number of linearly-spaced C_ell values produced
+   * - dlogchi
+     - int
+     - -1
+     - spacing in log-chi for exact non-limber calculation (or -1 to auto-set)
+   * - chi_pad_upper
+     - float
+     - 2.0
+     - Lower padding fraction in chi for non-limber calculation
    * - shear-shear
      - str or bool
      - 
@@ -124,6 +184,14 @@ Setup Parameters
      - real
      - 0.001
      - Relative tolerance for the Limber integral
+   * - lin_bias_prefix
+     - str
+     - b
+     - Parameter name to use for linear bias values, e.g. b for b1, b2, b3, etc.
+   * - do_rsd
+     - bool
+     - False
+     - Whether to compute RSD in non-limber calculations
 
 
 Input values
