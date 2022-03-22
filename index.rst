@@ -3,14 +3,13 @@ Welcome to CosmoSIS: Documentation Under Construction!
 
 Documentation Under Construction!
 
-CosmoSIS is a **cosmological parameter estimation code**.  It is now at version 1.4.
+CosmoSIS is a **cosmological parameter estimation code**.  It is now at version 2.0
 
-It is a framework for structuring cosmological parameter estimation with a focus on flexibility, re-usability, debugging, verifiability, and code sharing in the form of calculation modules.
-
-It consolidates and connects together existing code for predicting cosmic observables, and makes mapping out experimental likelihoods with a range of different techniques much more accessible
+It is a framework for structuring cosmological parameter estimation with a focus on flexibility, re-usability, debugging, verifiability, and code sharing in the form of calculation modules.  It consolidates and connects together existing code for predicting cosmic observables, and makes mapping out experimental likelihoods with a range of different techniques much more accessible.
 
 CosmoSIS is described in `Zuntz et al <http://arxiv.org/abs/1409.3409>`_ - if you make use of it in your research, please cite that paper and include the URL of this repository in your acknowledgments. Thanks!
 
+For help with CosmoSIS you can `open an issue <https://github.com/joezuntz/cosmosis>`_
 
 
 .. toctree::
