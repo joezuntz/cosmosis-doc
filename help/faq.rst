@@ -15,7 +15,7 @@ To run cosmosis under MPI you also need to pass it the --mpi flag, not just use 
 
 **How do I create a new module?**
 
-https://bitbucket.org/joezuntz/cosmosis/wiki/modules
+See :ref:`Tutorial 6: Writing new modules`
 
 
 ---------------------------------------
@@ -25,7 +25,7 @@ https://bitbucket.org/joezuntz/cosmosis/wiki/modules
 
 It usually doesn't.  CosmoSIS calls your code.  Physics or likelihood calculations are wrapped as CosmoSIS modules, a pipeline element that can plug together, and from there into other modules.
 
-You can call CosmoSIS from other code if you like - see :doc:`../reference/scripting`
+You can call CosmoSIS from other code if you like - see :ref:`Scripting`
 
 ---------------------------------------
 
