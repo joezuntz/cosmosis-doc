@@ -13,6 +13,14 @@ you are working on a new sampler.
 
 See the instructions on the :doc:`installation page <../intro/installation>` for details.
 
+Module paths
+------------
+
+In the old CosmoSIS you usually had to specify the ``file`` parameters in your main parameter file starting
+with ``$COSMOSIS_SRC_DIR/cosmosis-standard-library/``.  You would now typically run chains from the standard
+library directory and remove that prefix.  If you were running from a different directory you would use the path
+to the standard library as the ``root`` parameter in the ``[runtime]`` section.
+
 
 Camb & Halofit
 --------------
