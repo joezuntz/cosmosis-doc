@@ -47,7 +47,7 @@ You will need the pygraphviz tool to use this feature.  On Conda, you can instal
     conda install -c conda-forge pygraphviz
 
 
-Then you can create a graph from the command line using the ``--graph`` flag and then the graphviz ``dot`` command::
+Then you can create a graph from the command line using the ``--graph`` flag and then the graphviz ``dot`` command:
 
 .. code-block:: bash
 

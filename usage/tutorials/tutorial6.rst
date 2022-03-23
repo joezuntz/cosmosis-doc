@@ -49,3 +49,61 @@ In that file, put these lines, which represent an empty but runnable CosmoSIS mo
     def execute(block, config):
         return 0
 
+The Setup Function
+------------------
+
+The ``setup`` function is run once per chain, at the beginning of the analysis. It reads options from the parameter file, and then performs any setup required.  For example, it might load some data from files, pre-compute some important values, or just keep a list of all the settings for later.
+
+The ``option`` argument is an instance of a CosmoSIS DataBlock, containing everything specified in the parameter file. The setup function typically reads from it like this::
+
+    x = options[option_section, "name_of_option"]
+    # or, for value with a fallback option in case it is not set:
+    y = options.get_int(option_section, "name_of_int_option", default=4)
+
+For a full list of the ``get`` functions see the :ref:`Python API`.
+
+The constant ``option_section`` just refers to the section of the datablock that generated this module.  Usually you will want to use it.
+
+The ``setup`` function can return any object you like; you can use whatever is the most convenient way to store the configuration for your module.  For example, you could return a dictionary, list, or an instance of a class.  Whatever object you return will be passed back to the ``execute`` function later when it is called.
+
+The Execute Function
+--------------------
+
+``execute`` is the main worker function of a module. It is called for each new set of values that the (MCMC) sampler generates.  The execute functions of all the modules in the pipeline are called one by one, in order, with a single datablock passed from one to the next.  Each module reads values from the block (put there either by the sampler or previous modules), does some calculations, and then puts its own values in the block.
+
+The second argument, ``config``, is whatever the ``setup`` function returns.
+
+For example, here is an execute function that calculates ``D_V``, a distance measure used in BAO studies::
+
+    # Some values from previous modules
+    z = block["distances", "z"]
+    d_a = block["distances", "D_A"]
+    H = block["distances", "H"]
+
+    # Some constants
+    c = 1.0
+
+    # compute something derived from the inputs
+    d_v = ((1.0+z)**2 * c * z * d_a**2 / H )**(1./3.)
+
+    block["distances", "d_v"] = d_v
+
+The full list of methods that a block can run is discussed on the :ref:`Python API` page.
+
+You can explore what the previous pipeline has put in the block either by running the pipeline with the test sampler and exploring the saved directory from the block, by using the ``block.keys()`` method, or by reading the documentation for the module on the :ref:`Standard Library Overview` page.
+
+Execute functions should return ``0`` if the succeeded and any non-zero integer if they failed for any reason.
+
+
+
+Likelihood modules
+------------------
+
+Likelihoods are implemented in cosmosis just as another kind of module, but they should put the value of a log-likelihood the "likelihoods" section of the block::
+
+    block["likelihoods", "my_like"] = -0.5 * (x - mu)**2 / sigma**2
+
+If your likelihood is a Gaussian you can inherit from ``cosmosis.GaussianLikelihood`` and override some of the methods there.  See  `the Gaussian Likelihood class here <https://github.com/joezuntz/cosmosis/blob/main/cosmosis/gaussian_likelihood.py>`_  for details; you would usually only have to override the methods ``extract_theory_points``, ``build_data`` and ``build_covariance``.
+
+
+

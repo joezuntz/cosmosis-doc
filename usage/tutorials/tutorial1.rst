@@ -10,7 +10,7 @@ Installation
 
 Before you start, :doc:`follow the instructions to install cosmosis </installation/installation>`.  Once you are complete, you should be able to run::
 
-    cosmsois --help
+    cosmosis --help
 
 and see a usage message.
 

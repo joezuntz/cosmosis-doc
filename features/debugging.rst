@@ -19,7 +19,7 @@ to get more output on any error in the test sampler.
 Parameter file options
 ======================
 
-You can set several options in the CosmoSIS parameter file to find problems more easily::
+You can set several options in the CosmoSIS parameter file to find problems more easily:
 
 .. code-block:: ini
 

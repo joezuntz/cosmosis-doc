@@ -1,7 +1,5 @@
-Welcome to CosmoSIS: Documentation Under Construction!
-======================================================
-
-Documentation Under Construction!
+CosmoSIS: The COSMOlogical Survey Inference System
+==================================================
 
 CosmoSIS is a **cosmological parameter estimation code**.  It is now at version 2.0
 
@@ -60,7 +58,7 @@ For help with CosmoSIS you can `open an issue <https://github.com/joezuntz/cosmo
    :maxdepth: 1
    :caption: Misc:
 
-   scripting/scripting
+   reference/scripting
    help/faq
 
 
