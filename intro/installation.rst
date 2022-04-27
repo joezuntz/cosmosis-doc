@@ -135,8 +135,11 @@ and run::
 
 Then clone and build the standard library repository::
 
+    source cosomosis-configure
     git clone https://github.com/joezuntz/cosmosis-standard-library
     cd cosmosis-standard-library
     make
 
 Please `open an issue <https://github.com/joezuntz/cosmosis/issues/new>`_ if you have installation problems.
+
+The ``cosmosis-configure`` command can also set you up to use HomeBrew to install things: ``source cosmosis-configure --brew``
