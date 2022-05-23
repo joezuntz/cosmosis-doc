@@ -29,9 +29,9 @@ On Intel Macs::
 
     wget -O Miniforge3.sh  https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh
 
-On Silicon Macs::
 
-    wget -O Miniforge3.sh  https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
+Conda-forge CosmoSIS is not yet available for Silicon macs. We will have better instructions here shortly.
+
 
 Then, whichever you do, run these commands to install everything and download the standard library::
 
