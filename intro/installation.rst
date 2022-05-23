@@ -14,8 +14,8 @@ If you get an error including the phrase ``--single-version-externally-managed n
 
 and then try again.
 
-Conda-Forge (from scratch)
-==========================
+Conda-Forge (from scratch) on Linux and Intel Macs
+==================================================
 
 This is the easiest way to get the full CosmoSIS package. It downloads everything you need.  If the ``conda`` command works on your computer already, use the instructions for an existing installation (next section) instead. 
 
@@ -29,8 +29,6 @@ On Intel Macs::
 
     wget -O Miniforge3.sh  https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh
 
-
-Conda-forge CosmoSIS is not yet available for Silicon macs. We will have better instructions here shortly.
 
 
 Then, whichever you do, run these commands to install everything and download the standard library::
@@ -49,6 +47,36 @@ Whenever you start a fresh terminal shell you need to run these commands to get 
 
     conda activate ./env
     source cosmosis-configure
+
+
+Conda-Forge (from scratch) on M1 (Silicon) Macs
+===============================================
+
+We don't yet have the conda version auto-building on Silicon/M1 macs yet.  Instead you can get almost everything through conda and compile the final steps yourself::
+    conda create -c conda-forge -p ./env astropy camb cfitsio bzip2 llvm-openmp python=3.9 gsl fftw libblas liblapack fitsio cython scikit-learn fast-pt openmpi zeus-mcmc pyyaml emcee numpy scipy matplotlib pybind11 emcee dynesty mpi4py
+
+
+    conda activate ./env
+    export CC=clang CXX=clang++ FC=gfortran
+
+    pip install cosmosis cobaya
+
+    source cosmosis-configure
+
+    git clone https://github.com/joezuntz/cosmosis-standard-library
+    cd cosmosis-standard-library
+
+    # this will probably fail the first time - we are looking into this
+    make
+    # just run it again:
+    make
+
+Whenever you start a fresh terminal shell you need to run these commands to get set up again::
+
+    conda activate ./env
+    source cosmosis-configure
+    export CC=clang CXX=clang++ FC=gfortran
+
 
 
 
