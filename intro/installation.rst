@@ -53,6 +53,7 @@ Conda-Forge (from scratch) on M1 (Silicon) Macs
 ===============================================
 
 We don't yet have the conda version auto-building on Silicon/M1 macs yet.  Instead you can get almost everything through conda and compile the final steps yourself::
+
     conda create -c conda-forge -p ./env astropy camb cfitsio bzip2 llvm-openmp python=3.9 gsl fftw libblas liblapack fitsio cython scikit-learn fast-pt openmpi zeus-mcmc pyyaml emcee numpy scipy matplotlib pybind11 emcee dynesty mpi4py
 
 
