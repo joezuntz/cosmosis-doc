@@ -66,10 +66,6 @@ We don't yet have the conda version auto-building on Silicon/M1 macs yet.  Inste
 
     git clone https://github.com/joezuntz/cosmosis-standard-library
     cd cosmosis-standard-library
-
-    # this will probably fail the first time - we are looking into this
-    make
-    # just run it again:
     make
 
 Whenever you start a fresh terminal shell you need to run these commands to get set up again::
