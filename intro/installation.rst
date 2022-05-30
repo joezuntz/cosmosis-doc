@@ -1,6 +1,8 @@
 Installing CosmoSIS
 -------------------
 
+We are deeply indebted to Matt Becker for getting the Conda installation method to work.
+
 Pip (core package only, no cosmology content)
 =============================================
 
