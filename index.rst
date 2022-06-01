@@ -59,6 +59,7 @@ For help with CosmoSIS you can `open an issue <https://github.com/joezuntz/cosmo
    :caption: Misc:
 
    reference/scripting
+   reference/nersc_examples
    help/faq
 
 
