@@ -113,7 +113,7 @@ You need source the setup script each time you want to use the system, including
 
 If you need your own python environment to install new dependencies, you can do that with::
 
-    conda create -p ./env --clone $CFS/des/zuntz/cosmosis-global/env
+    conda create -p ./env --clone $CFS/des/zuntz/cosmosis-global/env-latest
 
 That will make a new environment in the ./env directory, which you can start using by doing::
 
