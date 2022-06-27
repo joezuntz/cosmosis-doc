@@ -35,6 +35,7 @@ For help with CosmoSIS you can `open an issue <https://github.com/joezuntz/cosmo
    features/pipeline_features
    features/parameter_features
    features/debugging
+   features/Interactive Postprocessing
 
 
 .. toctree::
