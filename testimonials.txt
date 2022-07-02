@@ -1,0 +1,10 @@
+CosmoSIS Testimonials
+
+"Like having half your paper already written" - Prof M.S.
+"I can't remember how to run CAMB without it any more" - Dr J.K.
+"Hands-down the most helpful, polite and friendly code I’ve ever met" - Dr T.B.
+"I’ll be honest, the more I use COSMOSIS the more it seems like I don't have to do that much work myself anymore." - Dr L.W.
+"All the CosmoSIS all the time!" - Prof R.H.
+"So easy a grad student would do it"  - Dr D.B.
+"Because of CosmoSIS this project is easy" - Dr I.H.
+"Your error messages make it so super easy to find out where you’ve balls things up" - Prof C.H.
