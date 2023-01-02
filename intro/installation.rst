@@ -38,12 +38,12 @@ Then, whichever you do, run these commands to install everything and download th
     chmod +x Miniforge3.sh
     ./Miniforge3.sh -b -p ./env 
     source ./env/bin/activate
-    conda install -y python=3.9 cosmosis cosmosis-build-standard-library
+    conda install -y cosmosis cosmosis-build-standard-library "numpy<1.24"
     source cosmosis-configure
     cosmosis-build-standard-library main
 
 
-This will make a new directory cosmosis-standard-library with the cosmology packages in. Explore that directory to start using CosmoSIS.
+This will make a new directory cosmosis-standard-library with the cosmology packages in. Explore that directory to start using CosmoSIS. (The latest version of numpy breaks fast-pt, which is a comosis dependency).
 
 Whenever you start a fresh terminal shell you need to run these commands to get set up again::
 
@@ -84,7 +84,7 @@ Conda-Forge (existing installation)
 
 If you already have conda installed on your computer, then you can create a new environment and install cosmosis tools in it with::
 
-    conda create -p ./env -c conda-forge python==3.9 cosmosis cosmosis-build-standard-library
+    conda create -p ./env -c conda-forge cosmosis cosmosis-build-standard-library "numpy<1.24"
     conda activate ./env
     source cosmosis-configure
     cosmosis-build-standard-library
