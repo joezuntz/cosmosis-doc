@@ -60,5 +60,5 @@ If no default is specified then the parameter is required. A listing of "(empty)
 +---------------+----------+---------------------------------------------------------------+----------+
 | | nsteps      | | integer| | number of points between saving data and testing convergence| | 100    |
 +---------------+----------+---------------------------------------------------------------+----------+
-| | samples     | | integer| | number of steps                                             |          |
+| | samples     | | integer| | number of steps                                             | | 20000  |
 +---------------+----------+---------------------------------------------------------------+----------+
