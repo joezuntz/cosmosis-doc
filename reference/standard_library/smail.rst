@@ -8,7 +8,11 @@ Compute window functions for photometric n(z)
    * - File
      - number_density/smail/photometric_smail.py
    * - Attribution
-     - CosmoSIS Team
+     - Donnacha Kirk
+   * -
+     - Simon Samuroff
+   * -
+     - Jessica Muir
    * - URL
      - 
    * - Citation
@@ -22,7 +26,7 @@ distribution of the galaxies in the survey.  It then convolves this with a photo
 error sigma(z) = sigma_0 (1+z) and optionally biases it.  It computes bin edges in the
 survey assuming equal numbers in each.
 
-We might wish to add an option to specify fixed bin edges instead?
+You can also specify fixed bin edges.
 
 
 
@@ -50,15 +54,31 @@ Setup Parameters
    * - nbin
      - int
      - 
-     - Number of redshift bins with equal number of gals in eachq
+     - Number of redshift bins with equal number of gals in each
+   * - zmin
+     - real
+     - 0.0
+     - Minimum redshift to compute
    * - zmax
      - real
-     - 
-     - Maximum redshift to compute; min is zero
+     - 4.0
+     - Maximum redshift to compute
    * - dz
      - real
-     - 
+     - 0.01
      - Spacing of samples to compute n(z) at.
+   * - enforce_equal_numbers
+     - bool
+     - F
+     - No matter how n(z) gets divided, specify that each bin has equal number density
+   * - z_edges
+     - real 1d
+     - None
+     - "Manually specified redshift bin edges. If nbin - 1 values passed,
+these are the bounds of photometric selection for those nbin bins.
+If 2 values are passed, they specify a minimum and maximum redshift between
+which galaxies are divided into equal number samples. "
+
 
 
 Input values
@@ -137,5 +157,9 @@ Output values
      - edge_{i}
      - real 1d
      - The nominal edges of the redshift bins (i.e. edges if no photometric errors)
+   * - 
+     - ngal_{i}
+     - real
+     - number density of redshift bin i
 
 

@@ -70,6 +70,10 @@ Setup Parameters
      - int
      - 0
      - Amount of output to print.  0 for no feedback.  1 for basic, 2 for extended, maybe higher?
+   * - max_printed_errors
+     - int
+     - 20
+     - Max number of full tracebacks to print when camb fails
    * - do_lensing
      - bool
      - False
@@ -170,6 +174,10 @@ Setup Parameters
      - int
      - nz
      - Number of z values to save distance measures
+   * - do_bao
+     - bool
+     - True
+     - Whether to save BAO quantities rs_DV and F_AP. Switch off to save time in SN-only runs.
    * - theta_H0_range
      - str
      - 10 100

@@ -88,6 +88,10 @@ Setup Parameters
      - str
      - 2pt
      - The name of the likelihood to save.
+   * - likelihood_only
+     - bool
+     - False
+     - Skip saving the covariance, inverse, simulation, etc. Saves some time.
    * - kind
      - str
      - cubic

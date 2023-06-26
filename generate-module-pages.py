@@ -9,6 +9,8 @@ yaml_filename = "module.yaml"
 background = {
     "distances",
     "growth_factor",
+    "log_w_model",
+    "astropy_background",
 }
 
 boltzmann = {
@@ -39,7 +41,6 @@ twopoint_maths = {
     "cl_to_xi_nicaea",
     "cl_to_xi_wigner_d",
     "project_2d",
-    "shear_xi",
     "wl_spectra",
     "wl_spectra_ppf",
 }
@@ -64,7 +65,6 @@ sample_properties = {
     "gaussian_window",
     "load_nz",
     "load_nz_fits",
-    "nz_hyperrank",
     "photoz_bias",
     "smail",
     "nz_multirank",
@@ -103,6 +103,7 @@ likelihoods = {
     "lrg",
     "qso",
     "eboss_dr14_lya",
+    "des-y3-bao",
 }
 
 

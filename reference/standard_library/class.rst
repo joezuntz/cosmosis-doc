@@ -85,6 +85,18 @@ Setup Parameters
      - real
      - 4.0
      - Max redshift to save P(k,z) and distances
+   * - cmb
+     - bool
+     - True
+     - Whether to lens the output CMB power spectra
+   * - mpk
+     - bool
+     - True
+     - Whether to compute matter power spectra
+   * - debug
+     - bool
+     - False
+     - Whether to give a fuller traceback on errors
 
 
 Input values

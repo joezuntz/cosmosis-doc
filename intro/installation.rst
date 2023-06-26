@@ -16,7 +16,7 @@ If you get an error including the phrase ``--single-version-externally-managed n
 
 and then try again.
 
-Conda-Forge (from scratch) on Linux and Intel Macs
+Conda-Forge (from scratch)
 ==================================================
 
 This is the easiest way to get the full CosmoSIS package. It downloads everything you need.  If the ``conda`` command works on your computer already, use the instructions for an existing installation (next section) instead. 
@@ -51,33 +51,6 @@ Whenever you start a fresh terminal shell you need to run these commands to get 
     source cosmosis-configure
 
 
-Conda-Forge (from scratch) on M1 (Silicon) Macs
-===============================================
-
-We don't yet have the conda version auto-building on Silicon/M1 macs yet.  Instead you can get almost everything through conda and compile the final steps yourself::
-
-    conda create -c conda-forge -p ./env astropy camb cfitsio bzip2 llvm-openmp python=3.9 gsl fftw libblas liblapack fitsio cython scikit-learn fast-pt openmpi zeus-mcmc pyyaml emcee numpy scipy matplotlib pybind11 emcee dynesty mpi4py
-
-
-    conda activate ./env
-    export CC=clang CXX=clang++ FC=gfortran
-
-    pip install cosmosis cobaya
-
-    source cosmosis-configure
-
-    git clone https://github.com/joezuntz/cosmosis-standard-library
-    cd cosmosis-standard-library
-    make
-
-Whenever you start a fresh terminal shell you need to run these commands to get set up again::
-
-    conda activate ./env
-    source cosmosis-configure
-    export CC=clang CXX=clang++ FC=gfortran
-
-
-
 
 Conda-Forge (existing installation)
 ===================================
@@ -99,7 +72,7 @@ Whenever you start a fresh terminal shell you need to run these commands to get 
 NERSC
 =====
 
-There is a globally-accessible CosmoSIS installation for the NERSC machine Cori.  You can access it by running::
+There is a globally-accessible CosmoSIS installation for the NERSC machine Perlmutter.  You can access it by running::
 
     source $CFS/des/zuntz/cosmosis-global/setup-cosmosis-nersc
 

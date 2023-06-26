@@ -112,10 +112,10 @@ Setup Parameters
      - bool
      - False
      - Raise an error instead of returning non-zero on error loading splines. Handy for debugging.
-   * - get_kernel_peaks
+   * - save_kernels
      - bool
      - False
-     - Save peak positions for the computed kernels
+     - Save the kernels n(chi) and w(chi) to the block
    * - do_exact
      - str
      - 
@@ -275,6 +275,30 @@ Output values
      - Type
      - Description
 
+   * - kernel_{sample}
+     - n_of_chi_chi_{i}
+     - real 1d
+     - The chi values for the n(chi) calculation. Only if save_kernels=T.
+   * - 
+     - n_of_chi_n_{i}
+     - real 1d
+     - The n values for the n(chi) calculation. Only if save_kernels=T.
+   * - 
+     - w_of_chi_chi_{i}
+     - real 1d
+     - The chi values for the w(chi) calculation. Only if save_kernels=T and shear spectrum calculated.
+   * - 
+     - w_of_chi_n_{i}
+     - real 1d
+     - The n values for the w(chi) calculation. Only if save_kernels=T and shear spectrum calculated.
+   * - 
+     - ww_of_chi_chi_{i}
+     - real 1d
+     - The chi values for the ww(chi) calculation. Only if save_kernels=T and Weyl spectrum calculated.
+   * - 
+     - ww_of_chi_n_{i}
+     - real 1d
+     - The n values for the ww(chi) calculation. Only if save_kernels=T and Weyl spectrum calculated.
    * - shear_cl
      - nbin_a
      - int
