@@ -6,10 +6,3 @@ build:
 
 sphinx:
   configuration: conf.py
-
-
-python:
-  version: 3
-  install:
-    - requirements: requirements.txt
-  system_packages: true
