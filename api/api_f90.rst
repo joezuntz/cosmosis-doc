@@ -12,7 +12,6 @@ Fortran setup and execute functions cannot be inside a fortran module.
 
     function setup(options) result(result)
         use cosmosis_modules
-        use my_calculation_code
         implicit none
         integer(cosmosis_block), value :: options
         integer(cosmosis_status) :: status
@@ -27,7 +26,7 @@ Fortran setup and execute functions cannot be inside a fortran module.
         status = datablock_get_int(options, option_section, "my_option", settings%my_option)
 
         if (status .ne. 0) then
-            write(*,*) "Please set the option called 'my_option' in the ini file for my wonderful module'
+            write(*,*) "Please set the option called 'my_option' in the ini file for my wonderful module"
             stop
         endif
 
@@ -37,10 +36,8 @@ Fortran setup and execute functions cannot be inside a fortran module.
         result = c_loc(settings)
     end function setup
 
-
     function execute(block, config) result(status)
         use cosmosis_modules
-        use my_calculation_code
 
         implicit none
         integer(cosmosis_block), value :: block

@@ -3,19 +3,13 @@ no_bias
 
 Generate galaxy power P(k) as though galaxies were unbiased DM tracers
 
-.. list-table::
-    
-   * - File
-     - bias/no_bias/no_bias.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+-------------------------+
+| File        | bias/no_bias/no_bias.py |
++-------------+-------------------------+
+| Attribution | CosmoSIS Team           |
++-------------+-------------------------+
+| URL         |                         |
++-------------+-------------------------+
 
 Galaxy bias relates the distribution of galaxies to the underlying (dark) matter
 field whose skeleton they trace.

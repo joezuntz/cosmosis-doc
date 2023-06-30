@@ -3,19 +3,13 @@ delete
 
 Enters python debugger.
 
-.. list-table::
-    
-   * - File
-     - utility/delete/delete_section.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - You can do what you want with this file.
-
++-------------+----------------------------------+
+| File        | utility/delete/delete_section.py |
++-------------+----------------------------------+
+| Attribution | CosmoSIS Team                    |
++-------------+----------------------------------+
+| URL         |                                  |
++-------------+----------------------------------+
 
 
 

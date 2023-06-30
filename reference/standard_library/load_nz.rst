@@ -3,19 +3,13 @@ load_nz
 
 Load a number density n(z) for weak lensing from a file
 
-.. list-table::
-    
-   * - File
-     - number_density/load_nz/load_nz.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - If you use a file from a particular survey you should cite that survey
-
++-------------+-----------------------------------+
+| File        | number_density/load_nz/load_nz.py |
++-------------+-----------------------------------+
+| Attribution | CosmoSIS Team                     |
++-------------+-----------------------------------+
+| URL         |                                   |
++-------------+-----------------------------------+
 
 This simple module just loads a set of n(z) for different bins from a
 fixed file and provides it as-is.  The n(z) are normalized before being saved.

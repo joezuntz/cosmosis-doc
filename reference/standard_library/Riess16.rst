@@ -3,21 +3,17 @@ Riess16
 
 Likelihood of hubble parameter H0 from Riess et al 2.4% supernova sample
 
-.. list-table::
-    
-   * - File
-     - likelihood/riess16/riess11.py
-   * - Attribution
-     - Riess et al (measurement)
-   * -
-     - CosmoSIS team (code)
-   * - URL
-     - http://iopscience.iop.org/article/10.3847/0004-637X/826/1/56/pdf
-   * - Citation
-     - Riess et al, ApJ, 826, 56, 31 (2016)
-   * - Rules
-     - None.
-
++-------------+------------------------------------------------------------------+
+| File        | likelihood/riess16/riess11.py                                    |
++-------------+------------------------------------------------------------------+
+| Attribution | Riess et al (measurement)                                        |
++-------------+------------------------------------------------------------------+
+|             | CosmoSIS team (code)                                             |
++-------------+------------------------------------------------------------------+
+| URL         | http://iopscience.iop.org/article/10.3847/0004-637X/826/1/56/pdf |
++-------------+------------------------------------------------------------------+
+| Citations   | Riess et al, ApJ, 826, 56, 31 (2016)                             |
++-------------+------------------------------------------------------------------+
 
 This small module was written for CosmoSIS.
 

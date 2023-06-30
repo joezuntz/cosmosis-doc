@@ -3,21 +3,17 @@ wmap_shift
 
 Massively simplified WMAP9 likelihood reduced to just shift parameter
 
-.. list-table::
-    
-   * - File
-     - likelihood/wmap_shift/wmap_shift.so
-   * - Attribution
-     - The WMAP Collaboration (measurement)
-   * -
-     - CosmoSIS team (code)
-   * - URL
-     - 
-   * - Citation
-     - Hinshaw et al, ApJS, 208, 2, 19, 25
-   * - Rules
-     -
-
++-------------+--------------------------------------+
+| File        | likelihood/wmap_shift/wmap_shift.so  |
++-------------+--------------------------------------+
+| Attribution | The WMAP Collaboration (measurement) |
++-------------+--------------------------------------+
+|             | CosmoSIS team (code)                 |
++-------------+--------------------------------------+
+| URL         |                                      |
++-------------+--------------------------------------+
+| Citations   | Hinshaw et al, ApJS, 208, 2, 19, 25  |
++-------------+--------------------------------------+
 
 The full WMAP likelihood is slow and requires a full Boltzmann
 integration (also slow) to get the CMB spectra.

@@ -3,21 +3,17 @@ clerkin
 
 Compute galaxy bias as function of k, z for 3-parameter Clerkin et al 2014 model
 
-.. list-table::
-    
-   * - File
-     - bias/clerkin/clerkin_interface.py
-   * - Attribution
-     - L. Clerkin
-   * - URL
-     - 
-   * - Citation
-     - arXiv:1405.5521
-   * -
-     - Cole et al, MNRAS, 362, 2, 505–534
-   * - Rules
-     - Please cite the relevant papers if you use this module.
-
++-------------+------------------------------------+
+| File        | bias/clerkin/clerkin_interface.py  |
++-------------+------------------------------------+
+| Attribution | L. Clerkin                         |
++-------------+------------------------------------+
+| URL         |                                    |
++-------------+------------------------------------+
+| Citations   | arXiv:1405.5521                    |
++-------------+------------------------------------+
+|             | Cole et al, MNRAS, 362, 2, 505–534 |
++-------------+------------------------------------+
 
 The GTD bias model provides a benchmark expression for 
 the redshift evolution of galaxy bias on large scales. 

@@ -3,31 +3,20 @@ smail
 
 Compute window functions for photometric n(z)
 
-.. list-table::
-    
-   * - File
-     - number_density/smail/photometric_smail.py
-   * - Attribution
-     - Donnacha Kirk
-   * -
-     - Simon Samuroff
-   * -
-     - Jessica Muir
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - You can do what you want with this file
++-------------+-------------------------------------------+
+| File        | number_density/smail/photometric_smail.py |
++-------------+-------------------------------------------+
+| Attribution | Donnacha Kirk                             |
++-------------+-------------------------------------------+
+|             | Simon Samuroff                            |
++-------------+-------------------------------------------+
+|             | Jessica Muir                              |
++-------------+-------------------------------------------+
+| URL         |                                           |
++-------------+-------------------------------------------+
 
-
-This module takes inputs that specify the underlying spectroscopic (true) redshift
-distribution of the galaxies in the survey.  It then convolves this with a photometric
-error sigma(z) = sigma_0 (1+z) and optionally biases it.  It computes bin edges in the
-survey assuming equal numbers in each.
-
+This module takes inputs that specify the underlying spectroscopic (true) redshift distribution of the galaxies in the survey.  It then convolves this with a photometric error sigma(z) = sigma_0 (1+z) and optionally biases it.  It computes bin edges in the survey assuming equal numbers in each.
 You can also specify fixed bin edges.
-
 
 
 Assumptions
@@ -74,10 +63,7 @@ Setup Parameters
    * - z_edges
      - real 1d
      - None
-     - "Manually specified redshift bin edges. If nbin - 1 values passed,
-these are the bounds of photometric selection for those nbin bins.
-If 2 values are passed, they specify a minimum and maximum redshift between
-which galaxies are divided into equal number samples. "
+     - Manually specified redshift bin edges. If nbin - 1 values passed, these are the bounds of photometric selection for those nbin bins. If 2 values are passed, they specify a minimum and maximum redshift between which galaxies are divided into equal number samples.
 
 
 

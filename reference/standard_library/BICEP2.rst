@@ -3,21 +3,17 @@ BICEP2
 
 Compute the likelihood of the supplied CMB power spectra
 
-.. list-table::
-    
-   * - File
-     - likelihood/bicep2/bicep_interface.py
-   * - Attribution
-     - BICEP2 Team
-   * - URL
-     - http://bicepkeck.org
-   * - Citation
-     - http://arxiv.org/abs/1403.4302
-   * -
-     - http://arxiv.org/abs/1403.3985
-   * - Rules
-     -
-
++-------------+--------------------------------------+
+| File        | likelihood/bicep2/bicep_interface.py |
++-------------+--------------------------------------+
+| Attribution | BICEP2 Team                          |
++-------------+--------------------------------------+
+| URL         | http://bicepkeck.org                 |
++-------------+--------------------------------------+
+| Citations   | http://arxiv.org/abs/1403.4302       |
++-------------+--------------------------------------+
+|             | http://arxiv.org/abs/1403.3985       |
++-------------+--------------------------------------+
 
 The 2014 BICEP2 results are a detection of cosmological B-modes
 on the scales that indicate a primordial gravitational wave bump.

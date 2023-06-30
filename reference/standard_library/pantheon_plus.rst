@@ -1,31 +1,30 @@
-pantheon
+pantheon_plus
 ================================================
 
-Likelihood of the Pantheon supernova analysis
+Likelihood of the Pantheon+ supernova analysis optionally combined with the SH0ES H0 measurement
 
-+-------------+-----------------------------------+
-| File        | likelihood/pantheon/pantheon.py   |
-+-------------+-----------------------------------+
-| Attribution | Scolnic et al (measurement)       |
-+-------------+-----------------------------------+
-|             | CosmoSIS team (code)              |
-+-------------+-----------------------------------+
-| URL         | http://dx.doi.org/10.17909/T95Q4X |
-+-------------+-----------------------------------+
-| Citations   | Scolnic et al, ApJ, 859, 28       |
-+-------------+-----------------------------------+
++-------------+-------------------------------------------------+
+| File        | likelihood/pantheon_plus/pantheon_plus_shoes.py |
++-------------+-------------------------------------------------+
+| Attribution | Dillon Brout                                    |
++-------------+-------------------------------------------------+
+| URL         | https://pantheonplussh0es.github.io/            |
++-------------+-------------------------------------------------+
+| Citations   | ApJ 938 110 (2022)                              |
++-------------+-------------------------------------------------+
+|             | Adam G. Riess et al 2022 ApJL 934 L7            |
++-------------+-------------------------------------------------+
 
 Supernova IA can be used as standardisable candles, letting us estimate a redshift-distance relation.
-The Pantheon sample collected together a combined SN IA sample from the Pan-Starrs1, Medium Deep Survey, SDSS, SNLS, and various HST data sets into a joint analysis.
+The Pantheon+ sample collected together 1701 light curves of 1550 distinct Type Ia supernovae
 This module uses that data set to constrain the distance modulus vs redshift relation.
-There are two Pantheon data variants - this version uses the compressed (binned) version since it is much smaller and faster to use and produces nearly identical results to the full version. You can separately download and use the full version files if you wish.
-The Pantheon data release was analyzed with a much more complex code in CosmoMC, but almost all of the machinery in that code was unusued, because the various systematic effects that it implements were subsumed into a single systematic covariance matrix.  This code therefore omits that machinery for simlicitiy.
+This version can optionally also include SH0ES HST measurements of H0 from Cepheid variables over 40 years of data.
 
 
 Assumptions
 -----------
 
- - Pantheon statistical and systematic analysis
+ - Pantheon+ statistical and systematic analysis
 
 
 
@@ -40,18 +39,18 @@ Setup Parameters
      - Default
      - Description
 
+   * - include_shoes
+     - bool
+     - 
+     - Whether to include SH0ES H0 measurements. Note that the parameter name has an o not a zero.
    * - data_file
      - str
-     - module_dir/lcparam_DS17f.txt
+     - module_dir/Pantheon+SH0ES.dat
      - Optional. File containing supernova measurements
    * - covmat_file
      - str
-     - module_dir/lcparam_DS17f.txt
+     - Pantheon+SH0ES_STAT+SYS.cov_compressed.gz
      - Optional. File containing supernova measurements
-   * - x_section
-     - str
-     - distances
-     - Datablock section for input theory redshift
    * - x_name
      - str
      - z
@@ -95,12 +94,12 @@ Input values
      - z
      - real 1d
      - 
-     - Redshifts of calculated theory mu(z)
+     - Redshifts z of calculated theory D_A(z)
    * - 
-     - mu
+     - D_A
      - real 1d
      - 
-     - Distance modulus mu(z) at given redshifts
+     - Angular diameter distance D_A(z)
    * - supernova_params
      - M
      - real

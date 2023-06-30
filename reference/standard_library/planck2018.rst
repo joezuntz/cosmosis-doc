@@ -3,20 +3,15 @@ planck2018
 
 Likelihood function of CMB from Planck 2015 data
 
-.. list-table::
-    
-   * - File
-     - likelihood/planck2018/planck_interface.so
-   * - Attribution
-     - The Planck Collaboration
-   * - URL
-     - 
-   * - Citation
-     - Planck collaboration, Aghanim et al, arXiv:1907.12875
-   * - Rules
-     - "Likelihood released by Planck Collaboration and packaged by cosmosis team.   Contact the latter with problems in the first instance.  Different papers should be cited depending which data sets are used with this module. "
-
-
++-------------+-------------------------------------------------------+
+| File        | likelihood/planck2018/planck_interface.so             |
++-------------+-------------------------------------------------------+
+| Attribution | The Planck Collaboration                              |
++-------------+-------------------------------------------------------+
+| URL         |                                                       |
++-------------+-------------------------------------------------------+
+| Citations   | Planck collaboration, Aghanim et al, arXiv:1907.12875 |
++-------------+-------------------------------------------------------+
 
 The Planck space telescope has provided the most powerful current
  CMB data from quadrupole to sub-degree scales.

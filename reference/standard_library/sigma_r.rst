@@ -3,19 +3,13 @@ sigma_r
 
 Compute anisotropy dispersion sigma(R,z)
 
-.. list-table::
-    
-   * - File
-     - boltzmann/sigmar/sigmar.py
-   * - Attribution
-     - Scott Dodelson
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+----------------------------+
+| File        | boltzmann/sigmar/sigmar.py |
++-------------+----------------------------+
+| Attribution | Scott Dodelson             |
++-------------+----------------------------+
+| URL         |                            |
++-------------+----------------------------+
 
 sigma(R,z) is the variance of cosmic density fluctuations on scales
 down to 8 Mpc/h.

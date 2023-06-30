@@ -3,19 +3,15 @@ des-y3-bao
 
 Compute the likelihood of DES Y3 BAO data
 
-.. list-table::
-    
-   * - File
-     - likelihood/des-y3-bao/bao_y3_like.py
-   * - Attribution
-     - DES Collaboration
-   * - URL
-     - 
-   * - Citation
-     - DES Collaboration, Physical Review D, 2022, Volume 105, Issue 4, article id.043512
-   * - Rules
-     -
-
++-------------+------------------------------------------------------------------------------------+
+| File        | likelihood/des-y3-bao/bao_y3_like.py                                               |
++-------------+------------------------------------------------------------------------------------+
+| Attribution | DES Collaboration                                                                  |
++-------------+------------------------------------------------------------------------------------+
+| URL         |                                                                                    |
++-------------+------------------------------------------------------------------------------------+
+| Citations   | DES Collaboration, Physical Review D, 2022, Volume 105, Issue 4, article id.043512 |
++-------------+------------------------------------------------------------------------------------+
 
 This module gives a likelihood of the combination d_m / r_s from the DES Y3 data.
 It interpolates the ratio of that combination to a fiducial value, and then interpolates

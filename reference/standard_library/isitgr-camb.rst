@@ -3,29 +3,25 @@ isitgr-camb
 
 Modified version of CAMB to implement phenomenological modified gravity models
 
-.. list-table::
-    
-   * - File
-     - boltzmann/isitgr/camb.so
-   * - Attribution
-     - Jason Dossett
-   * -
-     - Mustapha Ishak
-   * -
-     - Jacob Moldenhauer
-   * -
-     - Antony Lewis
-   * -
-     - Anthony Challinor
-   * - URL
-     - http://www.utdallas.edu/~jdossett/isitgr
-   * - Citation
-     - http://arxiv.org/abs/1109.4583
-   * -
-     - Phys. Rev. D86, 103008, 2012
-   * - Rules
-     - Since isitgr is derived from CAMB, please abide by the conditions set out in the CAMB license if you use this module http://camb.info/CAMBsubmit.html
-
++-------------+------------------------------------------+
+| File        | boltzmann/isitgr/camb.so                 |
++-------------+------------------------------------------+
+| Attribution | Jason Dossett                            |
++-------------+------------------------------------------+
+|             | Mustapha Ishak                           |
++-------------+------------------------------------------+
+|             | Jacob Moldenhauer                        |
++-------------+------------------------------------------+
+|             | Antony Lewis                             |
++-------------+------------------------------------------+
+|             | Anthony Challinor                        |
++-------------+------------------------------------------+
+| URL         | http://www.utdallas.edu/~jdossett/isitgr |
++-------------+------------------------------------------+
+| Citations   | http://arxiv.org/abs/1109.4583           |
++-------------+------------------------------------------+
+|             | Phys. Rev. D86, 103008, 2012             |
++-------------+------------------------------------------+
 
 ISiTGR, the Integrated Software in Testing General Relativity, is
 a set of modifications to CAMB and CosmoMC which implement a set of modified
@@ -38,7 +34,7 @@ code uses the variables in equations 8 and 10 of http://arxiv.org/pdf/1109.4583v
 and the functional form ansatz in equation 11:
 
 For X as Q, D, or R we use:
-    X(k,a) = [X_0 exp(-k/k_c) + X_inf (1-exp(-k/k_c)) - 1] a^s + 1
+:math:`X(k,a) = [X_0 \exp{-k/k_c} + X_inf (1-\exp{-k/k_c}) - 1] a^s + 1`
 
 Most of the parameters in this code are the same as those in camb; see
 the camb module information for more details.
@@ -81,8 +77,8 @@ Setup Parameters
    * - mode
      - str
      - 
-     - Choose from Background, thermal, cmb, or all.
-In background mode only the expansion history is calculated. In thermal mode the recombination history is computed and rs_zdrag and related quantities also. In cmb mode the CMB power spectra are also calculated. In all mode the matter power spectrum at low redshift and sigma8 are also calculated.
+     - Choose from Background, thermal, cmb, or all. In background mode only the expansion history is calculated. In thermal mode the recombination history is computed and rs_zdrag and related quantities also. In cmb mode the CMB power spectra are also calculated. In all mode the matter power spectrum at low redshift and sigma8 are also calculated.
+
    * - lmax
      - int
      - 

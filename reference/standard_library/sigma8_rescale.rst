@@ -3,21 +3,15 @@ sigma8_rescale
 
 Rescale structure measures to use a specified sigma_8
 
-.. list-table::
-    
-   * - File
-     - utility/sample_sigma8/sigma8_rescale.py
-   * - Attribution
-     - Susana Fernandez
-   * -
-     - Jack Elvin-Poole
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+-----------------------------------------+
+| File        | utility/sample_sigma8/sigma8_rescale.py |
++-------------+-----------------------------------------+
+| Attribution | Susana Fernandez                        |
++-------------+-----------------------------------------+
+|             | Jack Elvin-Poole                        |
++-------------+-----------------------------------------+
+| URL         |                                         |
++-------------+-----------------------------------------+
 
 Boltzmann codes like CAMB and CLASS typically take a primordial power spectrum
 amplitude A_s as an input parameter defining the amplitude of cosmic structure

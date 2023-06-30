@@ -3,19 +3,15 @@ BBN-Consistency
 
 Compute consistent Helium fraction from baryon density given BBN
 
-.. list-table::
-    
-   * - File
-     - utility/bbn_consistency/bbn_consistency.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - http://parthenope.na.infn.it/
-   * - Citation
-     - Comp.Phys.Commun.178:956-971,2008
-   * - Rules
-     -
-
++-------------+--------------------------------------------+
+| File        | utility/bbn_consistency/bbn_consistency.py |
++-------------+--------------------------------------------+
+| Attribution | CosmoSIS Team                              |
++-------------+--------------------------------------------+
+| URL         | http://parthenope.na.infn.it/              |
++-------------+--------------------------------------------+
+| Citations   | Comp.Phys.Commun.178:956-971,2008          |
++-------------+--------------------------------------------+
 
 
 The Big Bang Nucleosynthesis model describes how the 

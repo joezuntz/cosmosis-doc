@@ -3,19 +3,19 @@ The Fisher sampler
 
 Fisher matrix calculation
 
-+--------------+------------------------------------------+
-| | Name       | | fisher                                 |
-+--------------+------------------------------------------+
-| | Version    | | 1.0                                    |
-+--------------+------------------------------------------+
-| | Author(s)  | | CosmoSIS Team                          |
-+--------------+------------------------------------------+
-| | URL        | | https://bitbucket.org/joezuntz/cosmosis|
-+--------------+------------------------------------------+
-| | Citation(s)|                                          |
-+--------------+------------------------------------------+
-| | Parallelism| | embarrassing                           |
-+--------------+------------------------------------------+
++-------------+-----------------------------------------+
+| Name        | fisher                                  |
++-------------+-----------------------------------------+
+| Version     | 1.0                                     |
++-------------+-----------------------------------------+
+| Author(s)   | CosmoSIS Team                           |
++-------------+-----------------------------------------+
+| URL         | https://bitbucket.org/joezuntz/cosmosis |
++-------------+-----------------------------------------+
+| Citation(s) |                                         |
++-------------+-----------------------------------------+
+| Parallelism | embarrassing                            |
++-------------+-----------------------------------------+
 
 
 
@@ -35,9 +35,10 @@ There is an additional term that arises when the covariance matrix C depends on 
 
 The CosmoSIS fisher sampler is calculated around the central value provided in the values file; no optimization is done before running.
 
-Unlike most other CosmoSIS samplers which depend only likelihood of a parameter set, the fisher sampler requires the predicted observables from a pipeline too.  They are expected to be saved to a section of the data block, called "data_theory", with  keys, name+"_theory" and name+"_inverse_covariance" where "name" is the name of the likelihood, for example, to save a cmb data vector you could save "cmb_theory" and "cmb_inverse_covariance" in the "data_vector" section.
+Unlike most other CosmoSIS samplers which depend only likelihood of a parameter set, the fisher sampler requires the predicted observables from a pipeline too.  They are expected to be saved to a section of the data block, called "data_vector", with  keys, name+"_theory" and name+"_inverse_covariance" where "name" is the name of the likelihood, for example, to save a cmb data vector you could save "cmb_theory" and "cmb_inverse_covariance" in the "data_vector" section.
 
 Gaussian likelihoods implemented in CosmoSIS save these sections automatically. Your own likelihoods can use the CosmoSIS gaussian likelihood superclass to do the same, or you can manually save name+"_theory" and name+"_inverse_covariance" for any data that  you add.
+
 
 
 
@@ -55,10 +56,12 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+------------+--------+-----------------------------------------------------------+----------+
-| | Parameter| | Type | | Meaning                                                 | | Default|
-+------------+--------+-----------------------------------------------------------+----------+
-| | step_size| | float| | The size, as a fraction of the total parameter range, of| | 0.01   |
-|            |        | | steps to use in the derivative calculation. You should  |          |
-|            |        | | investigate stability wrt this.                         |          |
-+------------+--------+-----------------------------------------------------------+----------+
++------------------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------+
+| Name             | Type   | Description                                                                                                                                     | Default   |
++==================+========+=================================================================================================================================================+===========+
+| step_size        | float  | The size, as a fraction of the total parameter range, of steps to use in the derivative calculation. You should investigate stability wrt this. | 0.01      |
++------------------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------+
+| use_numdifftools | bool   | Use the library numdifftools instead of the default code (should be little difference)                                                          | False     |
++------------------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------+
+
+

@@ -3,19 +3,13 @@ sigma_cpp
 
 Compute anisotropy dispersion sigma(R,z) in cpp
 
-.. list-table::
-    
-   * - File
-     - boltzmann/sigma_cpp/sigma_cpp.py
-   * - Attribution
-     - Michel Aguena
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+----------------------------------+
+| File        | boltzmann/sigma_cpp/sigma_cpp.py |
++-------------+----------------------------------+
+| Attribution | Michel Aguena                    |
++-------------+----------------------------------+
+| URL         |                                  |
++-------------+----------------------------------+
 
 sigma(R,z) is the variance of cosmic density fluctuations on scales
 down to 8 Mpc/h.

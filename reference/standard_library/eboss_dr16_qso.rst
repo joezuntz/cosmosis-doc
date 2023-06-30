@@ -3,21 +3,15 @@ eboss_dr16_qso
 
 Compute the likelihood of eBOSS DR16 from QSO
 
-.. list-table::
-    
-   * - File
-     - likelihood/eboss_dr16/qso/eboss_dr16_qso.py
-   * - Attribution
-     -
-   * - URL
-     - 
-   * - Citation
-     - Neveux et al, MNRAS 2020
-   * -
-     - Hou et al, MNRAS 2020
-   * - Rules
-     -
-
++-----------+---------------------------------------------+
+| File      | likelihood/eboss_dr16/qso/eboss_dr16_qso.py |
++-----------+---------------------------------------------+
+| URL       |                                             |
++-----------+---------------------------------------------+
+| Citations | Neveux et al, MNRAS 2020                    |
++-----------+---------------------------------------------+
+|           | Hou et al, MNRAS 2020                       |
++-----------+---------------------------------------------+
 
 This module computes the likelihood of Dm_over_rd and Dh_over_rd for BAO-only analysis and Dm_over_rd, Dh_over_rd, and fsigma8 for BAO+FS analysis, both using eBOSS DR16 measurements from QSO.  We assume likelihoods are Gaussian.
 

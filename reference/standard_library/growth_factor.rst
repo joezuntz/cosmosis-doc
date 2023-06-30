@@ -3,19 +3,13 @@ growth_factor
 
 returns linear growth factor and growth rate for flat cosmology with either const w or variable DE eos w(a) = w + (1-a)*wa
 
-.. list-table::
-    
-   * - File
-     - structure/growth_factor/interface.so
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - If you use a file from a particular survey you should cite that survey
-
++-------------+--------------------------------------+
+| File        | structure/growth_factor/interface.so |
++-------------+--------------------------------------+
+| Attribution | CosmoSIS Team                        |
++-------------+--------------------------------------+
+| URL         |                                      |
++-------------+--------------------------------------+
 
 This simple module calculates the linear growth factor D, and linear growth rate, f, for flat cosmology with either const w or variable DE eos w(a) = w + (1-a)*wa. 
 Where D, f are defined by the growth of a

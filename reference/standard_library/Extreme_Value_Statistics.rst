@@ -3,21 +3,17 @@ Extreme_Value_Statistics
 
 PDF of the maximum cluster mass given cosmological parameters
 
-.. list-table::
-    
-   * - File
-     - likelihood/cluster_evs/cluster_evs.py
-   * - Attribution
-     - Harrison & Coles 2012
-   * -
-     - CosmoSIS team (code)
-   * - URL
-     - 
-   * - Citation
-     - Harrison and Coles, MNRAS 421 2012
-   * - Rules
-     - None.
-
++-------------+---------------------------------------+
+| File        | likelihood/cluster_evs/cluster_evs.py |
++-------------+---------------------------------------+
+| Attribution | Harrison & Coles 2012                 |
++-------------+---------------------------------------+
+|             | CosmoSIS team (code)                  |
++-------------+---------------------------------------+
+| URL         |                                       |
++-------------+---------------------------------------+
+| Citations   | Harrison and Coles, MNRAS 421 2012    |
++-------------+---------------------------------------+
 
 Computes the likelihood of the largest observed cluster near
 the specified redshift range being M_max, as loaded from the datablock, 

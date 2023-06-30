@@ -3,21 +3,17 @@ WiggleZBao
 
 Compute the likelihood of the supplied expansion history against WiggleZ BAO data
 
-.. list-table::
-    
-   * - File
-     - likelihood/wigglez_bao/wigglez_bao.py
-   * - Attribution
-     - WiggleZ Team
-   * -
-     - MontePython Team
-   * - URL
-     - http://www.smp.uq.edu.au/wigglez-data/
-   * - Citation
-     - MNRAS 441, 3524 (2014)
-   * - Rules
-     -
-
++-------------+----------------------------------------+
+| File        | likelihood/wigglez_bao/wigglez_bao.py  |
++-------------+----------------------------------------+
+| Attribution | WiggleZ Team                           |
++-------------+----------------------------------------+
+|             | MontePython Team                       |
++-------------+----------------------------------------+
+| URL         | http://www.smp.uq.edu.au/wigglez-data/ |
++-------------+----------------------------------------+
+| Citations   | MNRAS 441, 3524 (2014)                 |
++-------------+----------------------------------------+
 
 This module gives a likelihood of the redshift-distance and redshift-Hubble
 relations in combined form D_v = (da**2 * (1+z)**2 * dr)**(1./3.) 

@@ -3,21 +3,17 @@ cl_to_xi_wigner_d
 
 Compute correlation functions from power spectra
 
-.. list-table::
-    
-   * - File
-     - shear/cl_to_xi_wigner/wigner_cl_xi_interface.py
-   * - Attribution
-     - Joe Zuntz
-   * -
-     - Nicolas Tessore
-   * - URL
-     - 
-   * - Citation
-     - https://arxiv.org/abs/1904.09973
-   * - Rules
-     -
-
++-------------+-------------------------------------------------+
+| File        | shear/cl_to_xi_wigner/wigner_cl_xi_interface.py |
++-------------+-------------------------------------------------+
+| Attribution | Joe Zuntz                                       |
++-------------+-------------------------------------------------+
+|             | Nicolas Tessore                                 |
++-------------+-------------------------------------------------+
+| URL         |                                                 |
++-------------+-------------------------------------------------+
+| Citations   | https://arxiv.org/abs/1904.09973                |
++-------------+-------------------------------------------------+
 
 
 This module creates and stores transformation matrices to convert power

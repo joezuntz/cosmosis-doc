@@ -3,21 +3,17 @@ CRL_Eisenstein_Hu
 
 Komatsu's CRL code to compute the power spectrum using EH fitting formula.
 
-.. list-table::
-    
-   * - File
-     - structure/crl_eisenstein_hu/nowiggle_module.so
-   * - Attribution
-     - Komatsu-CRL
-   * - URL
-     - http://www.mpa-garching.mpg.de/~komatsu/crl/
-   * - Citation
-     - http://www.mpa-garching.mpg.de/~komatsu/crl/
-   * -
-     -  Eisenstein and Hu, ApJ, 496, 605 (1998)
-   * - Rules
-     -
-
++-------------+------------------------------------------------+
+| File        | structure/crl_eisenstein_hu/nowiggle_module.so |
++-------------+------------------------------------------------+
+| Attribution | Komatsu-CRL                                    |
++-------------+------------------------------------------------+
+| URL         | http://www.mpa-garching.mpg.de/~komatsu/crl/   |
++-------------+------------------------------------------------+
+| Citations   | http://www.mpa-garching.mpg.de/~komatsu/crl/   |
++-------------+------------------------------------------------+
+|             | Eisenstein and Hu, ApJ, 496, 605 (1998)        |
++-------------+------------------------------------------------+
 
 This module uses Eiichiro Komatsu's CRL code to calculate the power spectrum
 without BAO in it following Eisenstein and Hu, ApJ, 496, 605 (1998). 

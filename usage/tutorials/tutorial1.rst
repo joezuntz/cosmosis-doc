@@ -8,7 +8,7 @@ you how to compute a likelihood using CosmoSIS.
 Installation
 ============
 
-Before you start, :doc:`follow the instructions to install cosmosis </installation/installation>`.  Once you are complete, you should be able to run::
+Before you start, :doc:`follow the instructions to install cosmosis </intro/installation>`.  Once you are complete, you should be able to run::
 
     cosmosis --help
 
@@ -96,7 +96,7 @@ The first lines in the parameter file :code:`examples/planck.ini` are::
 
 The first option, :code:`sampler`, tells CosmoSIS what it should do with the likelihood that we will construct - how the parameter space should be explored.
 
-CosmoSIS has lots of different samplers in it, designed to move around parameter spaces in different ways.  The :code:`test` sampler is the simplest possible one: it doesn't move around the parameter space at all - it just computes a likelihood (runs the pipeline) for a single set of values.  These tutorials will discuss several samplers; the full list is described in :doc:`the samplers page </reference/samplers/samplers>`.
+CosmoSIS has lots of different samplers in it, designed to move around parameter spaces in different ways.  The :code:`test` sampler is the simplest possible one: it doesn't move around the parameter space at all - it just computes a likelihood (runs the pipeline) for a single set of values.  These tutorials will discuss several samplers; the full list is described in :doc:`the samplers page </usage/samplers>`.
 
 Once you have chosen a sampler you configure that sampler with the second section shown in above, which has the name of the sampler, in this case :code:`test`.
 

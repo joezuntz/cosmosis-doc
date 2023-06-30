@@ -3,21 +3,15 @@
 
 Generic 2-point measurement Gaussian likelihood
 
-.. list-table::
-    
-   * - File
-     - likelihood/2pt/2pt_like.py
-   * - Attribution
-     - CosmoSIS Team
-   * -
-     - Niall Maccrann
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - None.
-
++-------------+----------------------------+
+| File        | likelihood/2pt/2pt_like.py |
++-------------+----------------------------+
+| Attribution | CosmoSIS Team              |
++-------------+----------------------------+
+|             | Niall Maccrann             |
++-------------+----------------------------+
+| URL         |                            |
++-------------+----------------------------+
 
 This module implements a general likelihood of tomographic 2-point measuremnts
 of various quantities, including galaxy density, cosmic shear, intrinsic alignments,

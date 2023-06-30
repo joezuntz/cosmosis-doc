@@ -3,19 +3,11 @@ kappa_beam
 
 Apply smoothing function to cross-correlations with CMB kappa in harmonic space.
 
-.. list-table::
-    
-   * - File
-     - cmb_lensing/kappa_beam/kappa_beam.py
-   * - Attribution
-     -
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - You can do what you want with this file.
-
++------+--------------------------------------+
+| File | cmb_lensing/kappa_beam/kappa_beam.py |
++------+--------------------------------------+
+| URL  |                                      |
++------+--------------------------------------+
 
 It is often useful to convolve an estimated CMB lensing map with a Gaussian beam before measuring correlation functions with galaxies and shears.  If such smoothing is applied, we must account for it on the modeling side.  This module accounts for such smoothing by multiplying the theoretical power spectra by the necessary beam factors.
 

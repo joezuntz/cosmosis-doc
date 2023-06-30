@@ -3,19 +3,13 @@ rename
 
 Rename a section to a new name
 
-.. list-table::
-    
-   * - File
-     - utility/rename/rename_section.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - You can do what you want with this file.
-
++-------------+----------------------------------+
+| File        | utility/rename/rename_section.py |
++-------------+----------------------------------+
+| Attribution | CosmoSIS Team                    |
++-------------+----------------------------------+
+| URL         |                                  |
++-------------+----------------------------------+
 
 Use this module to rename one section to a new name.  This is only needed in quite complex pipelines
 

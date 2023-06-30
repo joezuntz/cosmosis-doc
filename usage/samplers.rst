@@ -23,11 +23,21 @@ MCMC Samplers
 
      emcee: Ensemble walker sampling <../reference/samplers/emcee>
      metropolis: Classic Metropolis-Hastings sampling <../reference/samplers/metropolis>
-     multinest: Nested sampling for Bayesian Evidence <../reference/samplers/multinest>
-     polychord: Ensemble nested sampling for Bayesian Evidence <../reference/samplers/polychord>
      importance: Importance sampling <../reference/samplers/importance>
      kombine: Clustered KDE <../reference/samplers/kombine>
      pmc: Adaptive Importance Sampling <../reference/samplers/pmc>
+     pocoMC: Adaptive Importance Sampling <../reference/samplers/poco>
+
+Nested Samplers
+===============
+
+.. toctree::
+    :maxdepth: 1
+
+     multinest: Nested sampling for Bayesian Evidence <../reference/samplers/multinest>
+     polychord: Ensemble nested sampling for Bayesian Evidence <../reference/samplers/polychord>
+     nautilus: ML-enhanced nested sampling for Bayesian Evidence <../reference/samplers/nautilus>
+
 
 Optimizers
 ===============

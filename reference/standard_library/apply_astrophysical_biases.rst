@@ -3,21 +3,15 @@ apply_astrophysical_biases
 
 Apply various astrophysical biases to the matter power spectrum P(k,z)
 
-.. list-table::
-    
-   * - File
-     - shear/apply_astrophysical_biases/interface.so
-   * - Attribution
-     - CosmoSIS team
-   * -
-     - Simon Samuroff
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+-----------------------------------------------+
+| File        | shear/apply_astrophysical_biases/interface.so |
++-------------+-----------------------------------------------+
+| Attribution | CosmoSIS team                                 |
++-------------+-----------------------------------------------+
+|             | Simon Samuroff                                |
++-------------+-----------------------------------------------+
+| URL         |                                               |
++-------------+-----------------------------------------------+
 
 
 Measurement of the matter power spectrum from real data relies on the visible positions and shapes of galaxies.

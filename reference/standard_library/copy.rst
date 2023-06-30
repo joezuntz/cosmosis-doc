@@ -3,19 +3,13 @@ copy
 
 Copy a section to a new section
 
-.. list-table::
-    
-   * - File
-     - utility/copy/copy_section.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - You can do what you want with this file.
-
++-------------+------------------------------+
+| File        | utility/copy/copy_section.py |
++-------------+------------------------------+
+| Attribution | CosmoSIS Team                |
++-------------+------------------------------+
+| URL         |                              |
++-------------+------------------------------+
 
 Use this module to copy one section to another section.  This is only needed in quite complex pipelines
 

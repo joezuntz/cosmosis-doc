@@ -3,19 +3,15 @@ jla
 
 Supernova likelihood for SDSS-II/SNLS3
 
-.. list-table::
-    
-   * - File
-     - supernovae/jla_v3/jla.so
-   * - Attribution
-     - Marc Betoule
-   * - URL
-     - http://supernovae.in2p3.fr/sdss_snls_jla/ReadMe.html
-   * - Citation
-     - http://arxiv.org/abs/1401.4064
-   * - Rules
-     -
-
++-------------+------------------------------------------------------+
+| File        | supernovae/jla_v3/jla.so                             |
++-------------+------------------------------------------------------+
+| Attribution | Marc Betoule                                         |
++-------------+------------------------------------------------------+
+| URL         | http://supernovae.in2p3.fr/sdss_snls_jla/ReadMe.html |
++-------------+------------------------------------------------------+
+| Citations   | http://arxiv.org/abs/1401.4064                       |
++-------------+------------------------------------------------------+
 
 This JLA code uses 731 supernovae from the JLA SDSS-II/SNLS3 sample 
 to get a likelihood of a given theory mu(z).

@@ -3,21 +3,15 @@ ia_z_powerlap
 
 
 
-.. list-table::
-    
-   * - File
-     - intrinsic_alignments/z_powerlaw/ia_z_powerlaw.py
-   * - Attribution
-     - CosmoSIS team
-   * -
-     - Niall Maccrann
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+--------------------------------------------------+
+| File        | intrinsic_alignments/z_powerlaw/ia_z_powerlaw.py |
++-------------+--------------------------------------------------+
+| Attribution | CosmoSIS team                                    |
++-------------+--------------------------------------------------+
+|             | Niall Maccrann                                   |
++-------------+--------------------------------------------------+
+| URL         |                                                  |
++-------------+--------------------------------------------------+
 
 
 Basic models of intrinsic alignments assume a specific simple evolution with redshift.

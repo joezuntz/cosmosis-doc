@@ -3,41 +3,37 @@ FrankenEmu
 
 Emulate N-body simulations to compute nonlinear matter power
 
-.. list-table::
-    
-   * - File
-     - structure/FrankenEmu/interface.so
-   * - Attribution
-     - Suman Bhattacharya
-   * -
-     - Salman Habib
-   * -
-     - Katrin Heitmann
-   * -
-     - David Higdon
-   * -
-     - Juliana Kwan
-   * -
-     - Earl Lawrence
-   * -
-     - Christian Wagner
-   * -
-     - Brian Williams
-   * -
-     - Martin White
-   * - URL
-     - http://www.hep.anl.gov/cosmology/CosmicEmu/emu.html
-   * - Citation
-     - The Coyote Universe Extended, arXiv:1304.7849
-   * -
-     - Coyote Universe I: ApJ 715, 104 (2010), arXiv:0812.1052
-   * -
-     - Coyote Universe II: ApJ 705, 156 (2009), arXiv:0902.0429
-   * -
-     - Coyote Universe III: ApJ 713, 1322 (2010), arXiv:0912.4490
-   * - Rules
-     -
-
++-------------+------------------------------------------------------------+
+| File        | structure/FrankenEmu/interface.so                          |
++-------------+------------------------------------------------------------+
+| Attribution | Suman Bhattacharya                                         |
++-------------+------------------------------------------------------------+
+|             | Salman Habib                                               |
++-------------+------------------------------------------------------------+
+|             | Katrin Heitmann                                            |
++-------------+------------------------------------------------------------+
+|             | David Higdon                                               |
++-------------+------------------------------------------------------------+
+|             | Juliana Kwan                                               |
++-------------+------------------------------------------------------------+
+|             | Earl Lawrence                                              |
++-------------+------------------------------------------------------------+
+|             | Christian Wagner                                           |
++-------------+------------------------------------------------------------+
+|             | Brian Williams                                             |
++-------------+------------------------------------------------------------+
+|             | Martin White                                               |
++-------------+------------------------------------------------------------+
+| URL         | http://www.hep.anl.gov/cosmology/CosmicEmu/emu.html        |
++-------------+------------------------------------------------------------+
+| Citations   | The Coyote Universe Extended, arXiv:1304.7849              |
++-------------+------------------------------------------------------------+
+|             | Coyote Universe I: ApJ 715, 104 (2010), arXiv:0812.1052    |
++-------------+------------------------------------------------------------+
+|             | Coyote Universe II: ApJ 705, 156 (2009), arXiv:0902.0429   |
++-------------+------------------------------------------------------------+
+|             | Coyote Universe III: ApJ 713, 1322 (2010), arXiv:0912.4490 |
++-------------+------------------------------------------------------------+
 
 
 FrankenEmu is an emulator designed to interpolate among a collection

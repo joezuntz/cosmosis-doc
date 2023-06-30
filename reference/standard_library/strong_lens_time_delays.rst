@@ -3,19 +3,15 @@ strong_lens_time_delays
 
 
 
-.. list-table::
-    
-   * - File
-     - strong_lensing/time_delay_lenses/time_delay_interface.py
-   * - Attribution
-     - Bonvin et al, MNRAS, 465, 4, p.4914-4930
-   * - URL
-     - 
-   * - Citation
-     - http://arxiv.org/pdf/1306.4732v2.pdf and http://arxiv.org/pdf/0910.2773v2.pdf
-   * - Rules
-     -
-
++-------------+-------------------------------------------------------------------------------+
+| File        | strong_lensing/time_delay_lenses/time_delay_interface.py                      |
++-------------+-------------------------------------------------------------------------------+
+| Attribution | Bonvin et al, MNRAS, 465, 4, p.4914-4930                                      |
++-------------+-------------------------------------------------------------------------------+
+| URL         |                                                                               |
++-------------+-------------------------------------------------------------------------------+
+| Citations   | http://arxiv.org/pdf/1306.4732v2.pdf and http://arxiv.org/pdf/0910.2773v2.pdf |
++-------------+-------------------------------------------------------------------------------+
 
 
 The likelihood of a strong lensing time-delay system as

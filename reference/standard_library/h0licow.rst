@@ -3,44 +3,40 @@ h0licow
 
 
 
-.. list-table::
-    
-   * - File
-     - strong_lensing/h0licow/time_delay_interface.py
-   * - Attribution
-     - Original code by Stefan Taubenberger and Sherry Suyu, see final citation link
-   * -
-     - Adapted from MontePython version by CosmoSIS team
-   * - URL
-     - 
-   * - Citation
-     - Suyu et al., 2010, ApJ, 711, 201
-   * -
-     - Suyu et al., 2014, ApJ, 788, L35
-   * -
-     - Wong et al., 2017, MNRAS, 465, 4895
-   * -
-     - Birrer et al., 2019, MNRAS, 484, 4726
-   * -
-     - Chen et al., 2019, MNRAS, 490, 1743
-   * -
-     - Jee et al., 2019, Science, 365, 1134
-   * -
-     - Rusu et al., 2019, arXiv:1905.09338
-   * -
-     - Wong et al., 2019, arXiv:1907.04869
-   * -
-     - https://zenodo.org/record/3632967#.YDOUEC2cY4d
-   * - Rules
-     -
-
++-------------+-------------------------------------------------------------------------------+
+| File        | strong_lensing/h0licow/time_delay_interface.py                                |
++-------------+-------------------------------------------------------------------------------+
+| Attribution | Original code by Stefan Taubenberger and Sherry Suyu, see final citation link |
++-------------+-------------------------------------------------------------------------------+
+|             | Adapted from MontePython version by CosmoSIS team                             |
++-------------+-------------------------------------------------------------------------------+
+| URL         |                                                                               |
++-------------+-------------------------------------------------------------------------------+
+| Citations   | Suyu et al., 2010, ApJ, 711, 201                                              |
++-------------+-------------------------------------------------------------------------------+
+|             | Suyu et al., 2014, ApJ, 788, L35                                              |
++-------------+-------------------------------------------------------------------------------+
+|             | Wong et al., 2017, MNRAS, 465, 4895                                           |
++-------------+-------------------------------------------------------------------------------+
+|             | Birrer et al., 2019, MNRAS, 484, 4726                                         |
++-------------+-------------------------------------------------------------------------------+
+|             | Chen et al., 2019, MNRAS, 490, 1743                                           |
++-------------+-------------------------------------------------------------------------------+
+|             | Jee et al., 2019, Science, 365, 1134                                          |
++-------------+-------------------------------------------------------------------------------+
+|             | Rusu et al., 2019, arXiv:1905.09338                                           |
++-------------+-------------------------------------------------------------------------------+
+|             | Wong et al., 2019, arXiv:1907.04869                                           |
++-------------+-------------------------------------------------------------------------------+
+|             | https://zenodo.org/record/3632967#.YDOUEC2cY4d                                |
++-------------+-------------------------------------------------------------------------------+
 
 
 The likelihood of a suite of time delay system from strong lenses,
 as collected in Wong et al., 2019, arXiv:1907.04869
 
 Various different pieces of the likelihood can be switched on and off
-using the data_ parameters.  The default configuration matches that
+using the data\_ parameters.  The default configuration matches that
 in the released MontePython code.
 
 

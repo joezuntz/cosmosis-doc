@@ -3,19 +3,13 @@ eboss_dr16_elg
 
 Compute the likelihood of eBOSS DR16 from ELG
 
-.. list-table::
-    
-   * - File
-     - likelihood/eboss_dr16/elg/eboss_dr16_elg.py
-   * - Attribution
-     -
-   * - URL
-     - https://svn.sdss.org/public/data/eboss/DR16cosmo/tags/v1_0_0/likelihoods/
-   * - Citation
-     - A. de Mattia et al, 2007.09008
-   * - Rules
-     -
-
++-----------+---------------------------------------------------------------------------+
+| File      | likelihood/eboss_dr16/elg/eboss_dr16_elg.py                               |
++-----------+---------------------------------------------------------------------------+
+| URL       | https://svn.sdss.org/public/data/eboss/DR16cosmo/tags/v1_0_0/likelihoods/ |
++-----------+---------------------------------------------------------------------------+
+| Citations | A. de Mattia et al, 2007.09008                                            |
++-----------+---------------------------------------------------------------------------+
 
 This module computes the likelihood of Dv_over_rd for BAO-only analysis and Dm_over_rd, Dh_over_rd, and fsigma8 for BAO+FS analysis, both using eBOSS DR16 measurements from ELG.
 

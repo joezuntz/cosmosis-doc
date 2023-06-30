@@ -3,33 +3,29 @@ astropy_background
 
 Calculate background cosmology using astropy
 
-.. list-table::
-    
-   * - File
-     - background/astropy_background/astropy_background.py
-   * - Attribution
-     - CosmoSIS Team (interface)
-   * -
-     - Astropy Team (library)
-   * - URL
-     - https://docs.astropy.org/en/stable/cosmology/index.html
-   * - Citation
-     - The Astropy Collaboration et al 2022 ApJ 935 167
-   * - Rules
-     -
-
++-------------+---------------------------------------------------------+
+| File        | background/astropy_background/astropy_background.py     |
++-------------+---------------------------------------------------------+
+| Attribution | CosmoSIS Team (interface)                               |
++-------------+---------------------------------------------------------+
+|             | Astropy Team (library)                                  |
++-------------+---------------------------------------------------------+
+| URL         | https://docs.astropy.org/en/stable/cosmology/index.html |
++-------------+---------------------------------------------------------+
+| Citations   | The Astropy Collaboration et al 2022 ApJ 935 167        |
++-------------+---------------------------------------------------------+
 
 The astropy cosmology library can compute background evolution distances as a function
 of redshift for a range of different cosmologies:
-    FlatLambdaCDM
-    FlatwCDM
-    Flatw0waCDM
-    LambdaCDM
-    wCDM
-    w0waCDM
-    w0wzCDM
-    w0wzCDM
-    wpwaCDM
+- FlatLambdaCDM
+- FlatwCDM
+- Flatw0waCDM
+- LambdaCDM
+- wCDM
+- w0waCDM
+- w0wzCDM
+- w0wzCDM
+- wpwaCDM
 
 This module requires the user to choose one of these models and then will read
 the appropriate parameters for that model and compute a range of distance measures.

@@ -3,23 +3,19 @@ linear_alignments
 
 Compute the terms P_II and P_GI which go into intrinsic aligment calculations
 
-.. list-table::
-    
-   * - File
-     - intrinsic_alignments/la_model/linear_alignments_interface.py
-   * - Attribution
-     - CosmoSIS team
-   * -
-     - Donnacha Kirk
-   * - URL
-     - 
-   * - Citation
-     - MNRAS 424 3 1647 (2012)
-   * -
-     - New J Phys 9 12 444 (2007)
-   * - Rules
-     -
-
++-------------+--------------------------------------------------------------+
+| File        | intrinsic_alignments/la_model/linear_alignments_interface.py |
++-------------+--------------------------------------------------------------+
+| Attribution | CosmoSIS team                                                |
++-------------+--------------------------------------------------------------+
+|             | Donnacha Kirk                                                |
++-------------+--------------------------------------------------------------+
+| URL         |                                                              |
++-------------+--------------------------------------------------------------+
+| Citations   | MNRAS 424 3 1647 (2012)                                      |
++-------------+--------------------------------------------------------------+
+|             | New J Phys 9 12 444 (2007)                                   |
++-------------+--------------------------------------------------------------+
 
 
 Intrinsic alignment refers to the extent to which galaxies align in the sky,
@@ -41,9 +37,9 @@ A number of variations to the LA model have been discussed since, and this modul
 implements three of them.  The history is a little convoluted as an error was found
 in early work missing a factor of (1+z), so one of our models is a corrected version
 of one of the other ones.  Our models are:
-    Bridle & King
-    Bridle & King (corrected)
-    Kirk, Rassat, Host, Bridle
+- Bridle & King
+- Bridle & King (corrected)
+- Kirk, Rassat, Host, Bridle
 
 See these papers for details of these models.
 

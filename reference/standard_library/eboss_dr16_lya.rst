@@ -3,19 +3,13 @@ eboss_dr16_lya
 
 Compute the likelihood of eBOSS DR16 from Lyman alpha
 
-.. list-table::
-    
-   * - File
-     - likelihood/eboss_dr16/lya/eboss_dr16_lya.py
-   * - Attribution
-     -
-   * - URL
-     - https://svn.sdss.org/public/data/eboss/DR16cosmo/tags/v1_0_0/likelihoods/
-   * - Citation
-     - du Mas des Bourboux, the Astrophysical Journal, 2020
-   * - Rules
-     -
-
++-----------+---------------------------------------------------------------------------+
+| File      | likelihood/eboss_dr16/lya/eboss_dr16_lya.py                               |
++-----------+---------------------------------------------------------------------------+
+| URL       | https://svn.sdss.org/public/data/eboss/DR16cosmo/tags/v1_0_0/likelihoods/ |
++-----------+---------------------------------------------------------------------------+
+| Citations | du Mas des Bourboux, the Astrophysical Journal, 2020                      |
++-----------+---------------------------------------------------------------------------+
 
 This module computes the likelihood of Dm and Dh using eBOSS DR16 measurement from Lyman alpha, auto and cross correlations.  These have only geometric information (no RSD). 
 This module computes the combined likelihoods of cross and auto. 

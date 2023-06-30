@@ -3,27 +3,23 @@ BBN
 
 Simple prior on Omega_b h^2 from light element abundances
 
-.. list-table::
-    
-   * - File
-     - likelihood/bbn/bbn_ombh2.py
-   * - Attribution
-     - B.D Fields
-   * -
-     - P. Molaro
-   * -
-     - S. Sarkar
-   * - URL
-     - http://pdg.lbl.gov/2013/reviews/rpp2013-rev-bbang-nucleosynthesis.pdf
-   * - Citation
-     - J. Beringer et al. (Particle Data Group), Phys. Rev. D86, 010001 (2012)
-   * -
-     - Cooke, R et al.  ApJ, 830, 2 (2016)
-   * -
-     - Pitrou, C. et al, MNRAS, 502, 2, 2474–2481, (2021)
-   * - Rules
-     - None.
-
++-------------+-------------------------------------------------------------------------+
+| File        | likelihood/bbn/bbn_ombh2.py                                             |
++-------------+-------------------------------------------------------------------------+
+| Attribution | B.D Fields                                                              |
++-------------+-------------------------------------------------------------------------+
+|             | P. Molaro                                                               |
++-------------+-------------------------------------------------------------------------+
+|             | S. Sarkar                                                               |
++-------------+-------------------------------------------------------------------------+
+| URL         | http://pdg.lbl.gov/2013/reviews/rpp2013-rev-bbang-nucleosynthesis.pdf   |
++-------------+-------------------------------------------------------------------------+
+| Citations   | J. Beringer et al. (Particle Data Group), Phys. Rev. D86, 010001 (2012) |
++-------------+-------------------------------------------------------------------------+
+|             | Cooke, R et al.  ApJ, 830, 2 (2016)                                     |
++-------------+-------------------------------------------------------------------------+
+|             | Pitrou, C. et al, MNRAS, 502, 2, 2474–2481, (2021)                      |
++-------------+-------------------------------------------------------------------------+
 
 This small module was written for CosmoSIS.
 

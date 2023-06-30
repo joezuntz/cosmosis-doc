@@ -3,19 +3,13 @@ extract_growth
 
 returns growth factor and growth rate by examining small-scale P(k)
 
-.. list-table::
-    
-   * - File
-     - structure/extract_growth/extract_growth.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+--------------------------------------------+
+| File        | structure/extract_growth/extract_growth.py |
++-------------+--------------------------------------------+
+| Attribution | CosmoSIS Team                              |
++-------------+--------------------------------------------+
+| URL         |                                            |
++-------------+--------------------------------------------+
 
 This simple module extracts the the linear growth factor D, and linear growth rate, from the matter power spectra
 It takes the z spacing from the input module

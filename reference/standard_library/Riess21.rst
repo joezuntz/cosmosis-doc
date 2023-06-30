@@ -3,21 +3,17 @@ Riess21
 
 Likelihood of hubble parameter H0 from Riess et al supernova sample
 
-.. list-table::
-    
-   * - File
-     - likelihood/riess21/riess21.py
-   * - Attribution
-     - Riess et al (measurement)
-   * -
-     - CosmoSIS team (code)
-   * - URL
-     - 
-   * - Citation
-     - Riess et al, ApJLett, 908, 1
-   * - Rules
-     - None.
-
++-------------+-------------------------------+
+| File        | likelihood/riess21/riess21.py |
++-------------+-------------------------------+
+| Attribution | Riess et al (measurement)     |
++-------------+-------------------------------+
+|             | CosmoSIS team (code)          |
++-------------+-------------------------------+
+| URL         |                               |
++-------------+-------------------------------+
+| Citations   | Riess et al, ApJLett, 908, 1  |
++-------------+-------------------------------+
 
 This small module was written for CosmoSIS.
 

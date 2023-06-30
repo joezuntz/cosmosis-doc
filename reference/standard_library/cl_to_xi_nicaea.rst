@@ -3,25 +3,21 @@ cl_to_xi_nicaea
 
 Compute WL correlation functions xi+, xi- from C_ell
 
-.. list-table::
-    
-   * - File
-     - shear/cl_to_xi_nicaea/nicaea_interface.so
-   * - Attribution
-     - Martin Kilbinger
-   * -
-     - Nicaea Team
-   * - URL
-     - 
-   * - Citation
-     - http://arxiv.org/abs/0810.5129
-   * - Rules
-     -
-
++-------------+-------------------------------------------+
+| File        | shear/cl_to_xi_nicaea/nicaea_interface.so |
++-------------+-------------------------------------------+
+| Attribution | Martin Kilbinger                          |
++-------------+-------------------------------------------+
+|             | Nicaea Team                               |
++-------------+-------------------------------------------+
+| URL         |                                           |
++-------------+-------------------------------------------+
+| Citations   | http://arxiv.org/abs/0810.5129            |
++-------------+-------------------------------------------+
 
 
 The correlation functions are related to the spectra via Bessel functions:
-xi_{(+/-)}(theta) = \int_0^\infty C_\ell J_{(0,4)}(\ell \theta) \ell d\ell / 2\pi
+:math:`xi_{(+/-)}(theta) = \int_0^\infty C_\ell J_{(0,4)}(\ell \theta) \ell d\ell / 2\pi`
 
 In this module that integral is done via a Hankel Transform.
 

@@ -3,30 +3,25 @@ cl_to_corr
 
 Compute correlation functions xi+, xi-, w, and gamma_t from C_ell
 
-.. list-table::
-    
-   * - File
-     - shear/cl_to_corr/cl_to_corr.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
-
++-------------+--------------------------------+
+| File        | shear/cl_to_corr/cl_to_corr.py |
++-------------+--------------------------------+
+| Attribution | CosmoSIS Team                  |
++-------------+--------------------------------+
+| URL         |                                |
++-------------+--------------------------------+
 
 The correlation functions are related to the spectra via Bessel functions:
-\xi_{+}(theta) = \int_0^\infty C^{ss}_\ell J_{0}(\ell \theta) \ell d\ell / 2\pi
-\xi_{-}(theta) = \int_0^\infty C^{ss}_\ell J_{4}(\ell \theta) \ell d\ell / 2\pi
-  w{-}(theta) = \int_0^\infty C^{gg}_\ell J_{4}(\ell \theta) \ell d\ell / 2\pi
-\gamma_t(theta) = \int_0^\infty C^{gs}_\ell J_{(0,4)}(\ell \theta) \ell d\ell / 2\pi
 
-where s=shear and g=galaxy position.
-In this module that integral is done via a Hankel Transform.
+:math:`\xi_{+}(\theta) = \int_0^\infty C^{ss}_\ell J_{0}(\ell \theta) \ell d\ell / 2\pi`
 
+:math:`\xi_{-}(\theta) = \int_0^\infty C^{ss}_\ell J_{4}(\ell \theta) \ell d\ell / 2\pi`
+
+:math:`w{-}(\theta) = \int_0^\infty C^{gg}_\ell J_{4}(\ell \theta) \ell d\ell / 2\pi`
+
+:math:`\gamma_t(\theta) = \int_0^\infty C^{gs}_\ell J_{(0,4)}(\ell \theta) \ell d\ell / 2\pi`
+
+where s=shear and g=galaxy position. In this module that integral is done via a Hankel Transform.
 
 
 Assumptions

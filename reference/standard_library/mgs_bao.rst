@@ -3,19 +3,15 @@ mgs_bao
 
 Compute the likelihood against SDSS MGS data
 
-.. list-table::
-    
-   * - File
-     - likelihood/mgs_bao/mgs_bao.py
-   * - Attribution
-     - MGS team
-   * - URL
-     - 
-   * - Citation
-     - A. Ross et al, MNRAS 449 (2015)
-   * - Rules
-     -
-
++-------------+---------------------------------+
+| File        | likelihood/mgs_bao/mgs_bao.py   |
++-------------+---------------------------------+
+| Attribution | MGS team                        |
++-------------+---------------------------------+
+| URL         |                                 |
++-------------+---------------------------------+
+| Citations   | A. Ross et al, MNRAS 449 (2015) |
++-------------+---------------------------------+
 
 This module gives a likelihood of the redshift-distance and redshift-Hubble
 relations in combined form D_v = (da**2 * (1+z)**2 * dr)**(1./3.) 

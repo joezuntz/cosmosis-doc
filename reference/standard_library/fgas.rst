@@ -3,21 +3,17 @@ fgas
 
 Likelihood of galaxy cluster gas-mass fractions
 
-.. list-table::
-    
-   * - File
-     - likelihood/fgas/fgas.so
-   * - Attribution
-     - Adam Mantz
-   * - URL
-     - http://www.slac.stanford.edu/~amantz/work/fgas14/
-   * - Citation
-     - Mantz et al., MNRAS, 440:2077 (2014)
-   * -
-     - http://arxiv.org/abs/1402.6212
-   * - Rules
-     - MIT license
-
++-------------+---------------------------------------------------+
+| File        | likelihood/fgas/fgas.so                           |
++-------------+---------------------------------------------------+
+| Attribution | Adam Mantz                                        |
++-------------+---------------------------------------------------+
+| URL         | http://www.slac.stanford.edu/~amantz/work/fgas14/ |
++-------------+---------------------------------------------------+
+| Citations   | Mantz et al., MNRAS, 440:2077 (2014)              |
++-------------+---------------------------------------------------+
+|             | http://arxiv.org/abs/1402.6212                    |
++-------------+---------------------------------------------------+
 
 Cluster gas mass fractions are a standard quantity whose value is related
 to the cosmic baryon mass fraction and whose apparent evolution depends

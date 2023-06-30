@@ -3,21 +3,15 @@ baryonic
 
 Apply baryonic effects to nonlinear pk based on hydrodynamic simulation measurements
 
-.. list-table::
-    
-   * - File
-     - structure/baryon_power_scaling/baryonic_interface.py
-   * - Attribution
-     - CosmoSIS Team
-   * -
-     - Angela Chen
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+------------------------------------------------------+
+| File        | structure/baryon_power_scaling/baryonic_interface.py |
++-------------+------------------------------------------------------+
+| Attribution | CosmoSIS Team                                        |
++-------------+------------------------------------------------------+
+|             | Angela Chen                                          |
++-------------+------------------------------------------------------+
+| URL         |                                                      |
++-------------+------------------------------------------------------+
 
 This module reads in Pk_nonlinear from previous modules modifies it, applying
 the ratio between DM-only and hydro simulations

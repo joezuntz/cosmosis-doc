@@ -3,19 +3,13 @@ qso
 
 Compute the likelihood of eBOSS DR14 D_v from QSO
 
-.. list-table::
-    
-   * - File
-     - likelihood/eboss/qso/eboss_dr14_qso.py
-   * - Attribution
-     -
-   * - URL
-     - 
-   * - Citation
-     - Ata et al MNRAS 473 1365-2966 (2017)
-   * - Rules
-     -
-
++-----------+----------------------------------------+
+| File      | likelihood/eboss/qso/eboss_dr14_qso.py |
++-----------+----------------------------------------+
+| URL       |                                        |
++-----------+----------------------------------------+
+| Citations | Ata et al MNRAS 473 1365-2966 (2017)   |
++-----------+----------------------------------------+
 
 This module computed the likelihood of D_v using eBOSS DR14 measurement from QSO.  This class inherits from the lrg likelihood class. We assume the likelihood on D_v is Gaussian.
 

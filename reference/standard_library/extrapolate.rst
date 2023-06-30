@@ -3,19 +3,13 @@ extrapolate
 
 Simple log-linear extrapolation of P(k) to high k
 
-.. list-table::
-    
-   * - File
-     - boltzmann/extrapolate/extrapolate_power.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - https://bitbucket.org/joezuntz/cosmosis
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+--------------------------------------------+
+| File        | boltzmann/extrapolate/extrapolate_power.py |
++-------------+--------------------------------------------+
+| Attribution | CosmoSIS Team                              |
++-------------+--------------------------------------------+
+| URL         | https://bitbucket.org/joezuntz/cosmosis    |
++-------------+--------------------------------------------+
 
 It is sometimes useful to extend matter power spectra P(k) to high values
 of k. These values are unphysical but are useful for numerical stability.

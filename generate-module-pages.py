@@ -1,6 +1,7 @@
 import sys
 import os
 import yaml
+import tabulate
 
 yaml_filename = "module.yaml"
 
@@ -88,7 +89,9 @@ likelihoods = {
     "jla",
     "mgs_bao",
     "pantheon",
+    "pantheon_plus",
     "planck2018",
+    "planck_py",
     "planck_sz",
     "strong_lens_time_delays",
     "wmap",
@@ -151,19 +154,7 @@ page_template = """{name}
 
 {purpose}
 
-.. list-table::
-    
-   * - File
-     - {interface_path}
-   * - Attribution
-{attribution_lines}
-   * - URL
-     - {url}
-   * - Citation
-{citation_lines}
-   * - Rules
-{rule_lines}
-
+{main_table}
 
 {explanation}
 
@@ -232,10 +223,38 @@ output_head1 = """.. list-table:: Output values
      - Type
      - Description
 """
+
+#    * - File
+#      - {interface_path}
+#    * - Attribution
+# {attribution_lines}
+#    * - URL
+#      - {url}
+#    * - Citation
+# {citation_lines}
+#    * - Rules
+# {rule_lines}
+
+
 def make_page_text(info):
     author_lines = [f"     - {a}" for a in info['attribution']]
-    info['attribution_lines'] = make_list_lines(info['attribution'])
-    info['citation_lines'] = make_list_lines(info['cite'])
+
+    rows = [
+        ["File", info['interface_path']],
+    ]
+    if info['attribution']:
+        rows.append(["Attribution", info['attribution'][0]])
+        for r in info['attribution'][1:]:
+            rows.append(["", r])
+
+    rows.append(["URL", info['url']])
+    if info['cite']:
+        rows.append(["Citations", info['cite'][0]])
+        for r in info['cite'][1:]:
+            rows.append(["", r])
+
+    info['main_table'] = tabulate.tabulate(rows, tablefmt="grid")
+
     info['rule_lines'] = make_list_lines(info['rules'])
 
     if (not info['assumptions']) or (len(info['assumptions']) == 1 and not info['assumptions'][0].strip()):

@@ -3,19 +3,13 @@ lrg
 
 Compute the likelihood of eBOSS DR14 D_v from LRG
 
-.. list-table::
-    
-   * - File
-     - likelihood/eboss/lrg/eboss_dr14_lrg.py
-   * - Attribution
-     -
-   * - URL
-     - 
-   * - Citation
-     -  Bautista et al ApJ 863 110 (2018)
-   * - Rules
-     -
-
++-----------+----------------------------------------+
+| File      | likelihood/eboss/lrg/eboss_dr14_lrg.py |
++-----------+----------------------------------------+
+| URL       |                                        |
++-----------+----------------------------------------+
+| Citations | Bautista et al ApJ 863 110 (2018)      |
++-----------+----------------------------------------+
 
 This module computed the likelihood of D_v using eBOSS DR14 measurement from LRG.  We assume the likelihood on D_v is Gaussian.
 

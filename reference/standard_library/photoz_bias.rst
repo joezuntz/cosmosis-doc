@@ -3,19 +3,13 @@ photoz_bias
 
 Modify a set of loaded n(z) distributions with a multiplicative or additive bias
 
-.. list-table::
-    
-   * - File
-     - number_density/photoz_bias/photoz_bias.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+-------------------------------------------+
+| File        | number_density/photoz_bias/photoz_bias.py |
++-------------+-------------------------------------------+
+| Attribution | CosmoSIS Team                             |
++-------------+-------------------------------------------+
+| URL         |                                           |
++-------------+-------------------------------------------+
 
 Photometric redshift distributions can contain biases - the actual distribution
 of galaxies in a survey can be different to the estimated one.

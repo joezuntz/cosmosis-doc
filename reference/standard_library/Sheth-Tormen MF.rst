@@ -3,19 +3,13 @@ Sheth-Tormen MF
 
 Code to compute the Sheth-Tormen mass function given Pk from CAMB, based on Komatsu's CRL
 
-.. list-table::
-    
-   * - File
-     - mass_function/mf_shethtormen/st_mf_module.so
-   * - Attribution
-     -
-   * - URL
-     - http://www.mpa-garching.mpg.de/~komatsu/crl/
-   * - Citation
-     - http://www.mpa-garching.mpg.de/~komatsu/crl/
-   * - Rules
-     -
-
++-----------+----------------------------------------------+
+| File      | mass_function/mf_shethtormen/st_mf_module.so |
++-----------+----------------------------------------------+
+| URL       | http://www.mpa-garching.mpg.de/~komatsu/crl/ |
++-----------+----------------------------------------------+
+| Citations | http://www.mpa-garching.mpg.de/~komatsu/crl/ |
++-----------+----------------------------------------------+
 
 This module calculates the Sheth-Tormen mass function given the linear matter power spectrum.
 

@@ -3,20 +3,15 @@ wmap
 
 Likelihood function of CMB from WMAP
 
-.. list-table::
-    
-   * - File
-     - likelihood/wmap9/wmap_interface.so
-   * - Attribution
-     - The WMAP Collaboration
-   * - URL
-     - 
-   * - Citation
-     - Hinshaw et al, ApJS, 208, 2, 19, 25
-   * - Rules
-     - "Likelihood released by WMAP Collaboration and packaged by cosmosis team.   Contact the latter with problems in the first instance. "
-
-
++-------------+-------------------------------------+
+| File        | likelihood/wmap9/wmap_interface.so  |
++-------------+-------------------------------------+
+| Attribution | The WMAP Collaboration              |
++-------------+-------------------------------------+
+| URL         |                                     |
++-------------+-------------------------------------+
+| Citations   | Hinshaw et al, ApJS, 208, 2, 19, 25 |
++-------------+-------------------------------------+
 
 The Wilkinson Microwave Anisotropy Probe measured the temperature
 and polarization of the CMB over the full sky in the K, Ka, Q, V, and W

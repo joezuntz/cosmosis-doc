@@ -3,23 +3,19 @@ distances
 
 Output cosmological distance measures for dynamical dark energy
 
-.. list-table::
-    
-   * - File
-     - background/dynamical_de_distances/distances.py
-   * - Attribution
-     - CosmoSIS team (code)
-   * - URL
-     - 
-   * - Citation
-     - Linder, E.V. 2003. Phys. Rev. Lett. 90:091301
-   * -
-     - Huterer, D., Turner, M.S. 2001. Phys. Rev. D64:123527
-   * -
-     - Wetterich, C. 2004 Physics Letters B, Volume 594
-   * - Rules
-     - None.
-
++-------------+-------------------------------------------------------+
+| File        | background/dynamical_de_distances/distances.py        |
++-------------+-------------------------------------------------------+
+| Attribution | CosmoSIS team (code)                                  |
++-------------+-------------------------------------------------------+
+| URL         |                                                       |
++-------------+-------------------------------------------------------+
+| Citations   | Linder, E.V. 2003. Phys. Rev. Lett. 90:091301         |
++-------------+-------------------------------------------------------+
+|             | Huterer, D., Turner, M.S. 2001. Phys. Rev. D64:123527 |
++-------------+-------------------------------------------------------+
+|             | Wetterich, C. 2004 Physics Letters B, Volume 594      |
++-------------+-------------------------------------------------------+
 
 This small module was written for CosmoSIS. This module computes the angular diameter distance, luminosity distance,
 and distance modulus for three different parametrisations of dark energy. w = w0 +(1-a)wa, w = w0+(ap-a)wa and and 2 parameter

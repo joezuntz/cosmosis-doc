@@ -3,19 +3,13 @@ consistency
 
 Deduce missing cosmological parameters and check consistency
 
-.. list-table::
-    
-   * - File
-     - utility/consistency/consistency_interface.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - Please maintain attribution.
-
++-------------+----------------------------------------------+
+| File        | utility/consistency/consistency_interface.py |
++-------------+----------------------------------------------+
+| Attribution | CosmoSIS Team                                |
++-------------+----------------------------------------------+
+| URL         |                                              |
++-------------+----------------------------------------------+
 
 There are various ways of parameterizing cosmologies with different advantages
 in different contexts.  This module takes a set of cosmological parameters and

@@ -3,19 +3,15 @@ balmes
 
 
 
-.. list-table::
-    
-   * - File
-     - strong_lensing/balmes_corasaniti/balmes.py
-   * - Attribution
-     - I. Balmes & P.S. Corasaniti
-   * - URL
-     - 
-   * - Citation
-     - arXiv:1206.5801 
-   * - Rules
-     - Please cite the relevant papers if you use this module.
-
++-------------+--------------------------------------------+
+| File        | strong_lensing/balmes_corasaniti/balmes.py |
++-------------+--------------------------------------------+
+| Attribution | I. Balmes & P.S. Corasaniti                |
++-------------+--------------------------------------------+
+| URL         |                                            |
++-------------+--------------------------------------------+
+| Citations   | arXiv:1206.5801                            |
++-------------+--------------------------------------------+
 
 
 Balmes & Corasaniti measured H0 using strong lensing systems.

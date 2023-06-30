@@ -3,19 +3,15 @@ log_w_model
 
 Implement Tripathi, Sangwan, Jassal (2017) w(z) model
 
-.. list-table::
-    
-   * - File
-     - background/log_w_model/log_w_model.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     - Tripathi, Sangwan, Jassal (2017)
-   * - Rules
-     -
-
++-------------+---------------------------------------+
+| File        | background/log_w_model/log_w_model.py |
++-------------+---------------------------------------+
+| Attribution | CosmoSIS Team                         |
++-------------+---------------------------------------+
+| URL         |                                       |
++-------------+---------------------------------------+
+| Citations   | Tripathi, Sangwan, Jassal (2017)      |
++-------------+---------------------------------------+
 
 This w(z) model is several of the example scripts; it uses
 w(z) = w_0 + w_1 log(1 + z)

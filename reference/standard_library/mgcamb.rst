@@ -3,31 +3,27 @@ mgcamb
 
 Modified Gravity Boltzmann and background integrator for BG, CMB, and matter power
 
-.. list-table::
-    
-   * - File
-     - boltzmann/mgcamb/camb.so
-   * - Attribution
-     - A. Hojjati
-   * -
-     - G.B. Zhao
-   * -
-     - L. Pogosian
-   * -
-     - A. Silvestri
-   * -
-     - Antony Lewis
-   * -
-     - Anthony Challinor
-   * - URL
-     - http://www.sfu.ca/~aha25/MGCAMB.html
-   * - Citation
-     - http://arxiv.org/abs/1106.4543
-   * -
-     - http://arxiv.org/abs/0809.3791
-   * - Rules
-     - Please abide by the conditions set out in the CAMB license if you use this module http://camb.info/CAMBsubmit.html
-
++-------------+--------------------------------------+
+| File        | boltzmann/mgcamb/camb.so             |
++-------------+--------------------------------------+
+| Attribution | A. Hojjati                           |
++-------------+--------------------------------------+
+|             | G.B. Zhao                            |
++-------------+--------------------------------------+
+|             | L. Pogosian                          |
++-------------+--------------------------------------+
+|             | A. Silvestri                         |
++-------------+--------------------------------------+
+|             | Antony Lewis                         |
++-------------+--------------------------------------+
+|             | Anthony Challinor                    |
++-------------+--------------------------------------+
+| URL         | http://www.sfu.ca/~aha25/MGCAMB.html |
++-------------+--------------------------------------+
+| Citations   | http://arxiv.org/abs/1106.4543       |
++-------------+--------------------------------------+
+|             | http://arxiv.org/abs/0809.3791       |
++-------------+--------------------------------------+
 
 See the CAMB module for a general introduction to CAMB.
 

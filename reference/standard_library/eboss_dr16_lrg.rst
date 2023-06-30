@@ -3,21 +3,15 @@ eboss_dr16_lrg
 
 Compute the likelihood of eBOSS DR16 from LRG
 
-.. list-table::
-    
-   * - File
-     - likelihood/eboss_dr16/lrg/eboss_dr16_lrg.py
-   * - Attribution
-     -
-   * - URL
-     - 
-   * - Citation
-     - J. Bautista et al, MNRAS 2020
-   * -
-     - H. Gil-Marin et al, MNRAS 2020
-   * - Rules
-     -
-
++-----------+---------------------------------------------+
+| File      | likelihood/eboss_dr16/lrg/eboss_dr16_lrg.py |
++-----------+---------------------------------------------+
+| URL       |                                             |
++-----------+---------------------------------------------+
+| Citations | J. Bautista et al, MNRAS 2020               |
++-----------+---------------------------------------------+
+|           | H. Gil-Marin et al, MNRAS 2020              |
++-----------+---------------------------------------------+
 
 This module computes the likelihood of Dm_over_rd and Dh_over_rd for BAO-only analysis and Dm_over_rd, Dh_over_rd, and fsigma8 for BAO+FS analysis, both using eBOSS DR16 measurements from LRG.  We assume likelihoods are Gaussian.
 

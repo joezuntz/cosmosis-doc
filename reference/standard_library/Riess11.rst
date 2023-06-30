@@ -3,23 +3,19 @@ Riess11
 
 Likelihood of hubble parameter H0 from Riess et al supernova sample
 
-.. list-table::
-    
-   * - File
-     - likelihood/riess11/riess11.py
-   * - Attribution
-     - Riess et al (measurement)
-   * -
-     - CosmoSIS team (code)
-   * - URL
-     - http://pdg.lbl.gov/2013/reviews/rpp2013-rev-bbang-nucleosynthesis.pdf
-   * - Citation
-     - Riess et al, ApJ, 730, 2, 119 (2011)
-   * -
-     - Riess et al, ApJ, 732, 2, 129 (2011)
-   * - Rules
-     - None.
-
++-------------+-----------------------------------------------------------------------+
+| File        | likelihood/riess11/riess11.py                                         |
++-------------+-----------------------------------------------------------------------+
+| Attribution | Riess et al (measurement)                                             |
++-------------+-----------------------------------------------------------------------+
+|             | CosmoSIS team (code)                                                  |
++-------------+-----------------------------------------------------------------------+
+| URL         | http://pdg.lbl.gov/2013/reviews/rpp2013-rev-bbang-nucleosynthesis.pdf |
++-------------+-----------------------------------------------------------------------+
+| Citations   | Riess et al, ApJ, 730, 2, 119 (2011)                                  |
++-------------+-----------------------------------------------------------------------+
+|             | Riess et al, ApJ, 732, 2, 129 (2011)                                  |
++-------------+-----------------------------------------------------------------------+
 
 This small module was written for CosmoSIS.
 

@@ -3,19 +3,13 @@ add_intrinsic
 
 Sum together intrinsic aligments with shear signal
 
-.. list-table::
-    
-   * - File
-     - shear/add_intrinsic/add_intrinsic.py
-   * - Attribution
-     - CosmoSIS team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+--------------------------------------+
+| File        | shear/add_intrinsic/add_intrinsic.py |
++-------------+--------------------------------------+
+| Attribution | CosmoSIS team                        |
++-------------+--------------------------------------+
+| URL         |                                      |
++-------------+--------------------------------------+
 
 Observerd shape spectra contain a sum of intrinsic and shear spectra, and the
 cross-correlation between them.  This module adds together these components,

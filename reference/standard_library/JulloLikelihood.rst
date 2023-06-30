@@ -3,21 +3,17 @@ JulloLikelihood
 
 Likelihood of Jullo et al (2012) measurements of a galaxy bias sample
 
-.. list-table::
-    
-   * - File
-     - likelihood/jullo_bias/jullo.py
-   * - Attribution
-     - Lucy Clerkin
-   * -
-     - CosmoSIS Team
-   * - URL
-     - http://www.sdss3.org
-   * - Citation
-     - http://arxiv.org/abs/1202.6491
-   * - Rules
-     -
-
++-------------+--------------------------------+
+| File        | likelihood/jullo_bias/jullo.py |
++-------------+--------------------------------+
+| Attribution | Lucy Clerkin                   |
++-------------+--------------------------------+
+|             | CosmoSIS Team                  |
++-------------+--------------------------------+
+| URL         | http://www.sdss3.org           |
++-------------+--------------------------------+
+| Citations   | http://arxiv.org/abs/1202.6491 |
++-------------+--------------------------------+
 
 Galaxy bias refers to the relative density of galaxies compared to underlying dark matter,
 and can be a function of scale and/or redshift.

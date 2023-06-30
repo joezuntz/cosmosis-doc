@@ -3,26 +3,18 @@ eboss_dr14_lya
 
 Compute the likelihood of eBOSS DR14 D_m and D_h from Lyman alpha
 
-.. list-table::
-    
-   * - File
-     - likelihood/eboss/lya/eboss_dr14_lya.py
-   * - Attribution
-     -
-   * - URL
-     - 
-   * - Citation
-     - de Sainte Agathe et al A&A 629 (2019)
-   * -
-     - Blomqvist et al A&A 629 (2019)
-   * - Rules
-     -
-
++-----------+----------------------------------------+
+| File      | likelihood/eboss/lya/eboss_dr14_lya.py |
++-----------+----------------------------------------+
+| URL       |                                        |
++-----------+----------------------------------------+
+| Citations | de Sainte Agathe et al A&A 629 (2019)  |
++-----------+----------------------------------------+
+|           | Blomqvist et al A&A 629 (2019)         |
++-----------+----------------------------------------+
 
 This module computes the likelihood of D_m and D_h using eBOSS DR14 measurement from Lyman alpha. At the moment, we are only using the combined measurements from auto and cross correlations. We use the chi2 table given at https://github.com/igmhub/picca/tree/master/data/deSainteAgatheetal2019/combined_stdFit.  The first column is alpha_parallel and the second alpha_perpendicular (sometimes called alpha_transverse) The relation between alphas and D_m and D_h is: alpha_perp = (Dm/rd)/(Dm_fid/rd_fid) alpha_par  = (Dh/rd)/(Dh_fid/rd_fid)
-We use the fiducial values from de Sainte Agathe et al as done in this paper.  We then relate the chi2 to the likelihood:
-        log(like) = -chi2/2
-
+We use the fiducial values from de Sainte Agathe et al as done in this paper.  We then relate the chi2 to the likelihood: log(like) = -chi2/2 
 
 
 Assumptions

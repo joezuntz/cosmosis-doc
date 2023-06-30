@@ -3,21 +3,15 @@ Tinker_MF
 
 Code to compute the Tinker et al. mass function given Pk from CAMB, based on Komatsu's CRL
 
-.. list-table::
-    
-   * - File
-     - mass_function/mf_tinker/tinker_mf_module.so
-   * - Attribution
-     -
-   * - URL
-     - http://www.mpa-garching.mpg.de/~komatsu/crl/
-   * - Citation
-     - http://www.mpa-garching.mpg.de/~komatsu/crl/
-   * -
-     - Tinker et al 2008
-   * - Rules
-     -
-
++-----------+----------------------------------------------+
+| File      | mass_function/mf_tinker/tinker_mf_module.so  |
++-----------+----------------------------------------------+
+| URL       | http://www.mpa-garching.mpg.de/~komatsu/crl/ |
++-----------+----------------------------------------------+
+| Citations | http://www.mpa-garching.mpg.de/~komatsu/crl/ |
++-----------+----------------------------------------------+
+|           | Tinker et al 2008                            |
++-----------+----------------------------------------------+
 
 This module calculates the Tinker et al. mass function given the linear matter power spectrum.
 

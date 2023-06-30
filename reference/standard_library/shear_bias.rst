@@ -3,19 +3,13 @@ shear_bias
 
 Modify a set of calculated shear C_ell with a multiplicative bias
 
-.. list-table::
-    
-   * - File
-     - shear/shear_bias/shear_bias.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+--------------------------------+
+| File        | shear/shear_bias/shear_bias.py |
++-------------+--------------------------------+
+| Attribution | CosmoSIS Team                  |
++-------------+--------------------------------+
+| URL         |                                |
++-------------+--------------------------------+
 
 Errors in cosmic shear measurement can lead to a multiplicative factor
 scaling the observed shear spectra.

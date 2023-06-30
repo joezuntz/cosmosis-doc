@@ -3,19 +3,15 @@ BOSS
 
 Compute the likelihood of supplied fsigma8(z=0.57), H(z=0.57), D_a(z=0.57), omegamh2, bsigma8(z=0.57)
 
-.. list-table::
-    
-   * - File
-     - likelihood/boss/boss_rsd.py
-   * - Attribution
-     - SDSS-III BOSS Team
-   * - URL
-     - http://www.sdss3.org
-   * - Citation
-     - http://arxiv.org/abs/1303.4486
-   * - Rules
-     -
-
++-------------+--------------------------------+
+| File        | likelihood/boss/boss_rsd.py    |
++-------------+--------------------------------+
+| Attribution | SDSS-III BOSS Team             |
++-------------+--------------------------------+
+| URL         | http://www.sdss3.org           |
++-------------+--------------------------------+
+| Citations   | http://arxiv.org/abs/1303.4486 |
++-------------+--------------------------------+
 
 This module calculates the likelihood using the CMASS only results from 
 Chuang et al. 2013 for fsigma8(z=0.57), H(z=0.57), D_a(z=0.57), omegamh2, bsigma8(z=0.57).

@@ -3,21 +3,17 @@ fast_pt
 
 Compute various 1-loop perturbation theory quantities
 
-.. list-table::
-    
-   * - File
-     - structure/fast_pt/fast_pt_interface.py
-   * - Attribution
-     - Niall Maccrann
-   * -
-     - Jonathan Blazek
-   * - URL
-     - https://github.com/JoeMcEwen/FAST-PT
-   * - Citation
-     - https://iopscience.iop.org/article/10.1088/1475-7516/2016/09/015
-   * - Rules
-     -
-
++-------------+------------------------------------------------------------------+
+| File        | structure/fast_pt/fast_pt_interface.py                           |
++-------------+------------------------------------------------------------------+
+| Attribution | Niall Maccrann                                                   |
++-------------+------------------------------------------------------------------+
+|             | Jonathan Blazek                                                  |
++-------------+------------------------------------------------------------------+
+| URL         | https://github.com/JoeMcEwen/FAST-PT                             |
++-------------+------------------------------------------------------------------+
+| Citations   | https://iopscience.iop.org/article/10.1088/1475-7516/2016/09/015 |
++-------------+------------------------------------------------------------------+
 
 The FAST-PT library computes a selection of quantities which are 
 integrals over the 3D matter power spectrum, coupled with itself by a
@@ -108,7 +104,7 @@ Setup Parameters
    * - C_window
      - real
      - 0.75
-     - Taper fourier coefficients at |m| > C_window * N/2
+     - Taper fourier coefficients at :math:`|m|` > C_window * N/2
    * - n_pad_fac
      - real
      - 1.0

@@ -3,49 +3,26 @@ wl_spectra_ppf
 
 Compute weak lensing C_ell from P(k,z) and MG D(k,z) with the Limber integral
 
-.. list-table::
-    
-   * - File
-     - shear/spectra-ppf/interface.so
-   * - Attribution
-     - CosmoSIS team
-   * -
-     - Matt Becker
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
-
++-------------+--------------------------------+
+| File        | shear/spectra-ppf/interface.so |
++-------------+--------------------------------+
+| Attribution | CosmoSIS team                  |
++-------------+--------------------------------+
+|             | Matt Becker                    |
++-------------+--------------------------------+
+| URL         |                                |
++-------------+--------------------------------+
 
 DEPRECATED: You should use the module cosmosis-standard-library/structure/projection_ppf/project_2d_ppf.py instead.
+This variant of the wl_spectra module includes modified gravity via the phenomenological D(k,z) which modifies the lensing kernel. Compare equations 33 and 34 of http://arxiv.org/pdf/1109.4583v3.pdf
+Intrinsic alignments under modified gravity are not correctly supported; please use intrinsic_alignments=F
 
-
-This variant of the wl_spectra module includes modified gravity
-via the phenomenological D(k,z) which modifies the lensing kernel.
-Compare equations 33 and 34 of http://arxiv.org/pdf/1109.4583v3.pdf
-
-Intrinsic alignments under modified gravity are not correctly
-supported; please use intrinsic_alignments=F
-
-
-The Limber approximation integrates a 3D power spectrum over the radial
-direction to get a 2D angular power spectrum.  It is an approximation 
-which is only valid on smaller scales.
-
-
-C_\ell =  A \int_0^{\chi_1} W_1(\chi) W_2(\chi) P(k=l/\chi, z(\chi)) / chi^2 d\chi
+The Limber approximation integrates a 3D power spectrum over the radial direction to get a 2D angular power spectrum.  It is an approximation  which is only valid on smaller scales.
+:math:`C_\ell =  A \int_0^{\chi_1} W_1(\chi) W_2(\chi) P(k=l/\chi, z(\chi)) / \chi^2 d\chi`
 
 The full integral must integrate over k(\ell) also.
-
-For weak lensing, the power spectrum is the matter power spectrum and the two
-kernel functions W depend on the redshift bins being used and the geometry.
-
-Parts of this code and the underlying implementation of limber are based on cosmocalc:
-https://bitbucket.org/beckermr/cosmocalc-public
-
+For weak lensing, the power spectrum is the matter power spectrum and the two kernel functions W depend on the redshift bins being used and the geometry.
+Parts of this code and the underlying implementation of limber are based on cosmocalc: https://bitbucket.org/beckermr/cosmocalc-public
 
 
 Assumptions

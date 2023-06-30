@@ -3,19 +3,13 @@ load_nz_fits
 
 Load a number density n(z) from a FITS file
 
-.. list-table::
-    
-   * - File
-     - number_density/load_nz_fits/load_nz_fits.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - If you use a file from a particular survey you should cite that survey
-
++-------------+---------------------------------------------+
+| File        | number_density/load_nz_fits/load_nz_fits.py |
++-------------+---------------------------------------------+
+| Attribution | CosmoSIS Team                               |
++-------------+---------------------------------------------+
+| URL         |                                             |
++-------------+---------------------------------------------+
 
 This module is designed to work with the number density part of the FITS
 files described in:
@@ -47,7 +41,7 @@ use the n(z) that understand the histogram form, is in our roadmap.
 Assumptions
 -----------
 
- - Data is provided in FITS extensions NZ_{NAME}
+ - Data is provided in FITS extensions NZ\_{NAME}
  - There are various subtleties to do with the sampling and form of the n(z) data
 
 
@@ -74,11 +68,11 @@ Setup Parameters
    * - prefix_extension
      - bool
      - True
-     - Add the prefix NZ_ to the names in data_sets when looking in the FITS file
+     - Add the prefix NZ\_ to the names in data_sets when looking in the FITS file
    * - prefix_section
      - bool
      - True
-     - Add the same NZ_ prefix to the section names used in the block.
+     - Add the same NZ\_ prefix to the section names used in the block.
    * - upsampling
      - int
      - 1.0

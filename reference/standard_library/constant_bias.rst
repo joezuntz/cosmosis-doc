@@ -3,19 +3,13 @@ constant_bias
 
 Apply a galaxy bias constant with k and z.
 
-.. list-table::
-    
-   * - File
-     - bias/constant_bias/constant_bias.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+-------------------------------------+
+| File        | bias/constant_bias/constant_bias.py |
++-------------+-------------------------------------+
+| Attribution | CosmoSIS Team                       |
++-------------+-------------------------------------+
+| URL         |                                     |
++-------------+-------------------------------------+
 
 Galaxy bias relates the distribution of galaxies to the underlying (dark) matter
 field whose skeleton they trace.

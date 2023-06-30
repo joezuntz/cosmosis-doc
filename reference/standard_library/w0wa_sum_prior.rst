@@ -3,19 +3,13 @@ w0wa_sum_prior
 
 Skip parameter sample without failing if w0+wa>0.
 
-.. list-table::
-    
-   * - File
-     - utility/exclude_w0_wa/w0wa_sum_prior.py
-   * - Attribution
-     - Jessie Muir
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - Please maintain attribution.
-
++-------------+-----------------------------------------+
+| File        | utility/exclude_w0_wa/w0wa_sum_prior.py |
++-------------+-----------------------------------------+
+| Attribution | Jessie Muir                             |
++-------------+-----------------------------------------+
+| URL         |                                         |
++-------------+-----------------------------------------+
 
 This module imposes a the requirement that  w_0+w_a<0, which
 ensures that w(a)= w_0 + (1-a)w_a  is always negative. 

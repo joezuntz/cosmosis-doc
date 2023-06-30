@@ -3,21 +3,17 @@ planck_sz
 
 Prior on sigma_8 * Omega_M ** 0.3 from Planck SZ cluster counts
 
-.. list-table::
-    
-   * - File
-     - likelihood/sz/sz.py
-   * - Attribution
-     - Planck collaboration (measurement)
-   * -
-     - CosmoSIS team (code)
-   * - URL
-     - 
-   * - Citation
-     - arXiv:1303.5080, Planck 2013 results. XX. Cosmology from Sunyaev-Zeldovich cluster counts
-   * - Rules
-     - None.
-
++-------------+-------------------------------------------------------------------------------------------+
+| File        | likelihood/sz/sz.py                                                                       |
++-------------+-------------------------------------------------------------------------------------------+
+| Attribution | Planck collaboration (measurement)                                                        |
++-------------+-------------------------------------------------------------------------------------------+
+|             | CosmoSIS team (code)                                                                      |
++-------------+-------------------------------------------------------------------------------------------+
+| URL         |                                                                                           |
++-------------+-------------------------------------------------------------------------------------------+
+| Citations   | arXiv:1303.5080, Planck 2013 results. XX. Cosmology from Sunyaev-Zeldovich cluster counts |
++-------------+-------------------------------------------------------------------------------------------+
 
 This small module was written for CosmoSIS.
 

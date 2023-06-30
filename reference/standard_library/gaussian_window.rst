@@ -3,19 +3,13 @@ gaussian_window
 
 Compute Gaussian n(z) window functions for weak lensing bins
 
-.. list-table::
-    
-   * - File
-     - number_density/gaussian_window/gaussian_window.py
-   * - Attribution
-     - CosmoSIS Team
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - You can do what you want with this file
-
++-------------+---------------------------------------------------+
+| File        | number_density/gaussian_window/gaussian_window.py |
++-------------+---------------------------------------------------+
+| Attribution | CosmoSIS Team                                     |
++-------------+---------------------------------------------------+
+| URL         |                                                   |
++-------------+---------------------------------------------------+
 
 This very simple module sets up fixed redshift n(z) bins for weak lensing.
  We should probably upgrade it to take the redshift and sigma from the 

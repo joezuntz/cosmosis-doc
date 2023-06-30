@@ -3,37 +3,33 @@ class
 
 Boltzmann and background integrator for BG, CMB, matter power, and more
 
-.. list-table::
-    
-   * - File
-     - boltzmann/class/class_interface.py
-   * - Attribution
-     - Julien Lesgourgues
-   * -
-     - Thomas Tram
-   * -
-     - Benjamin Audren
-   * -
-     - Simon Prunet
-   * -
-     - Jesus Torrado
-   * -
-     - Miguel Zumalacarregui
-   * -
-     - etc
-   * - URL
-     - http://class-code.net
-   * - Citation
-     - http://arxiv.org/abs/1104.2932
-   * -
-     - JCAP 07 (2011) 034
-   * -
-     - http://arxiv.org/abs/1104.2934
-   * -
-     - JCAP 09 (2011) 032
-   * - Rules
-     - You can use CLASS freely, provided that in your publications, you cite at least the paper CLASS II: Approximation schemes. Feel free to cite more CLASS papers!
-
++-------------+------------------------------------+
+| File        | boltzmann/class/class_interface.py |
++-------------+------------------------------------+
+| Attribution | Julien Lesgourgues                 |
++-------------+------------------------------------+
+|             | Thomas Tram                        |
++-------------+------------------------------------+
+|             | Benjamin Audren                    |
++-------------+------------------------------------+
+|             | Simon Prunet                       |
++-------------+------------------------------------+
+|             | Jesus Torrado                      |
++-------------+------------------------------------+
+|             | Miguel Zumalacarregui              |
++-------------+------------------------------------+
+|             | etc                                |
++-------------+------------------------------------+
+| URL         | http://class-code.net              |
++-------------+------------------------------------+
+| Citations   | http://arxiv.org/abs/1104.2932     |
++-------------+------------------------------------+
+|             | JCAP 07 (2011) 034                 |
++-------------+------------------------------------+
+|             | http://arxiv.org/abs/1104.2934     |
++-------------+------------------------------------+
+|             | JCAP 09 (2011) 032                 |
++-------------+------------------------------------+
 
 CLASS is one of the standard cosmology codes for evolving perturbations
 in the primordial universe into CMB and other power spectra, as

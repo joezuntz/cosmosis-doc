@@ -3,21 +3,15 @@ add_magnification
 
 Add magnification terms to C_ell
 
-.. list-table::
-    
-   * - File
-     - structure/magnification/add_magnification.py
-   * - Attribution
-     - Niall MacCrann
-   * -
-     - Jack Elvin-Poole
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+----------------------------------------------+
+| File        | structure/magnification/add_magnification.py |
++-------------+----------------------------------------------+
+| Attribution | Niall MacCrann                               |
++-------------+----------------------------------------------+
+|             | Jack Elvin-Poole                             |
++-------------+----------------------------------------------+
+| URL         |                                              |
++-------------+----------------------------------------------+
 
 Magnification affects both the galaxy density and galaxy galaxy-lensing spectra,
 adding extra terms to each.  The module finds and adds those terms.

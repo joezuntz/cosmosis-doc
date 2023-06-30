@@ -3,25 +3,21 @@ Cluster_mass
 
 Likelihood of z=1.59 Cluster mass from Santos et al. 2011
 
-.. list-table::
-    
-   * - File
-     - likelihood/cluster_mass/cluster_mass.py
-   * - Attribution
-     - Santos et al. 2011 (measurement)
-   * -
-     - Harrison & Coles 2012
-   * -
-     - CosmoSIS team (code)
-   * - URL
-     - 
-   * - Citation
-     - Santos et al. 2011 
-   * -
-     - Harrison & Coles 2012 
-   * - Rules
-     -
-
++-------------+-----------------------------------------+
+| File        | likelihood/cluster_mass/cluster_mass.py |
++-------------+-----------------------------------------+
+| Attribution | Santos et al. 2011 (measurement)        |
++-------------+-----------------------------------------+
+|             | Harrison & Coles 2012                   |
++-------------+-----------------------------------------+
+|             | CosmoSIS team (code)                    |
++-------------+-----------------------------------------+
+| URL         |                                         |
++-------------+-----------------------------------------+
+| Citations   | Santos et al. 2011                      |
++-------------+-----------------------------------------+
+|             | Harrison & Coles 2012                   |
++-------------+-----------------------------------------+
 
 This small module was written for CosmoSIS.
     The Extreme Value statistics module (evs) should be run in the pipeline prior to this module.

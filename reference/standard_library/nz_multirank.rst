@@ -3,19 +3,69 @@ nz_multirank
 
 Load, rank, and sample a set of density n(z) realisations from a FITS file
 
-.. list-table::
-    
-   * - File
-     - number_density/nz_multirank/nz_multirank.py
-   * - Attribution
-     - Juan P. Cordero, Ian Harrison
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     - If you use a file from a particular survey you should cite that survey
-
++-------------+---------------------------------------------+
+| File        | number_density/nz_multirank/nz_multirank.py |
++-------------+---------------------------------------------+
+| Attribution | J                                           |
++-------------+---------------------------------------------+
+|             | u                                           |
++-------------+---------------------------------------------+
+|             | a                                           |
++-------------+---------------------------------------------+
+|             | n                                           |
++-------------+---------------------------------------------+
+|             |                                             |
++-------------+---------------------------------------------+
+|             | P                                           |
++-------------+---------------------------------------------+
+|             | .                                           |
++-------------+---------------------------------------------+
+|             |                                             |
++-------------+---------------------------------------------+
+|             | C                                           |
++-------------+---------------------------------------------+
+|             | o                                           |
++-------------+---------------------------------------------+
+|             | r                                           |
++-------------+---------------------------------------------+
+|             | d                                           |
++-------------+---------------------------------------------+
+|             | e                                           |
++-------------+---------------------------------------------+
+|             | r                                           |
++-------------+---------------------------------------------+
+|             | o                                           |
++-------------+---------------------------------------------+
+|             | ,                                           |
++-------------+---------------------------------------------+
+|             |                                             |
++-------------+---------------------------------------------+
+|             | I                                           |
++-------------+---------------------------------------------+
+|             | a                                           |
++-------------+---------------------------------------------+
+|             | n                                           |
++-------------+---------------------------------------------+
+|             |                                             |
++-------------+---------------------------------------------+
+|             | H                                           |
++-------------+---------------------------------------------+
+|             | a                                           |
++-------------+---------------------------------------------+
+|             | r                                           |
++-------------+---------------------------------------------+
+|             | r                                           |
++-------------+---------------------------------------------+
+|             | i                                           |
++-------------+---------------------------------------------+
+|             | s                                           |
++-------------+---------------------------------------------+
+|             | o                                           |
++-------------+---------------------------------------------+
+|             | n                                           |
++-------------+---------------------------------------------+
+| URL         |                                             |
++-------------+---------------------------------------------+
 
 This module is designed to work with the number density part of the FITS
 files described in:
@@ -35,7 +85,7 @@ We can then sample from them directly rather than using nuisance to capture the
 full effect of the shapes of the redshift distributions, as well as their internal
 correlation.
 
-This module extends the load_nz_fits module to read multiple realisations, one per
+This module extends the load\_nz\_fits module to read multiple realisations, one per
 extension.
 It then ranks the realisations depending on the selected mode and maps it to a continuous
 hyper-parameter which can be sampled in the pipeline.
@@ -47,7 +97,7 @@ for better sampling efficiency over random sampling of the realisations.
 Assumptions
 -----------
 
- - Realisations are provided in FITS extensions NZ_{NAME}_realisation_{NUMBER} starting with NUMBER=0, in correlated order and without skips
+ - Realisations are provided in FITS extensions NZ {NAME}_realisation_{NUMBER} starting with NUMBER=0, in correlated order and without skips
 
 
 
@@ -144,7 +194,7 @@ Output values
      - real 1d
      - Redshift sample values
    * - 
-     - bin_
+     - bin\_
      - real 1d
      - n(z) at redshift sample values.  bin_1, bin_2, ...
 

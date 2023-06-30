@@ -3,21 +3,15 @@ NLfactor
 
 Compute nonlinear weyl potential (and other) spectrum by multiplying the linear spectrum with matter_power_nl/matter_power_lin
 
-.. list-table::
-    
-   * - File
-     - structure/nlfactor/NLfactor.py
-   * - Attribution
-     - Danielle Leonard
-   * -
-     - Angela Chen
-   * - URL
-     - None
-   * - Citation
-     -
-   * - Rules
-     - It assumes the nonlinearity of the target spectrum is due to the nonlinearity of the matter perturbation. You should also make sure that the linear k_h is not in a narrower range than the nonlinear k_h. Target nonlinear pk will be truncated to the nonlinear matter power k_h range.
-
++-------------+--------------------------------+
+| File        | structure/nlfactor/NLfactor.py |
++-------------+--------------------------------+
+| Attribution | Danielle Leonard               |
++-------------+--------------------------------+
+|             | Angela Chen                    |
++-------------+--------------------------------+
+| URL         |                                |
++-------------+--------------------------------+
 
 This module multiplies the target_section by the nonlinear boost (matter_power_nl/matter_power_lin).
 

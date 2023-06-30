@@ -3,27 +3,23 @@ camb
 
 Boltzmann and background integrator for BG, CMB, and matter power
 
-.. list-table::
-    
-   * - File
-     - boltzmann/camb/camb_interface.py
-   * - Attribution
-     - Antony Lewis
-   * -
-     - Anthony Challinor (camb)
-   * -
-     - Tilman Troester
-   * -
-     - Angela Chen (interface)
-   * - URL
-     - http://camb.info
-   * - Citation
-     - http://arxiv.org/abs/1201.3654
-   * -
-     - http://arxiv.org/abs/astro-ph/9911177
-   * - Rules
-     - Please abide by the conditions set out in the CAMB license if you use this module http://camb.info/CAMBsubmit.html
-
++-------------+---------------------------------------+
+| File        | boltzmann/camb/camb_interface.py      |
++-------------+---------------------------------------+
+| Attribution | Antony Lewis                          |
++-------------+---------------------------------------+
+|             | Anthony Challinor (camb)              |
++-------------+---------------------------------------+
+|             | Tilman Troester                       |
++-------------+---------------------------------------+
+|             | Angela Chen (interface)               |
++-------------+---------------------------------------+
+| URL         | http://camb.info                      |
++-------------+---------------------------------------+
+| Citations   | http://arxiv.org/abs/1201.3654        |
++-------------+---------------------------------------+
+|             | http://arxiv.org/abs/astro-ph/9911177 |
++-------------+---------------------------------------+
 
 The Code for Anisotropies in the Microwave Background, using the
 newer python interface, which must be installed separately.

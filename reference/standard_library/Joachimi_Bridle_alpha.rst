@@ -3,21 +3,15 @@ Joachimi_Bridle_alpha
 
 Calculate the gradient of the galaxy luminosity function at the limiting magnitude of the survey.
 
-.. list-table::
-    
-   * - File
-     - luminosity_function/Joachimi_Bridle_alpha/interface.py
-   * - Attribution
-     - CosmoSIS team
-   * -
-     - Simon Samuroff
-   * - URL
-     - 
-   * - Citation
-     -
-   * - Rules
-     -
-
++-------------+--------------------------------------------------------+
+| File        | luminosity_function/Joachimi_Bridle_alpha/interface.py |
++-------------+--------------------------------------------------------+
+| Attribution | CosmoSIS team                                          |
++-------------+--------------------------------------------------------+
+|             | Simon Samuroff                                         |
++-------------+--------------------------------------------------------+
+| URL         |                                                        |
++-------------+--------------------------------------------------------+
 
 
 The gradient of the cumulative galaxy luminosity function \alpha is sensitive to both redshift and magnitude limit of the survey 

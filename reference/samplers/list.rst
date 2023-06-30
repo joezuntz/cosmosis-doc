@@ -3,23 +3,24 @@ The List sampler
 
 Re-run existing chain samples
 
-+--------------+------------------------------------------+
-| | Name       | | list                                   |
-+--------------+------------------------------------------+
-| | Version    | | 1.0                                    |
-+--------------+------------------------------------------+
-| | Author(s)  | | CosmoSIS Team                          |
-+--------------+------------------------------------------+
-| | URL        | | https://bitbucket.org/joezuntz/cosmosis|
-+--------------+------------------------------------------+
-| | Citation(s)|                                          |
-+--------------+------------------------------------------+
-| | Parallelism| | embarrassing                           |
-+--------------+------------------------------------------+
++-------------+-----------------------------------------+
+| Name        | list                                    |
++-------------+-----------------------------------------+
+| Version     | 1.0                                     |
++-------------+-----------------------------------------+
+| Author(s)   | CosmoSIS Team                           |
++-------------+-----------------------------------------+
+| URL         | https://bitbucket.org/joezuntz/cosmosis |
++-------------+-----------------------------------------+
+| Citation(s) |                                         |
++-------------+-----------------------------------------+
+| Parallelism | embarrassing                            |
++-------------+-----------------------------------------+
 
 This is perhaps the second simplest sampler - it simply takes all its samples from a list in a file and runs them all with the new pipeline.
 
 This could probably be replaced with an importance sampler, and may be merged into it in future.
+
 
 
 
@@ -37,11 +38,18 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+------------+---------+-------------------------------------------------------------+----------+
-| | Parameter| | Type  | | Meaning                                                   | | Default|
-+------------+---------+-------------------------------------------------------------+----------+
-| | save     | | string| | if present the base-name to save the cosmology output from| | (empty)|
-|            |         | | each sample                                               |          |
-+------------+---------+-------------------------------------------------------------+----------+
-| | filename | | string| | cosmosis-format chain of input samples                    |          |
-+------------+---------+-------------------------------------------------------------+----------+
++----------+---------------------+----------------------------------------------------------------------------------+-----------+
+| Name     | Type                | Description                                                                      | Default   |
++==========+=====================+==================================================================================+===========+
+| filename | string              | cosmosis-format chain of input samples                                           |           |
++----------+---------------------+----------------------------------------------------------------------------------+-----------+
+| save     | string              | if present the base-name to save the cosmology output from each sample           | (empty)   |
++----------+---------------------+----------------------------------------------------------------------------------+-----------+
+| burn     | int, default=0      | Number of samples to skip from the start of the input file                       |           |
++----------+---------------------+----------------------------------------------------------------------------------+-----------+
+| thin     | int, default=1      | Process only every n'th samples from the input file                              |           |
++----------+---------------------+----------------------------------------------------------------------------------+-----------+
+| limits   | bool, default=False | Respect the parameter prior limits in the values file; otherwise use all samples |           |
++----------+---------------------+----------------------------------------------------------------------------------+-----------+
+
+
