@@ -16,7 +16,8 @@ Compute various weak lensing C\_ell from P(k,z) with the Limber integral
 DEPRECATED: You should use the module cosmosis-standard-library/structure/projection/project_2d.py instead.
 The Limber approximation integrates a 3D power spectrum over the radial direction to get a 2D angular power spectrum.  It is an approximation which is only valid on smaller scales.
 
-:math:`C_\ell =  A \int_0^{\chi_1} W_1(\chi) W_2(\chi) P(k=l/\chi, z(\chi)) / chi^2 d\chi`
+:math:`C_\ell =  A \int_0^{\chi_1} W_1(\chi) W_2(\chi) P(k=l/\chi, z(\chi)) / \chi^2 d\chi`
+
 The full integral must integrate over k(\ell) also.
 For weak lensing, the power spectrum is the matter power spectrum and the two kernel functions W depend on the redshift bins being used and the geometry.
 Parts of this code and the underlying implementation of limber are based on cosmocalc: https://bitbucket.org/beckermr/cosmocalc-public

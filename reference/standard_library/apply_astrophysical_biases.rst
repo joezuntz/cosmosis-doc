@@ -20,7 +20,9 @@ astrophysical processes in their formation and interaction history, the visible 
 the dark matter. Additionally, the precise relationship between their shapes and the total mass is dependent on 
 the details of how galaxies obtain intrinsic ellipticities. One can parameterise ignorance of these processes 
 using a series of scale and time dependent biases, which map the matter power spectrum onto the observable
-fields.   
+fields.
+
+This module applies galaxy biases and intrinsic alignments together to generate new 3D spectra.
 
 
 

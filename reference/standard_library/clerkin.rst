@@ -28,19 +28,19 @@ binned constant bias in obtaining unbiased estimates of
 cosmological parameters.
 
 The GTD model is:
-b(z) = c + (b_0 - c) / D(z)^alpha
+
+:math:`b(z) = c + (b_0 - c) / D(z)^\alpha`
 
 where D(z) is the growth factor.
 
 The Q model is:
-b(k) = (1+Q k^2) / (a+A k)
+
+:math:`b(k) = (1+Q k^2) / (a+A k)`
  
 This module creates bias fields and/or scales power spectra, 
 depending on the chosen  options
 
 The version of this model without redshift dependence is from Cole et al.
-
-
 
 
 Assumptions

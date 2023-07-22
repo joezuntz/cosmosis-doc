@@ -17,7 +17,7 @@ Compute WL correlation functions xi+, xi- from C_ell
 
 
 The correlation functions are related to the spectra via Bessel functions:
-:math:`xi_{(+/-)}(theta) = \int_0^\infty C_\ell J_{(0,4)}(\ell \theta) \ell d\ell / 2\pi`
+:math:`\xi_{(+/-)}(\theta) = \int_0^\infty C_\ell J_{(0/4)}(\ell \theta) \ell d\ell / 2\pi`
 
 In this module that integral is done via a Hankel Transform.
 

@@ -14,11 +14,10 @@ Compute anisotropy dispersion sigma(R,z) in cpp
 sigma(R,z) is the variance of cosmic density fluctuations on scales
 down to 8 Mpc/h.
 
-In Fourier space is given by sigma(R,z) = \int_0^\infty W^2(k R) k^2 P(k,z) / (2 \pi)^2 dk
+In Fourier space is given by :math:`sigma(R,z) = \int_0^\infty W^2(k R) k^2 P(k,z) / (2 \pi)^2 dk`
 
 The P(k,z) used could in general be linear or non-linear, but usually when people
 say sigma they mean the non-linear variant.
-
 
 
 Assumptions

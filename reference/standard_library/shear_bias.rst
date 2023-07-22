@@ -20,7 +20,7 @@ assuming model values of the multiplicative factor m, either per bin or for all 
 Since the bias can be different in different bins we have, for the general case
 including cross-spectra:
 
-C^{ij}_ell -> (1+m_i)(1+m_j) C^{ij}_ell
+:math:`C^{ij}_\ell -> (1+m_i)(1+m_j) C^{ij}_\ell`
 
 
 Assumptions

@@ -37,8 +37,11 @@ A number of variations to the LA model have been discussed since, and this modul
 implements three of them.  The history is a little convoluted as an error was found
 in early work missing a factor of (1+z), so one of our models is a corrected version
 of one of the other ones.  Our models are:
+
 - Bridle & King
+
 - Bridle & King (corrected)
+
 - Kirk, Rassat, Host, Bridle
 
 See these papers for details of these models.

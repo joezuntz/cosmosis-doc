@@ -17,6 +17,7 @@ Calculate background cosmology using astropy
 
 The astropy cosmology library can compute background evolution distances as a function
 of redshift for a range of different cosmologies:
+
 - FlatLambdaCDM
 - FlatwCDM
 - Flatw0waCDM

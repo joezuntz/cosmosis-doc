@@ -48,7 +48,7 @@ twopoint_maths = {
 
 twopoint_sys = {
     "add_intrinsic",
-    "ia_z_powerlap",
+    "ia_z_powerlaw",
     "apply_astrophysical_biases",
     "shear_bias",
     "kappa_beam",

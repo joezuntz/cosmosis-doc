@@ -108,7 +108,7 @@ Input values
    * - 
      - w
      - real
-     - -1
+     - -1.0
      - Dark energy EoS.
    * - 
      - h0
@@ -123,7 +123,7 @@ Input values
    * - 
      - n_run
      - real
-     - -1
+     - 0.0
      - Scalar spectral index running.
    * - 
      - a_s

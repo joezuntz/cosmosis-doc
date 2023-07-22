@@ -96,31 +96,31 @@ Setup Parameters
      - 
      - Maximum value of (k eta) to evolve for scalars. (default 2*lmax)
    * - do_tensors
-     - ???
+     - bool
      - False
      - Include tensor modes
    * - zmin
-     - ???
+     - real
      - 0
      - Min value to save P(k,z)
    * - zmax
-     - ???
+     - real
      - 4
      - Max value to save P(k,z)
    * - nz
-     - ???
+     - int
      - 
      - Number of z values to save P(k,z) (default 401, so that dz=0.01)
    * - do_nonlinear
-     - ???
+     - bool
      - False
      - Apply non-linear halofit corrections to matter-power.  Relevant only for lensing right now
    * - do_lensing
-     - ???
+     - bool
      - False
      - Include lensing of CMB, and save C_ell phi-phi
    * - high_ell_template
-     - ???
+     - str
      - 
      - Required for lensing - set to the file included in the camb dir (no default)
 

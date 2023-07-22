@@ -15,7 +15,7 @@ Compute window functions for photometric n(z)
 | URL         |                                           |
 +-------------+-------------------------------------------+
 
-This module takes inputs that specify the underlying spectroscopic (true) redshift distribution of the galaxies in the survey.  It then convolves this with a photometric error sigma(z) = sigma_0 (1+z) and optionally biases it.  It computes bin edges in the survey assuming equal numbers in each.
+This module takes inputs that specify the underlying spectroscopic (true) redshift distribution of the galaxies in the survey.  It then convolves this with a photometric error :math:`\sigma(z) = \sigma_0 (1+z)` and optionally biases it.  It computes bin edges in the survey assuming equal numbers in each.
 You can also specify fixed bin edges.
 
 
