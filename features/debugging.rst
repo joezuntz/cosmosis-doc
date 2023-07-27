@@ -23,11 +23,13 @@ You can set several options in the CosmoSIS parameter file to find problems more
 
 .. code-block:: ini
 
+    [runtime]
+    verbosity = debug
+
     [pipeline]
-    quiet=F
     debug=T
 
-Setting :code:`quiet=F` will print when each stage is reached so you can tell where errors happen.
+Setting the verbosity to its maximum debug setting will print out lots of general information
 
 Setting :code:`debug=T` will, after an error, print out a log of all the values saved to the CosmoSIS data block - if you are getting an error saying that some value has not been found in the block then this can be useful to figure out why.
 
@@ -98,3 +100,15 @@ If your code seems to be running out of memory, you can help track things down u
 This will print a memory report every 3 seconds, telling you how much memory cosmosis has used (the physical memory).
 
 This requires the ``psutil`` python module, which you can install with pip.
+
+Profiling
+=========
+
+If your code is taking a long time to run, you can profile it to find out which functions are slow::
+
+    cosmosis my_params.ini --profile profile.stats
+
+This will print out a record of the time taken in each function, and also save it to profile.stats so you can explore it more later.
+
+See the `Python Profiler documentation <https://docs.python.org/3/library/profile.html>`_ for more details of how to interpret the results.
+

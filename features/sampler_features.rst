@@ -52,7 +52,7 @@ Resuming Sampling
 
 Several samplers can resume sampling if they are interrupted for some reason.
 
-The Zeus, Emcee, and Metropolis samplers can be told to resume like this:
+The Zeus, Emcee, Multinest, Polychord, Nautilus, and Metropolis samplers can be told to resume like this:
 
 .. code-block:: ini
 
@@ -60,17 +60,15 @@ The Zeus, Emcee, and Metropolis samplers can be told to resume like this:
     resume = T
 
 
-and the Multinest and Polychord samplers can be resumed like this:
+The Multinest and Polychord need to be told an output file root to enable this:
 
 .. code-block:: ini
 
     [multinest]
     multinest_outfile_root = ./directory_to_save_progress
-    resume = T
 
     [polychord]
     polychord_outfile_root = ./directory_to_save_progress
-    resume = T
 
 
 If a sampler is interrupted then simply re-run the same command again to resume sampling.  If no old sampling information is found then the job will start afresh (so it is fine to put ``resume=T`` on the first run).

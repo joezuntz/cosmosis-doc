@@ -10,10 +10,26 @@ The :code:`sampler` parameter must be one of the CosmoSIS samplers.  It determin
 
 The :code:`root` parameter changes how paths to modules in the parameter file are looked for.  All paths are defined relative to the root::
 
+The :code:`verbosity` setting can be used to control how much output is printed to the screen.  It can either be set to a number from 0 to 50,
+where 50 is the noisiest and 0 is silent, or to one of the following strings::
+
+    debug 40 - extra information on proposals will be printed for some samplers
+    noisy = 35 - extra information will be printed about pipeline stage progress
+    standard = 30 - likelihood will be printed for every evaluated parameter set
+    quiet = 20 - likelihoods will not be printed but general progress will
+    muted 10 - no general progress will be printed
+    silent -1 - nothing will be printed during sampling
+
+
+For example::
+
     [runtime]
     sampler = metropolis
     ; This is the default value of root:
     root = .
+    verbosity = quiet
+
+
 
 
 Sampler Options
@@ -38,21 +54,7 @@ All the samplers except the test sampler generate output chain files. You can ch
     filename = my_output_chain.txt
     ; the default format is "text".  It can also be set to "fits".
     format = text
-    verbosity = noisy
 
-
-The verbosity parameter can be set to any of these values::
-
-    highest
-    debug
-    noisy
-    standard
-    gentle
-    quiet
-    silent
-
-Or a value from 0 (silent) to 50 (highest).
-The verbosity settings in the code are a little mixed up right now, and the biggest effect can actually be had by modifying the "quiet" parameter described below in the :code:`[pipeline]` section.  This will be addressed in future releases.
 
 
 Pipeline Options
@@ -66,7 +68,6 @@ It must have these parameters::
     modules = consistency camb jla riess11
     values = demos/values5.ini
     likelihoods = jla riess
-    quiet=T
     debug=F
     timing=F
     extra_output = cosmological_parameters/Yhe
@@ -76,8 +77,6 @@ The **modules** parameter must contain a sequence of the modules that make up th
 The **values** parameter must point to the values file, which defines what parameters are put in to the start of the pipeline.  The path is relative to the current working directory, not to the parameter file.
 
 The **likelihoods** parameter defines which likelihoods are extracted from the pipeline.  After running the pipeline CosmoSIS looks in the data block for parameters called :code:`X_LIKE` for each X in the list given here. If this parameter is not set then all available likelihoods are used.
-
-The **quiet** parameter tells the code to minimize the output it prints out if it is set to "T".
 
 The **debug** parameter can be set to "T" to print out more detailed debugging output if the pipeline fails.  It will print out the complete list of all things written to and read from the pipeline.
 
