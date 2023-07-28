@@ -77,7 +77,7 @@ NERSC
 
 There is a globally-accessible CosmoSIS installation for the NERSC machine Perlmutter.  You can access it by running::
 
-    source $CFS/des/zuntz/cosmosis-global/setup-cosmosis-nersc
+    source /dvs_ro/cfs/projectdirs/des/zuntz/cosmosis-global/setup-cosmosis3
 
 This will set all the necessary environment variables; you can then clone the cosmosis-standard-library and the make command should work::
 
@@ -93,7 +93,7 @@ If you need your own python environment to install new dependencies, you can do 
 
 That will make a new environment in the ./env directory, which you can start using by doing::
 
-    source $CFS/des/zuntz/cosmosis-global/setup-cosmosis-nersc ./env
+    source /dvs_ro/cfs/projectdirs/des/zuntz/cosmosis-global/setup-cosmosis3 ./env
 
 You can then pip or conda install things in your new environment.
 
