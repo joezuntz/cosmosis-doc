@@ -99,6 +99,16 @@ You can then pip or conda install things in your new environment.
 
 If your dependency may be generally useful please open an issue and we can install it centrally also: https://github.com/joezuntz/cosmosis/issues/
 
+Jupyter at NERSC
+================
+
+After setting up the conda environment as described above, you can create a Jupyter "kernel" which lets you run notebooks in that environment with::
+
+    python -m ipykernel install --user --name cosmosis-$(cosmosis --version)
+
+Then you can select the kernel in the Jupyter notebook interface at jupyter.nersc.gov.
+
+
 Installing manually on clusters and supercomputers
 ==================================================
 
