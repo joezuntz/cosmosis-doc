@@ -286,6 +286,11 @@ Input values
      - 
      - Primordial scalar spectral amplitude
    * - 
+     - sigma_8
+     - real
+     - 
+     - Amplitude of linear perturbations at z=0 on scales of 8 Mpc/h. Only A_s or sigma_8 should be provided.
+   * - 
      - hubble
      - real
      - 

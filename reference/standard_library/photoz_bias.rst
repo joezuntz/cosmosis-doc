@@ -65,6 +65,10 @@ Setup Parameters
      - bool
      - True
      - Whether to use one value per bin, If False, use one value for all bins.
+   * - output_deltaz_section_name
+     - string
+     - 
+     - If set, compute the mean of the shifted n(z) and writes it to the specified section.
 
 
 Input values
@@ -117,5 +121,9 @@ Output values
      - bin_i
      - real 1d
      - n(z) for i=1..nbin. Modified n(z) estimates replaced old value
+   * - delta_z_out
+     - bin_i
+     - real 1d
+     - mean of the new n(z) for i=1..nbin.
 
 

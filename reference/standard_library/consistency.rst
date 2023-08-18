@@ -24,57 +24,59 @@ parameter, and vice versa.  This is off by default as it's a little slow.
 It matches the CosmoMC version to about 0.2%, which is enough for testing the
 effects of changing prior but not for precision comparison of the value itself.
 
-The following relations are used:
+The below relations are used by default. These can either be replaced entirely by
+those in a file given by the relations_file setup parameter or added to as a comma
+separated list using the extra_relations setup parameter.
 
-omega_m = ommh2/h/h
+omega_m=ommh2/h/h
 
-omega_b = ombh2/h/h
+omega_b=ombh2/h/h
 
-omega_c = omch2/h/h
+omega_c=omch2/h/h
 
-omega_nu = omnuh2/h/h
+omega_nu=omnuh2/h/h
 
-ommh2 = omega_m*h*h
+ommh2=omega_m*h*h
 
-ombh2 = omega_b*h*h
+ombh2=omega_b*h*h
 
-omch2 = omega_c*h*h
+omch2=omega_c*h*h
 
-omnuh2 = omega_nu*h*h
+omnuh2=omega_nu*h*h
 
-omch2 = ommh2-ombh2
+omch2=ommh2-ombh2
 
-ommh2 = omch2+ombh2
+ommh2=omch2+ombh2
 
-baryon = omega_b/omega_m
+baryon=omega_b/omega_m
 
-omega_b = omega_m*baryon_fraction
+omega_b=omega_m*baryon_fraction
 
-omega_m = omega_b/baryon_fraction
+omega_m=omega_b/baryon_fraction
 
-baryon_fraction = ombh2/ommh2
+baryon_fraction=ombh2/ommh2
 
-ombh2 = ommh2*baryon_fraction
+ombh2=ommh2*baryon_fraction
 
-ommh2 = ombh2/baryon_fraction
+ommh2=ombh2/baryon_fraction
 
-omega_m = omega_b+omega_c
+omega_m=omega_b+omega_c
 
-h = hubble/100
+h=hubble/100
 
-hubble = h*100
+hubble=h*100
 
-omega_lambda = 1-omega_m-omega_k-omega_nu
+omega_lambda=1-omega_m-omega_k-omega_nu
 
-omega_m = 1-omega_lambda-omega_k-omega_nu
+omega_m=1-omega_lambda-omega_k-omega_nu
 
-omega_k = 1-omega_m-omega_lambda-omega_nu
+omega_k=1-omega_m-omega_lambda-omega_nu
 
-omega_nu = 1-omega_m-omega_lambda-omega_k
+omega_nu=1-omega_m-omega_lambda-omega_k
 
-mnu = omnuh2 * 93.14
+mnu=omnuh2*93.14
 
-omnuh2 = mnu / 93.14
+omnuh2=mnu/93.14
 
 
 Assumptions
@@ -109,7 +111,13 @@ Setup Parameters
    * - relations_file
      - str
      - 
-     - Path to an alternative parameter relations file
+     - Path to an alternative parameter relations file. Relations should be specified in the form 'new_parameter=parameter_b*parameter_b' with one per line.
+
+   * - extra_relations
+     - str
+     - 
+     - Extra relations to be added to the default list. Relations should be specified in the form 'new_parameter=parameter_b*parameter_b,new_parameter2=parameter_d/parameter_e' 
+
 
 
 Input values
