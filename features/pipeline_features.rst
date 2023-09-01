@@ -104,4 +104,4 @@ You can now test your pipeline, calling ``pipeline.posterior`` or ``pipeline.lik
 
 The output will be an astropy table with the samples and likelihoods.
 
-You can use derived parameters. See the ``LikelihoodPipeline.from_likelihood_function`` docstring for details.
+You can also use derived parameters or supply non-uniform priors. See the ``LikelihoodPipeline.from_likelihood_function`` docstring for details.
