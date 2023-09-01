@@ -57,3 +57,51 @@ Then you can create a graph from the command line using the ``--graph`` flag and
 And example is shown below:
 
 .. image:: /images/des-y1.png
+
+
+Making a pipeline from a single likelihood function
+----------------------------------------------------
+
+*New in version 3.3*
+
+If you have a single likelihood function that you want to use as a pipeline (so that you are really just using CosmoSIS for its sampling features), then you can do it like this:
+
+.. code-block:: python
+
+    import cosmosis
+
+    def log_like(x):
+        # your likelihood function here
+        return log_like
+
+    param_ranges = [
+        (-1.0, 0.0, 1.0),
+        # ...
+        # min, start, and max of each parameter of the likelihood
+    ]
+
+    pipeline = cosmosis.LikelihoodPipeline.from_likelihood_function(log_like, param_ranges)
+
+
+You can now test your pipeline, calling ``pipeline.posterior`` or ``pipeline.likelihood``, or run a sampler like this:
+
+.. code-block:: python
+
+    sampler_config = {
+        "runtime": {
+            "sampler": "emcee",
+            "verbosity": "quiet",
+        },
+
+        "emcee": {
+            "walkers": 100,
+            # ... other emcee parameters
+        },
+    }
+
+    status, output = cosmosis.run_cosmosis(sampler_config, pipeline=pipeline, output='astropy')
+
+
+The output will be an astropy table with the samples and likelihoods.
+
+You can use derived parameters. See the ``LikelihoodPipeline.from_likelihood_function`` docstring for details.

@@ -1,7 +1,7 @@
 CosmoSIS: The COSMOlogical Survey Inference System
 ==================================================
 
-CosmoSIS is a **cosmological parameter estimation code**.  It is now at version 3.2
+CosmoSIS is a **cosmological parameter estimation code**.  It is now at version 3.3
 
 It is a framework for structuring cosmological parameter estimation with a focus on flexibility, re-usability, debugging, verifiability, and code sharing in the form of calculation modules.  It consolidates and connects together existing code for predicting cosmic observables, and makes mapping out experimental likelihoods with a range of different techniques much more accessible.
 
