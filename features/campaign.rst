@@ -129,7 +129,7 @@ Then it has a number of options:
 If you use the ``--run`` flag to set a run going then you can also give the ``--mpi`` flag to run it under MPI. In that case
 you should run the whole ``cosmosis-campaign`` command under MPI, e.g.
 
-``mpirun -n 4 cosmosis-campaign my_campaign.yml --run my_run``
+``mpirun -n 4 cosmosis-campaign my_campaign.yml --run my_run --mpi``
 
 
 Using the campaign tool from a Python script or Jupyter notebook
