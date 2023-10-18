@@ -8,7 +8,7 @@ A section called :code:`[runtime]` must be present in the parameter file.  It ha
 
 The :code:`sampler` parameter must be one of the CosmoSIS samplers.  It determines how the parameter space is explored.
 
-The :code:`root` parameter changes how paths to modules in the parameter file are looked for.  All paths are defined relative to the root::
+The :code:`root` parameter changes how paths to modules in the parameter file are looked for.  All paths are defined relative to the root.
 
 The :code:`verbosity` setting can be used to control how much output is printed to the screen.  It can either be set to a number from 0 to 50,
 where 50 is the noisiest and 0 is silent, or to one of the following strings::

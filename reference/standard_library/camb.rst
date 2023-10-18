@@ -659,15 +659,15 @@ Output values
    * - 
      - pp
      - real 1d
-     - Phi-Phi lensing spectrum; note ell scaling: ell * (ell+1) C_ell^PhiPhi. Only if mode=cmb or all
+     - Phi-Phi lensing spectrum; ell * (ell+1) C_ell^PhiPhi  / 2pi. Only if mode=cmb or all
    * - 
      - pt
      - real 1d
-     - Phi-T lensing spectrum; note ell scaling: ell * (ell+1) C_ell^PhiT. Only if mode=cmb or all
+     - Phi-T lensing spectrum; ell * (ell+1) C_ell^PhiT / 2pi Only if mode=cmb or all
    * - 
      - pe
      - real 1d
-     - Phi-E lensing spectrum; note ell scaling: ell * (ell+1) C_ell^PhiE. Only if mode=cmb or all
+     - Phi-E lensing spectrum;  ell * (ell+1) C_ell^PhiE / 2pi Only if mode=cmb or all
    * - matter_power_lin
      - z
      - real 1d

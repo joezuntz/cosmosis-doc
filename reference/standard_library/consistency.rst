@@ -20,63 +20,13 @@ If you specify inconsistent parameters (e.g. omega values that do not add up to 
 then an error status is returned.
 
 You can set an option to also calculate the Hubble parameter from the CosmoMC theta
-parameter, and vice versa.  This is off by default as it's a little slow.
-It matches the CosmoMC version to about 0.2%, which is enough for testing the
-effects of changing prior but not for precision comparison of the value itself.
+parameter, and vice versa.  This is off by default as it's a little slower.
+It uses the camb code directly so should match up.
 
-The below relations are used by default. These can either be replaced entirely by
-those in a file given by the relations_file setup parameter or added to as a comma
-separated list using the extra_relations setup parameter.
+The standard set of relations is in consistency.py and relates the standard LCDM
+parameters, including massive neutrinos.
 
-omega_m=ommh2/h/h
-
-omega_b=ombh2/h/h
-
-omega_c=omch2/h/h
-
-omega_nu=omnuh2/h/h
-
-ommh2=omega_m*h*h
-
-ombh2=omega_b*h*h
-
-omch2=omega_c*h*h
-
-omnuh2=omega_nu*h*h
-
-omch2=ommh2-ombh2
-
-ommh2=omch2+ombh2
-
-baryon=omega_b/omega_m
-
-omega_b=omega_m*baryon_fraction
-
-omega_m=omega_b/baryon_fraction
-
-baryon_fraction=ombh2/ommh2
-
-ombh2=ommh2*baryon_fraction
-
-ommh2=ombh2/baryon_fraction
-
-omega_m=omega_b+omega_c
-
-h=hubble/100
-
-hubble=h*100
-
-omega_lambda=1-omega_m-omega_k-omega_nu
-
-omega_m=1-omega_lambda-omega_k-omega_nu
-
-omega_k=1-omega_m-omega_lambda-omega_nu
-
-omega_nu=1-omega_m-omega_lambda-omega_k
-
-mnu=omnuh2*93.14
-
-omnuh2=mnu/93.14
+It also converts log1e10As or A_s_1e9 to A_s, and (S_8, Omega_m) to (sigma_8, Omega_m).
 
 
 Assumptions
@@ -197,6 +147,21 @@ Input values
      - real
      - 
      - Dimensionless Hubble h = H_0 / 100 km/s/Mpc
+   * - 
+     - log1e10As
+     - real
+     - 
+     - log (10**10 * A_s) parameter. Ignored if not present
+   * - 
+     - A_s_1e9
+     - real
+     - 
+     - 10**9 * A_s parameter. Ignored if not present
+   * - 
+     - S_8
+     - real
+     - 
+     - sigma_8 * (omega_m/0.3)**0.5 parameter. Ignored if not present.
 
 
 Output values
@@ -263,5 +228,13 @@ Output values
      - h
      - real
      - Dimensionless Hubble h = H_0 / 100 km/s/Mpc
+   * - 
+     - A_s
+     - real
+     - Amplitude of primordial fluctuations. Only if log1e10As or A_s_1e9 is present on input.
+   * - 
+     - sigma_8
+     - real
+     - RMS mass fluctuation in 8 Mpc/h spheres. Only if S_8 is present on input.
 
 

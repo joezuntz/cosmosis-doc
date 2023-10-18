@@ -21,10 +21,17 @@ boltzmann = {
     "mgcamb",
 }
 
+emulators = {
+    "bacco_emulator",
+    "CosmicEmu",
+    "EuclidEmulator2",
+    "FrankenEmu",
+}
+
+
 structure = {
     "CRL_Eisenstein_Hu",
-    "CosmicEmu",
-    "FrankenEmu",
+    "pyhmcode",
     "Extreme_Value_Statistics",
     "Press_Schechter_MF",
     "Sheth-Tormen MF",
@@ -42,6 +49,7 @@ twopoint_maths = {
     "cl_to_xi_nicaea",
     "cl_to_xi_wigner_d",
     "project_2d",
+    "cosebis",
     "wl_spectra",
     "wl_spectra_ppf",
 }
@@ -74,6 +82,7 @@ sample_properties = {
 likelihoods = {
     "2pt",
     "6dFGS",
+    "act-dr6-lens",
     "BBN",
     "BICEP2",
     "BOSS",
@@ -121,12 +130,14 @@ misc = {
     "delete",
     "copy",
     "rename",
+    "correlated_priors",
 }
 
 
 categories = {
     "Background": background,
     "Boltzmann": boltzmann,
+    "Emulators": emulators,
     "Structure": structure,
     "Two-point Mathemetics": twopoint_maths,
     "Two-point Systematics": twopoint_sys,
@@ -139,7 +150,8 @@ categories = {
 category_blurb = {
     "Background": "These modules calculate quantities related to the average background expansion of the Universe.",
     "Boltzmann": "Boltzmann codes evolve cosmic perturbations from the early Universe through recombination and to late times, and power spectra of matter, the CMB, and other quantities.",
-    "Structure": "These modules compute aspects of cosmic structure, for example by emulating matter behaviour, integrating over it, or calculating halo model quantities.",
+    "Emulators": "These modules emulate aspects of cosmic structure based on fits to simulations.",
+    "Structure": "These modules compute aspects of cosmic structure, for example by integrating over cosmic structure, or calculating halo model quantities.",
     "Two-point Mathemetics": "These modules perform mathematical claculations associated with two-point statistics, mostly on a sphere.",
     "Two-point Systematics": "These modules compute and apply quantities associated with systematics errors on two-point (and potentially other) quantities.",
     "Sample Properties": "These modules compute properties, mostly number density, of galaxy samples.",
