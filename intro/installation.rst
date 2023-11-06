@@ -46,6 +46,16 @@ Then, whichever you do, run these commands to install everything and download th
     cosmosis-build-standard-library main
 
 
+If you find this takes a very long time, you can try instead (mamba is a faster version of conda)::
+
+    chmod +x Miniforge3.sh
+    ./Miniforge3.sh -b -p ./env 
+    source ./env/bin/activate
+    conda install -y mamba
+    mamba install -y cosmosis cosmosis-build-standard-library
+    source cosmosis-configure
+    cosmosis-build-standard-library main
+
 This will make a new directory cosmosis-standard-library with the cosmology packages in. Explore that directory to start using CosmoSIS. 
 
 Whenever you start a fresh terminal shell you need to run these commands to get set up again::
@@ -66,6 +76,16 @@ If you already have conda installed on your computer, then you can create a new 
     cosmosis-build-standard-library
 
 This will make a new directory cosmosis-standard-library with the cosmology packages in.
+
+If you find this takes a very long time, you can try instead (mamba is a faster version of conda)::
+
+    conda create -p ./env -c conda-forge mamba
+    conda activate ./env
+    mamba install -y cosmosis cosmosis-build-standard-library
+    source cosmosis-configure
+    cosmosis-build-standard-library main
+
+
 
 Whenever you start a fresh terminal shell you need to run these commands to get set up again::
 
