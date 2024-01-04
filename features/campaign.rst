@@ -31,6 +31,8 @@ The file can have four top-level keys:
 
 - ``include`` - either a list or a string, this specifies other YAML campaign files to load before the current one.
 
+- ``output_name`` - a string to use as the format for all output files. This must include the string ``{name}`` which will be replaced by the name of the run. You can put other things before and after ``{name}`` to customize the output chain file names.
+
 Runs
 ****
 
