@@ -95,6 +95,7 @@ likelihoods = {
     "boss_dr12",
     "fgas",
     "h0licow",
+    "hsc_cosmic_shear",
     "jla",
     "mgs_bao",
     "pantheon",
@@ -112,10 +113,12 @@ likelihoods = {
     "eboss_dr16_elg",
     "eboss_dr16_lya",
     "Riess21",
+    "sacc_like",
     "lrg",
     "qso",
     "eboss_dr14_lya",
     "des-y3-bao",
+    "tdcosmo",
 }
 
 

@@ -692,5 +692,13 @@ Output values
      - p_k
      - real 2d
      - Non-linear power spectrum at samples in (Mpc/h)^-3.
+   * - transfer_func
+     - k_h
+     - real 1d
+     - Wavenumbers k of samples in Mpc/h. Different than the k of power spectra!
+   * - 
+     - t_k
+     - real 1d
+     - Linear transfer function at z=0.
 
 

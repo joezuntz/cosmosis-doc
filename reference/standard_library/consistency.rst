@@ -143,7 +143,7 @@ Input values
      - 
      - Hubble parameter H_0 in km/s/Mpc
    * - 
-     - h
+     - h0
      - real
      - 
      - Dimensionless Hubble h = H_0 / 100 km/s/Mpc
