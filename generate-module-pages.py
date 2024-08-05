@@ -12,6 +12,7 @@ background = {
     "growth_factor",
     "log_w_model",
     "astropy_background",
+    "rescale_distances_rdh",
 }
 
 boltzmann = {
@@ -87,6 +88,7 @@ likelihoods = {
     "BICEP2",
     "BOSS",
     "Cluster_mass",
+    "desi_dr1_arxiv",
     "JulloLikelihood",
     "Riess11",
     "Riess16",

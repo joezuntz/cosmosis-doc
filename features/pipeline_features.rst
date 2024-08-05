@@ -14,6 +14,28 @@ Any sufficient choice of the parameters can be specified and the remainder will 
 To use this module, just include the module ``utility/consistency/consistency_interface.py`` at the start of a pipeline.
 
 
+Short-cutting modules
+----------------------
+
+You may have a situtation where the output of the first few pipeline modules does not change as the parameters vary.
+
+For example, if you are fixing cosmological parameters, but varying other parameters, then the outputs of early modules in the chain may be fixed.
+
+In this case you can set a "shortcut", which tells CosmoSIS to only run the first few modules once, and then re-use the results from them for all the other parameter points. 
+You do so like this:
+
+.. code-block:: ini
+
+    [pipeline]
+    ...
+    modules = module_1 module_2 module_3 module_5 module_5
+    shortcut = module_3
+
+This tells CosmoSIS to run modules 1, and 2, only the first time the pipeline is run, and then to re-use their results for all later parameter points.  
+It will then run modules 3, 4, and 5 only for each subsequent points.
+
+
+
 
 Pre- and post-scripts
 ---------------------
@@ -42,7 +64,7 @@ Making pipeline graphs
 
 You will need the pygraphviz tool to use this feature.  On Conda, you can install it with:
 
-.. code-block:: ini
+.. code-block:: bash
 
     conda install -c conda-forge pygraphviz
 

@@ -533,13 +533,17 @@ Output values
      - real 1d
      - Luminosity distance in Mpc
    * - 
+     - d_v
+     - real 1d
+     - Angular average of comoving angular diameter and line of sight distance in Mpc
+   * - 
      - mu
      - real 1d
      - Distance modulus
    * - 
      - h
      - real 1d
-     - Hubble parameter with in units of Mpc
+     - Hubble parameter as function of redshift in units of Mpc
    * - 
      - age
      - real
@@ -596,6 +600,10 @@ Output values
      - thetarseq
      - real
      - Angle 100 r_s(eq)/DA(zstar)
+   * - 
+     - cmbshift
+     - real
+     - CMB shift parameter equation 69 of Komatsu et al 2009
    * - growth_parameters
      - z
      - real 1d
