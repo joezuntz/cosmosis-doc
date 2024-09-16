@@ -26,7 +26,7 @@ MCMC Samplers
      importance: Importance sampling <../reference/samplers/importance>
      kombine: Clustered KDE <../reference/samplers/kombine>
      pmc: Adaptive Importance Sampling <../reference/samplers/pmc>
-     pocoMC: Adaptive Importance Sampling <../reference/samplers/poco>
+     pocoMC: Preconditioned Monte Carlo for Accelerated Posterior and Evidence Estimation <../reference/samplers/pocomc>
 
 Nested Samplers
 ===============
