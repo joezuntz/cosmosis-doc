@@ -76,20 +76,20 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+---------------+---------+--------------------------------------------------------------------------------------------+-------------+
-| Name          | Type    | Description                                                                                | Default     |
-+===============+=========+============================================================================================+=============+
-| method        | string  | The minimization method to use.                                                            | Nelder-Mead |
-+---------------+---------+--------------------------------------------------------------------------------------------+-------------+
-| tolerance     | real    | The tolerance parameter for termination.  Meaning depends on the sampler - see scipy docs. | 1e-3        |
-+---------------+---------+--------------------------------------------------------------------------------------------+-------------+
-| maxiter       | integer | Maximum number of iterations of the sampler                                                | 1000        |
-+---------------+---------+--------------------------------------------------------------------------------------------+-------------+
-| output_ini    | string  | if present, save the resulting parameters to a new ini file with this name                 | (empty)     |
-+---------------+---------+--------------------------------------------------------------------------------------------+-------------+
-| output_covmat | string  | if present and the sampler supports it, save the estimated covariance to this file         | (empty)     |
-+---------------+---------+--------------------------------------------------------------------------------------------+-------------+
-| max_posterior | bool    | find the max a posteriori point instead of max like (includes the priors as well)          | False       |
-+---------------+---------+--------------------------------------------------------------------------------------------+-------------+
++---------------+---------+-------------+--------------------------------------------------------------------------------------------+
+| Name          | Type    | Default     | Description                                                                                |
++===============+=========+=============+============================================================================================+
+| method        | string  | Nelder-Mead | The minimization method to use.                                                            |
++---------------+---------+-------------+--------------------------------------------------------------------------------------------+
+| tolerance     | real    | 1e-3        | The tolerance parameter for termination.  Meaning depends on the sampler - see scipy docs. |
++---------------+---------+-------------+--------------------------------------------------------------------------------------------+
+| maxiter       | integer | 1000        | Maximum number of iterations of the sampler                                                |
++---------------+---------+-------------+--------------------------------------------------------------------------------------------+
+| output_ini    | string  | (empty)     | if present, save the resulting parameters to a new ini file with this name                 |
++---------------+---------+-------------+--------------------------------------------------------------------------------------------+
+| output_covmat | string  | (empty)     | if present and the sampler supports it, save the estimated covariance to this file         |
++---------------+---------+-------------+--------------------------------------------------------------------------------------------+
+| max_posterior | bool    | False       | find the max a posteriori point instead of max like (includes the priors as well)          |
++---------------+---------+-------------+--------------------------------------------------------------------------------------------+
 
 

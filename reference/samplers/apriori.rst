@@ -34,12 +34,12 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+---------+---------+------------------------------------------------------------------------+-----------+
-| Name    | Type    | Description                                                            | Default   |
-+=========+=========+========================================================================+===========+
-| nsample | integer | number of samples to draw                                              |           |
-+---------+---------+------------------------------------------------------------------------+-----------+
-| save    | string  | If set, save sample data to directories save_name_0, save_name_1, etc. | (empty)   |
-+---------+---------+------------------------------------------------------------------------+-----------+
++---------+---------+-----------+------------------------------------------------------------------------+
+| Name    | Type    | Default   | Description                                                            |
++=========+=========+===========+========================================================================+
+| nsample | integer |           | number of samples to draw                                              |
++---------+---------+-----------+------------------------------------------------------------------------+
+| save    | string  | (empty)   | If set, save sample data to directories save_name_0, save_name_1, etc. |
++---------+---------+-----------+------------------------------------------------------------------------+
 
 

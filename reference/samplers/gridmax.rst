@@ -44,16 +44,16 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+----------------+---------+-----------------------------------------------------------------------------+-----------+
-| Name           | Type    | Description                                                                 | Default   |
-+================+=========+=============================================================================+===========+
-| nsteps         | integer | The number of sample points along each line through the space               |           |
-+----------------+---------+-----------------------------------------------------------------------------+-----------+
-| tolerance      | real    | tolerance for Delta Log Like along one complete loop through the dimensions | 0.1       |
-+----------------+---------+-----------------------------------------------------------------------------+-----------+
-| output_ini     | string  | if present, save the resulting parameters to a new ini file with this name  | (empty)   |
-+----------------+---------+-----------------------------------------------------------------------------+-----------+
-| max_iterations | int     | Max number of slices                                                        | 10000     |
-+----------------+---------+-----------------------------------------------------------------------------+-----------+
++----------------+---------+-----------+-----------------------------------------------------------------------------+
+| Name           | Type    | Default   | Description                                                                 |
++================+=========+===========+=============================================================================+
+| nsteps         | integer |           | The number of sample points along each line through the space               |
++----------------+---------+-----------+-----------------------------------------------------------------------------+
+| tolerance      | real    | 0.1       | tolerance for Delta Log Like along one complete loop through the dimensions |
++----------------+---------+-----------+-----------------------------------------------------------------------------+
+| output_ini     | string  | (empty)   | if present, save the resulting parameters to a new ini file with this name  |
++----------------+---------+-----------+-----------------------------------------------------------------------------+
+| max_iterations | int     | 10000     | Max number of slices                                                        |
++----------------+---------+-----------+-----------------------------------------------------------------------------+
 
 

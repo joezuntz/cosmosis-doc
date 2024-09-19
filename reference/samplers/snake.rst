@@ -42,14 +42,14 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+-------------------+---------+---------------------------------------------------------------------------+-----------+
-| Name              | Type    | Description                                                               | Default   |
-+===================+=========+===========================================================================+===========+
-| threshold         | float   | Termination for difference betwen max-like and highest surface likelihood | 4.0       |
-+-------------------+---------+---------------------------------------------------------------------------+-----------+
-| nsample_dimension | integer | Number of grid points per dimension                                       | 10        |
-+-------------------+---------+---------------------------------------------------------------------------+-----------+
-| maxiter           | integer | Maximum number of samples to take                                         | 100000    |
-+-------------------+---------+---------------------------------------------------------------------------+-----------+
++-------------------+---------+-----------+---------------------------------------------------------------------------+
+| Name              | Type    | Default   | Description                                                               |
++===================+=========+===========+===========================================================================+
+| threshold         | float   | 4.0       | Termination for difference betwen max-like and highest surface likelihood |
++-------------------+---------+-----------+---------------------------------------------------------------------------+
+| nsample_dimension | integer | 10        | Number of grid points per dimension                                       |
++-------------------+---------+-----------+---------------------------------------------------------------------------+
+| maxiter           | integer | 100000    | Maximum number of samples to take                                         |
++-------------------+---------+-----------+---------------------------------------------------------------------------+
 
 

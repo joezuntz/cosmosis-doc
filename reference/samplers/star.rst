@@ -34,16 +34,16 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+-------------------+---------------------+---------------------------------------------------------------------------------------------------+-----------+
-| Name              | Type                | Description                                                                                       | Default   |
-+===================+=====================+===================================================================================================+===========+
-| nsample_dimension | integer             | The number of star points along each dimension of the space                                       |           |
-+-------------------+---------------------+---------------------------------------------------------------------------------------------------+-----------+
-| save              | string              | If set, a base directory or .tgz name for saving the cosmology output for every point in the star | (empty)   |
-+-------------------+---------------------+---------------------------------------------------------------------------------------------------+-----------+
-| nstep             | int, default=-1     | Number of evaluations between saving output, defaults to nsample_dimension                        |           |
-+-------------------+---------------------+---------------------------------------------------------------------------------------------------+-----------+
-| allow_large       | bool, default=False | Allow suspiciously large numbers of evaluations to be done                                        |           |
-+-------------------+---------------------+---------------------------------------------------------------------------------------------------+-----------+
++-------------------+---------------------+-----------+---------------------------------------------------------------------------------------------------+
+| Name              | Type                | Default   | Description                                                                                       |
++===================+=====================+===========+===================================================================================================+
+| nsample_dimension | integer             |           | The number of star points along each dimension of the space                                       |
++-------------------+---------------------+-----------+---------------------------------------------------------------------------------------------------+
+| save              | string              | (empty)   | If set, a base directory or .tgz name for saving the cosmology output for every point in the star |
++-------------------+---------------------+-----------+---------------------------------------------------------------------------------------------------+
+| nstep             | int, default=-1     |           | Number of evaluations between saving output, defaults to nsample_dimension                        |
++-------------------+---------------------+-----------+---------------------------------------------------------------------------------------------------+
+| allow_large       | bool, default=False |           | Allow suspiciously large numbers of evaluations to be done                                        |
++-------------------+---------------------+-----------+---------------------------------------------------------------------------------------------------+
 
 

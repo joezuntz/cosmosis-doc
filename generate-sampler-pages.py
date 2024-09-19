@@ -75,13 +75,13 @@ def generate_sampler_wiki(info):
 	for pname,description in list(info['params'].items()):
 		try:
 			dtype, default, rest = parse_parameter_description(description)
-			table2.append([pname, dtype, rest, str(default)])
+			table2.append([pname, dtype, str(default), rest])
 		except (IndexError, ValueError):
 			print("ERROR: Could not parse in {0}".format(name))
 			print(description)
 			continue
 
-	parameter_table = tabulate.tabulate(table2, headers=['Name', 'Type', 'Description', 'Default'], tablefmt="grid", disable_numparse=True)
+	parameter_table = tabulate.tabulate(table2, headers=['Name', 'Type', 'Default', 'Description', ], tablefmt="grid", disable_numparse=True)
 
 	info['name'] = name.capitalize()
 	info['citations'] = ', '.join(info['cite'])

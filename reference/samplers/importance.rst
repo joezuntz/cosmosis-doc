@@ -40,14 +40,14 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+-------------------+---------+-------------------------------------------------------------------+-----------+
-| Name              | Type    | Description                                                       | Default   |
-+===================+=========+===================================================================+===========+
-| input_filename    | string  | cosmosis-format chain of input samples                            |           |
-+-------------------+---------+-------------------------------------------------------------------+-----------+
-| nstep             | integer | number of samples to do between saving output                     | 128       |
-+-------------------+---------+-------------------------------------------------------------------+-----------+
-| add_to_likelihood | bool    | include the old likelihood in the old likelihood; i.e. P'=P*P_new | N         |
-+-------------------+---------+-------------------------------------------------------------------+-----------+
++-------------------+---------+-----------+-------------------------------------------------------------------+
+| Name              | Type    | Default   | Description                                                       |
++===================+=========+===========+===================================================================+
+| input_filename    | string  |           | cosmosis-format chain of input samples                            |
++-------------------+---------+-----------+-------------------------------------------------------------------+
+| nstep             | integer | 128       | number of samples to do between saving output                     |
++-------------------+---------+-----------+-------------------------------------------------------------------+
+| add_to_likelihood | bool    | N         | include the old likelihood in the old likelihood; i.e. P'=P*P_new |
++-------------------+---------+-----------+-------------------------------------------------------------------+
 
 

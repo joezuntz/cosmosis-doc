@@ -48,14 +48,14 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+--------------+--------+------------------------------------------------------------------------------------------------------------+-----------+
-| Name         | Type   | Description                                                                                                | Default   |
-+==============+========+============================================================================================================+===========+
-| fatal_errors | bool   | Any errors in the pipeline trigger an immediate failure so you can diagnose errors                         | N         |
-+--------------+--------+------------------------------------------------------------------------------------------------------------+-----------+
-| save_dir     | string | Save all the data computed in the pipeline to this directory (can also end with .tgz to get a zipped form) | (empty)   |
-+--------------+--------+------------------------------------------------------------------------------------------------------------+-----------+
-| graph        | string | Requires pygraphviz.  Save a dot file describing the pipeline                                              | (empty)   |
-+--------------+--------+------------------------------------------------------------------------------------------------------------+-----------+
++--------------+--------+-----------+------------------------------------------------------------------------------------------------------------+
+| Name         | Type   | Default   | Description                                                                                                |
++==============+========+===========+============================================================================================================+
+| fatal_errors | bool   | N         | Any errors in the pipeline trigger an immediate failure so you can diagnose errors                         |
++--------------+--------+-----------+------------------------------------------------------------------------------------------------------------+
+| save_dir     | string | (empty)   | Save all the data computed in the pipeline to this directory (can also end with .tgz to get a zipped form) |
++--------------+--------+-----------+------------------------------------------------------------------------------------------------------------+
+| graph        | string | (empty)   | Requires pygraphviz.  Save a dot file describing the pipeline                                              |
++--------------+--------+-----------+------------------------------------------------------------------------------------------------------------+
 
 

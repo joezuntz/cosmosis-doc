@@ -38,18 +38,18 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+----------+---------------------+----------------------------------------------------------------------------------+-----------+
-| Name     | Type                | Description                                                                      | Default   |
-+==========+=====================+==================================================================================+===========+
-| filename | string              | cosmosis-format chain of input samples                                           |           |
-+----------+---------------------+----------------------------------------------------------------------------------+-----------+
-| save     | string              | if present the base-name to save the cosmology output from each sample           | (empty)   |
-+----------+---------------------+----------------------------------------------------------------------------------+-----------+
-| burn     | int, default=0      | Number of samples to skip from the start of the input file                       |           |
-+----------+---------------------+----------------------------------------------------------------------------------+-----------+
-| thin     | int, default=1      | Process only every n'th samples from the input file                              |           |
-+----------+---------------------+----------------------------------------------------------------------------------+-----------+
-| limits   | bool, default=False | Respect the parameter prior limits in the values file; otherwise use all samples |           |
-+----------+---------------------+----------------------------------------------------------------------------------+-----------+
++----------+---------------------+-----------+----------------------------------------------------------------------------------+
+| Name     | Type                | Default   | Description                                                                      |
++==========+=====================+===========+==================================================================================+
+| filename | string              |           | cosmosis-format chain of input samples                                           |
++----------+---------------------+-----------+----------------------------------------------------------------------------------+
+| save     | string              | (empty)   | if present the base-name to save the cosmology output from each sample           |
++----------+---------------------+-----------+----------------------------------------------------------------------------------+
+| burn     | int, default=0      |           | Number of samples to skip from the start of the input file                       |
++----------+---------------------+-----------+----------------------------------------------------------------------------------+
+| thin     | int, default=1      |           | Process only every n'th samples from the input file                              |
++----------+---------------------+-----------+----------------------------------------------------------------------------------+
+| limits   | bool, default=False |           | Respect the parameter prior limits in the values file; otherwise use all samples |
++----------+---------------------+-----------+----------------------------------------------------------------------------------+
 
 

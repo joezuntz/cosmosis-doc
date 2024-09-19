@@ -42,20 +42,20 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+-----------------------+---------+----------------------------------------------------------------------------------+-----------+
-| Name                  | Type    | Description                                                                      | Default   |
-+=======================+=========+==================================================================================+===========+
-| iterations            | integer | Number of iterations (importance updates) of PMC                                 | 30        |
-+-----------------------+---------+----------------------------------------------------------------------------------+-----------+
-| components            | integer | Number of components in the Gaussian mixture                                     | 5         |
-+-----------------------+---------+----------------------------------------------------------------------------------+-----------+
-| samples_per_iteration | integer | Number of samples per iteration of PMC                                           | 1000      |
-+-----------------------+---------+----------------------------------------------------------------------------------+-----------+
-| final_samples         | integer | Samples to take after the updating of the mixture is complete                    | 5000      |
-+-----------------------+---------+----------------------------------------------------------------------------------+-----------+
-| student               | boolean | Do not use this.  It is a not yet functional attempt to use a Student t mixture. | F         |
-+-----------------------+---------+----------------------------------------------------------------------------------+-----------+
-| nu                    | float   | Do not use this.  It is the nu parameter for the non-function Student t mode.    | 2.0       |
-+-----------------------+---------+----------------------------------------------------------------------------------+-----------+
++-----------------------+---------+-----------+----------------------------------------------------------------------------------+
+| Name                  | Type    | Default   | Description                                                                      |
++=======================+=========+===========+==================================================================================+
+| iterations            | integer | 30        | Number of iterations (importance updates) of PMC                                 |
++-----------------------+---------+-----------+----------------------------------------------------------------------------------+
+| components            | integer | 5         | Number of components in the Gaussian mixture                                     |
++-----------------------+---------+-----------+----------------------------------------------------------------------------------+
+| samples_per_iteration | integer | 1000      | Number of samples per iteration of PMC                                           |
++-----------------------+---------+-----------+----------------------------------------------------------------------------------+
+| final_samples         | integer | 5000      | Samples to take after the updating of the mixture is complete                    |
++-----------------------+---------+-----------+----------------------------------------------------------------------------------+
+| student               | boolean | F         | Do not use this.  It is a not yet functional attempt to use a Student t mixture. |
++-----------------------+---------+-----------+----------------------------------------------------------------------------------+
+| nu                    | float   | 2.0       | Do not use this.  It is the nu parameter for the non-function Student t mode.    |
++-----------------------+---------+-----------+----------------------------------------------------------------------------------+
 
 
