@@ -32,7 +32,7 @@ emulators = {
 
 structure = {
     "CRL_Eisenstein_Hu",
-    "pyhmcode",
+    # "pyhmcode",
     "Extreme_Value_Statistics",
     "Press_Schechter_MF",
     "Sheth-Tormen MF",

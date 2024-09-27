@@ -97,8 +97,6 @@ These modules compute aspects of cosmic structure, for example by integrating ov
      - Code to compute the Sheth-Tormen mass function given Pk from CAMB, based on Komatsu's CRL
    * - :doc:`Extreme_Value_Statistics <../reference/standard_library/Extreme_Value_Statistics>` 
      - PDF of the maximum cluster mass given cosmological parameters
-   * - :doc:`pyhmcode <../reference/standard_library/pyhmcode>` 
-     - Compute the non-linear matter power spectrum with pyhalofit
    * - :doc:`NLfactor <../reference/standard_library/NLfactor>` 
      - Compute nonlinear weyl potential (and other) spectrum by multiplying the linear spectrum with matter_power_nl/matter_power_lin
    * - :doc:`constant_bias <../reference/standard_library/constant_bias>` 
