@@ -25,38 +25,30 @@ Otherwise first run one of these commands to download the installer:
 
 On Linux::
 
-    wget -O Miniforge3.sh  https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+    wget -O Miniforge3.sh  https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Miniforge3-Linux-x86_64.sh
 
 On Intel Macs::
 
-    wget -O Miniforge3.sh  https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh
+    wget -O Miniforge3.sh  https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Miniforge3-MacOSX-x86_64.sh
 
 On Silicon (M1 or M2) Macs::
 
-    wget -O Miniforge3.sh  https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
+    wget -O Miniforge3.sh  https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Miniforge3-MacOSX-arm64.sh
 
-
-Then, whichever you do, run these commands to install everything and download the standard library::
-
-    chmod +x Miniforge3.sh
-    ./Miniforge3.sh -b -p ./env 
-    source ./env/bin/activate
-    conda install -y cosmosis cosmosis-build-standard-library
-    source cosmosis-configure
-    cosmosis-build-standard-library main
-
-
-If you find this takes a very long time, you can try instead (mamba is a faster version of conda)::
+Then, whichever you do, run these commands to install everything and download the standard library (see below for CosmoPower instructions)::
 
     chmod +x Miniforge3.sh
-    ./Miniforge3.sh -b -p ./env 
+    ./Miniforge3.sh -b -p ./env
     source ./env/bin/activate
-    conda install -y mamba
     mamba install -y cosmosis cosmosis-build-standard-library
     source cosmosis-configure
     cosmosis-build-standard-library main
 
-This will make a new directory cosmosis-standard-library with the cosmology packages in. Explore that directory to start using CosmoSIS. 
+This will make a new directory cosmosis-standard-library with the cosmology packages in. Explore that directory to start using CosmoSIS.
+
+If you want to use `CosmoPower <https://github.com/alessiospuriomancini/cosmopower>`_ then change the fourth line above to::
+
+    mamba install -y cosmosis cosmosis-build-standard-library cosmopower
 
 Whenever you start a fresh terminal shell you need to run these commands to get set up again::
 
