@@ -54,3 +54,9 @@ The exponential distribution has the form :math:`P(X=x) = \frac{1}{\beta} \exp{(
 They are specified in the form: :code:`param_name = exponential  <beta>`.
 
 
+Custom Priors
+-------------
+
+You can specify a custom prior by loading it from a text file.  The file should contain two columns, the first being the parameter value in ascending order and the second the prior probability density.  The prior will be linearly interpolated between the points you specify.
+
+They are specified in the form: :code:`param_name = load  <filename>`.
