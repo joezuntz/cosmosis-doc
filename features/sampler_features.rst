@@ -4,6 +4,8 @@ Sampler Features
 CosmoSIS has several features that can help you out in building and running pipelines
 
 
+
+
 Derived Parameters
 ------------------
 
@@ -91,3 +93,28 @@ to:
 - initialise emcee walkers from that covariance
 
 Currently only a best-fit estimate and covariance estimate are passed to the next sampler; if you can think of more then please open an issue.
+
+Starting points
+---------------
+
+Several samplers share a common set of parameters that are used to control the starting point of the algorithm.  They are:
+- maxlike
+- minuit
+- zeus
+- emcee
+- fisher
+- test
+
+All these samplers can take the following parameters:
+
+- `start_method`: takes one of the following values to determine how to start the chain
+    - `chain-sample` - choose a random sample from a previous chain file (weighted if the chain has weights)
+    - `chain-maxpost` - choose the maximum-posterior point from a previous chain file
+    - `chain-maxlike` - choose the maximum-likelihood point from a previous chain file
+    - `chain` - decide from the above three options based on the file contents and requirements
+    - `chain-last` - choose the last point from a previous chain file
+    - `prior` - chooise a random point from the prior distribution
+    - `cov` - load the specified covariance matrix and choose a random point from the multivariate Gaussian defined by it
+- `start_input`: for the choices of `start_method` the begin from an input file, this is the name of the file to read.
+
+All of these methods are superseded if using sampler chaining (see above) and the previous sampler has recorded a best-fitting point.

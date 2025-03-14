@@ -52,7 +52,7 @@ All the samplers except the test sampler generate output chain files. You can ch
 
     [output]
     filename = my_output_chain.txt
-    ; the default format is "text".  It can also be set to "fits".
+    ; the default format is "text".  It can also be set to "fits", but we don't recommend that.
     format = text
 
 
