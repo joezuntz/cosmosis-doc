@@ -107,14 +107,14 @@ Several samplers share a common set of parameters that are used to control the s
 
 All these samplers can take the following parameters:
 
-- `start_method`: takes one of the following values to determine how to start the chain
-    - `chain-sample` - choose a random sample from a previous chain file (weighted if the chain has weights)
-    - `chain-maxpost` - choose the maximum-posterior point from a previous chain file
-    - `chain-maxlike` - choose the maximum-likelihood point from a previous chain file
-    - `chain` - decide from the above three options based on the file contents and requirements
-    - `chain-last` - choose the last point from a previous chain file
-    - `prior` - chooise a random point from the prior distribution
-    - `cov` - load the specified covariance matrix and choose a random point from the multivariate Gaussian defined by it
-- `start_input`: for the choices of `start_method` the begin from an input file, this is the name of the file to read.
+- ``start_method`` takes one of the following values to determine how to start the chain
+    - ``chain-sample`` - choose a random sample from a previous chain file (weighted if the chain has weights)
+    - ``chain-maxpost`` - choose the maximum-posterior point from a previous chain file
+    - ``chain-maxlike``` - choose the maximum-likelihood point from a previous chain file
+    - ``chain`` - decide from the above three options based on the file contents and requirements (sample if multiple points are needed, otherwise maxpost if post column found, otherwise maxlike column if like column found, otherwise last)
+    - ``chain-last``` - choose the last point from a previous chain file
+    - ``prior`` - chooise a random point from the prior distribution
+    - ``cov``` - load the specified covariance matrix and choose a random point from the multivariate Gaussian defined by it
+- ``start_input``: for the choices of `start_method` the begin from an input file, this is the name of the file to read.
 
 All of these methods are superseded if using sampler chaining (see above) and the previous sampler has recorded a best-fitting point.
