@@ -31,7 +31,7 @@ For a general distribution the Fisher matrix can be rather fiddly to calculate; 
 
 
 
-There is an additional term that arises when the covariance matrix C depends on the parameters p, which we do not currently calculate here, as it is usually fixed in  cosmology. We plan to implement this shortly, however.
+There is an additional term that arises when the covariance matrix C depends on the parameters p, which we do not currently calculate here, as it is usually fixed in  cosmology.
 
 The CosmoSIS fisher sampler is calculated around the central value provided in the values file; no optimization is done before running.
 
@@ -39,13 +39,17 @@ Unlike most other CosmoSIS samplers which depend only likelihood of a parameter 
 
 Gaussian likelihoods implemented in CosmoSIS save these sections automatically. Your own likelihoods can use the CosmoSIS gaussian likelihood superclass to do the same, or you can manually save name+"_theory" and name+"_inverse_covariance" for any data that  you add.
 
+Three methods are exposed for calculating the numerical derivatives.
+
+1. 'stencil' - Uses a simple finite difference stencil to calculate the derivative. 2. 'numdifftools' - Uses the numdifftools package to calculate the derivative. 3. 'smooth' - Uses the derivative package to calculate the derivative - this can be slower but more robust.
+
 
 
 
 Installation
 ============
 
-No special installation required; everything is packaged with CosmoSIS
+You can pip install numdifftools and derivative to use the 'numdifftools' and 'smooth' methods respectively.
 
 
 
@@ -56,12 +60,18 @@ Parameters
 These parameters can be set in the sampler's section in the ini parameter file.  
 If no default is specified then the parameter is required. A listing of "(empty)" means a blank string is the default.
 
-+------------------+--------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-| Name             | Type   | Default   | Description                                                                                                                                     |
-+==================+========+===========+=================================================================================================================================================+
-| step_size        | float  | 0.01      | The size, as a fraction of the total parameter range, of steps to use in the derivative calculation. You should investigate stability wrt this. |
-+------------------+--------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-| use_numdifftools | bool   | False     | Use the library numdifftools instead of the default code (should be little difference)                                                          |
-+------------------+--------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------+--------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Name            | Type   | Default   | Description                                                                                                                                                                     |
++=================+========+===========+=================================================================================================================================================================================+
+| method          | string | 'stencil' | The method to use for numerical differentiation.  Options are 'stencil', 'numdifftools', 'smooth'. The latter two require the numdifftools and derivative packages respectively |
++-----------------+--------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| step_size       | float  | 0.01      | The size, as a fraction of the total parameter range, of steps to use in the stencil and numdifftools methods.                                                                  |
++-----------------+--------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| step_size_min   | float  | 1e-5      | The minimum step size to use in the numerical differentiation using the 'smooth' method                                                                                         |
++-----------------+--------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| step_size_max   | float  | 1e-2      | The maximum step size to use in the numerical differentiation using the 'smooth' method                                                                                         |
++-----------------+--------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| step_size_count | int    | 10        | The numer of steps to use in the numerical differentiation using the 'smooth' method                                                                                            |
++-----------------+--------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
