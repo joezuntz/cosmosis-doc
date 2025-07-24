@@ -160,7 +160,7 @@ and run::
 
 Then clone and build the standard library repository::
 
-    source cosomosis-configure
+    source cosmosis-configure
     git clone https://github.com/joezuntz/cosmosis-standard-library
     cd cosmosis-standard-library
     make
