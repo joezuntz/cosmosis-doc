@@ -11,3 +11,4 @@ cosmosis-intro.pdf
 *.log
 cosmosis_packages.pdf
 astro_packages.pdf
+_build/
