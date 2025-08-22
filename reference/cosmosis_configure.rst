@@ -63,4 +63,4 @@ After sourcing the configure script, several environment variables will be set:
 Note
 ====
 
-You need to source this script in each new shell session where you plan to build CosmoSIS code. Many users add the source command to their :code:`.bashrc` or similar shell startup file.
+You need to source this script in each new shell session where you plan to build CosmoSIS code.
