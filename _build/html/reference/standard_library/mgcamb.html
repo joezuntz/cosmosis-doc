@@ -1,0 +1,816 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mgcamb &mdash; CosmoSIS 3.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=26f62d79"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mgs" href="mgs.html" />
+    <link rel="prev" title="lrg" href="lrg.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CosmoSIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/overview.html">CosmoSIS Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/installation.html">Installing CosmoSIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using CosmoSIS:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../usage/tutorials.html">Tutorials: Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage/samplers.html">Samplers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage/parameter_files.html">CosmoSIS Parameter Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage/standard_library_overview.html">Standard Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage/upgrading.html">Upgrading from the previous CosmoSIS Version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus Features:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features/sampler_features.html">Sampler Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/pipeline_features.html">Pipeline Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/parameter_features.html">Parameter Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/campaign.html">Managing sets of runs with a Campaign</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Writing modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_python.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_c.html">C API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_cpp.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_f90.html">Fortran API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cosmosis_command_line.html">Command line flags for cosmosis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmosis_campaign.html">cosmosis-campaign</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmosis_configure.html">Command line flags for cosmosis-configure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmosis_extract.html">Command line flags for cosmosis-extract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmosis_sample_fisher.html">Command line flags for cosmosis-sample-fisher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../postprocess_command_line.html">Command line flags for postprocess</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../standard_library_complete.html">Standard Library Complete Listing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2pt.html">2pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6dFGS.html">6dFGS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BBN.html">BBN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BBN-Consistency.html">BBN-Consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BICEP2.html">BICEP2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BOSS.html">BOSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CRL_Eisenstein_Hu.html">CRL_Eisenstein_Hu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Cluster_mass.html">Cluster_mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CosmicEmu.html">CosmicEmu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EuclidEmulator2.html">EuclidEmulator2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extreme_Value_Statistics.html">Extreme_Value_Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FrankenEmu.html">FrankenEmu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Joachimi_Bridle_alpha.html">Joachimi_Bridle_alpha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="JulloLikelihood.html">JulloLikelihood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NLfactor.html">NLfactor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Press_Schechter_MF.html">Press_Schechter_MF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Riess11.html">Riess11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Riess16.html">Riess16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Riess21.html">Riess21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sheth-Tormen%20MF.html">Sheth-Tormen MF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tinker_MF.html">Tinker_MF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WiggleZBao.html">WiggleZBao</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act-dr6-lens.html">act-dr6-lens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_intrinsic.html">add_intrinsic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_magnification.html">add_magnification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apply_astrophysical_biases.html">apply_astrophysical_biases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="astropy_background.html">astropy_background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bacco_emulator.html">bacco_emulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="balmes.html">balmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="baryonic.html">baryonic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boss_dr12.html">boss_dr12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boss_dr12_lrg_reanalyze.html">boss_dr12_lrg_reanalyze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camb.html">camb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cl_to_corr.html">cl_to_corr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cl_to_xi_nicaea.html">cl_to_xi_nicaea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cl_to_xi_wigner_d.html">cl_to_xi_wigner_d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class.html">class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clerkin.html">clerkin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consistency.html">consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constant_bias.html">constant_bias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copy.html">copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correlated_priors.html">correlated_priors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cosebis.html">cosebis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delete.html">delete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="des-y3-bao.html">des-y3-bao</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desi_dr1_arxiv.html">desi_dr1_arxiv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distances.html">distances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eboss_dr14_lya.html">eboss_dr14_lya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eboss_dr16_elg.html">eboss_dr16_elg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eboss_dr16_lrg.html">eboss_dr16_lrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eboss_dr16_lya.html">eboss_dr16_lya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eboss_dr16_qso.html">eboss_dr16_qso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_growth.html">extract_growth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extrapolate.html">extrapolate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast_pt.html">fast_pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgas.html">fgas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gaussian_window.html">gaussian_window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="growth_factor.html">growth_factor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="h0licow.html">h0licow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hsc_cosmic_shear.html">hsc_cosmic_shear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ia_z_powerlap.html">ia_z_powerlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ia_z_powerlaw.html">ia_z_powerlaw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="isitgr-camb.html">isitgr-camb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jla.html">jla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kappa_beam.html">kappa_beam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kappa_ell_cut.html">kappa_ell_cut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear_alignments.html">linear_alignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_nz.html">load_nz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_nz_fits.html">load_nz_fits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_w_model.html">log_w_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lrg.html">lrg</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">mgcamb</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#assumptions">Assumptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-parameters">Setup Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#input-values">Input values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-values">Output values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mgs.html">mgs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mgs_bao.html">mgs_bao</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no_bias.html">no_bias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nz_multirank.html">nz_multirank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pantheon.html">pantheon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pantheon_plus.html">pantheon_plus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="photoz_bias.html">photoz_bias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planck2018.html">planck2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planck_py.html">planck_py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planck_sz.html">planck_sz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_2d.html">project_2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qso.html">qso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rename.html">rename</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rescale_distances_rdh.html">rescale_distances_rdh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sacc_like.html">sacc_like</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shear_bias.html">shear_bias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sigma8_rescale.html">sigma8_rescale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sigma_cpp.html">sigma_cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sigma_r.html">sigma_r</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smail.html">smail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stop.html">stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strong_lens_time_delays.html">strong_lens_time_delays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdcosmo.html">tdcosmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="w0wa_sum_prior.html">w0wa_sum_prior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wl_spectra.html">wl_spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wl_spectra_ppf.html">wl_spectra_ppf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wmap.html">wmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wmap_shift.html">wmap_shift</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nersc_examples.html">NERSC Submission Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CosmoSIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../standard_library_complete.html">Standard Library Complete Listing</a></li>
+      <li class="breadcrumb-item active">mgcamb</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/reference/standard_library/mgcamb.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mgcamb">
+<h1>mgcamb<a class="headerlink" href="#mgcamb" title="Link to this heading"></a></h1>
+<p>Modified Gravity Boltzmann and background integrator for BG, CMB, and matter power</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>File</p></td>
+<td><p>boltzmann/mgcamb/camb.so</p></td>
+</tr>
+<tr class="row-even"><td><p>Attribution</p></td>
+<td><ol class="upperalpha simple">
+<li><p>Hojjati</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>G.B. Zhao</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><ol class="upperalpha simple" start="12">
+<li><p>Pogosian</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><ol class="upperalpha simple">
+<li><p>Silvestri</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Antony Lewis</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Anthony Challinor</p></td>
+</tr>
+<tr class="row-even"><td><p>URL</p></td>
+<td><p><a class="reference external" href="http://www.sfu.ca/~aha25/MGCAMB.html">http://www.sfu.ca/~aha25/MGCAMB.html</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Citations</p></td>
+<td><p><a class="reference external" href="http://arxiv.org/abs/1106.4543">http://arxiv.org/abs/1106.4543</a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference external" href="http://arxiv.org/abs/0809.3791">http://arxiv.org/abs/0809.3791</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>See the CAMB module for a general introduction to CAMB.</p>
+<p>MGCAMB is a modified version of CAMB in which the linearized
+Einstein equations of General Relativity (GR) are modified.</p>
+<p>It implements several different parameterizations, which are described on this page:
+<a class="reference external" href="http://www.sfu.ca/~aha25/Models.html">http://www.sfu.ca/~aha25/Models.html</a>
+and referred to here as:</p>
+<ul class="simple">
+<li><p>model 0 : default GR</p></li>
+<li><p>model 1 : BZ(mu,gamma) ( introduced in arXiv:0801.2431)</p></li>
+<li><p>model 2 : (Q,R) ( introduced in arXiv:1002.4197 )</p></li>
+<li><p>model 3 : (Q0,R0,s)( introduced in arXiv:1002.4197 )</p></li>
+<li><p>model 4 : f(R) ( introduced in arXiv:0909.2045 )</p></li>
+<li><p>model 5 : Chameleon ( introduced in arXiv:0909.2045 )</p></li>
+<li><p>model 6 : Linder’s gamma (introduced in arXiv:0507263 )</p></li>
+</ul>
+<section id="assumptions">
+<h2>Assumptions<a class="headerlink" href="#assumptions" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>One of several modification ansatzes specifying changes from GR</p></li>
+<li><p>wCDM background evolution</p></li>
+<li><p>Other camb assumptions</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="setup-parameters">
+<h2>Setup Parameters<a class="headerlink" href="#setup-parameters" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mode</p></td>
+<td><p>str</p></td>
+<td></td>
+<td><p>Choose from Background, thermal, cmb, or all. In background mode only the expansion history is calculated. In thermal mode the recombination history is computed and rs_zdrag and related quantities also. In cmb mode the CMB power spectra are also calculated. In all mode the matter power spectrum at low redshift and sigma8 are also calculated.</p></td>
+</tr>
+<tr class="row-odd"><td><p>mg_model</p></td>
+<td><p>int</p></td>
+<td></td>
+<td><p>From 0-6, choice of MG model to use</p></td>
+</tr>
+<tr class="row-even"><td><p>lmax</p></td>
+<td><p>int</p></td>
+<td></td>
+<td><p>Only if mode!=background, default 1200 - the max ell to use for cmb calculation</p></td>
+</tr>
+<tr class="row-odd"><td><p>feedback</p></td>
+<td><p>int</p></td>
+<td></td>
+<td><p>Amount of output to print.  0 for no feedback.  1 for basic, 2 for extended.</p></td>
+</tr>
+<tr class="row-even"><td><p>use_tabulated_w</p></td>
+<td><p>bool</p></td>
+<td><p>False</p></td>
+<td><p>Set to true to load w(z) from previous module</p></td>
+</tr>
+<tr class="row-odd"><td><p>k_eta_max_scalar</p></td>
+<td><p>int</p></td>
+<td></td>
+<td><p>Maximum value of (k eta) to evolve for scalars. (default 2*lmax)</p></td>
+</tr>
+<tr class="row-even"><td><p>do_tensors</p></td>
+<td><p>bool</p></td>
+<td><p>False</p></td>
+<td><p>Include tensor modes</p></td>
+</tr>
+<tr class="row-odd"><td><p>zmin</p></td>
+<td><p>real</p></td>
+<td><p>0.0</p></td>
+<td><p>Min value to save P(k,z)</p></td>
+</tr>
+<tr class="row-even"><td><p>zmax</p></td>
+<td><p>real</p></td>
+<td><p>4.0</p></td>
+<td><p>Max value to save P(k,z)</p></td>
+</tr>
+<tr class="row-odd"><td><p>nz</p></td>
+<td><p>int</p></td>
+<td><p>401</p></td>
+<td><p>Number of z values to save P(k,z) (default gives dz=0.01)</p></td>
+</tr>
+<tr class="row-even"><td><p>do_nonlinear</p></td>
+<td><p>bool</p></td>
+<td><p>False</p></td>
+<td><p>Apply non-linear halofit corrections to matter-power.  Relevant only for lensing right now</p></td>
+</tr>
+<tr class="row-odd"><td><p>do_lensing</p></td>
+<td><p>bool</p></td>
+<td><p>False</p></td>
+<td><p>Include lensing of CMB, and save C_ell phi-phi</p></td>
+</tr>
+<tr class="row-even"><td><p>high_ell_template</p></td>
+<td><p>str</p></td>
+<td></td>
+<td><p>Required for lensing - set to the file included in the camb dir</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="input-values">
+<h2>Input values<a class="headerlink" href="#input-values" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Section</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>modified_gravity</p></td>
+<td><p>grtrans</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Scale factor of transition from GR</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>b1</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 1, beta 1 in mu(a,k)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>b2</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 1, beta 2 in gamma(a,k)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>lambda1_2</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 1, lambda_1^2 in mu(a,k)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>lambda2_2</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 1, lambda_2^2 in gamma(a,k)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ss</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 1,  scale factor power index in mu and gamma</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>MGQfix</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 2, Constant Q value</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>MGRfix</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 2, Constant R value</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Qnot</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 3, Q_0 term in Q(k,a)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Rnot</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 3, R_0 term in R(k,a)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>sss</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 3, scale factor power index for Q and R</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>b0</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Models 4 &amp; 5, B_0 term that goes into lambda_1^2 in mu(a,k)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>beta1</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 5, beta_1 term that goes into lambda_2^2 term in mu(a,k)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>s</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 5 scale factor power index for mu</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>linder_gamma</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Model 6, gamma_L power law in Omega_M for growth rate</p></td>
+</tr>
+<tr class="row-odd"><td><p>cosmological_parameters</p></td>
+<td><p>omega_b</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Baryon density fraction today</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>omega_c</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>CDM density fraction today</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>omega_k</p></td>
+<td><p>real</p></td>
+<td><p>0.0</p></td>
+<td><p>Curvature density fraction today</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>omega_lambda</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Dark energy density fraction today</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>hubble</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Hubble parameter H0 (km/s/Mpc)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>tau</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Optical depth to last-scattering (ignored in background mode)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>n_s</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Scalar spectral index (ignored in background/thermal mode)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>A_s</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Scalar spectrum primordial amplitude (ignored in background/thermal mode)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>k_s</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Power spectrum pivot scale (default 0.05/Mpc)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>r_t</p></td>
+<td><p>real</p></td>
+<td><p>0.0</p></td>
+<td><p>Tensor to scalar ratio</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>n_run</p></td>
+<td><p>real</p></td>
+<td><p>0.0</p></td>
+<td><p>Running of scalar spectrum d n_s / d log_k</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>n_t</p></td>
+<td><p>real</p></td>
+<td><p>0.0</p></td>
+<td><p>Tensor spectral index</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>omega_nu</p></td>
+<td><p>real</p></td>
+<td><p>0.0</p></td>
+<td><p>Neutrino density fraction today</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>massless_nu</p></td>
+<td><p>real</p></td>
+<td><p>3.046</p></td>
+<td><p>Effective number of massless neutrinos</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>massive_nu</p></td>
+<td><p>int</p></td>
+<td><p>0</p></td>
+<td><p>Number of massive neutrinos</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>sterile_neutrino</p></td>
+<td><p>int</p></td>
+<td><p>0</p></td>
+<td><p>Number of sterile neutrinos</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>delta_neff</p></td>
+<td><p>real</p></td>
+<td><p>0</p></td>
+<td><p>Contribution to N_eff by sterile neutrino</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>sterile_mass_fraction</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Fraction of omega_nu in sterile neutrino</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>yhe</p></td>
+<td><p>real</p></td>
+<td><p>0.24</p></td>
+<td><p>Helium fraction</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>w</p></td>
+<td><p>real</p></td>
+<td><p>-1.0</p></td>
+<td><p>Equation of state of dark energy w(z=0)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>wa</p></td>
+<td><p>real</p></td>
+<td><p>0.0</p></td>
+<td><p>Equation of state parameter in w(z) = w_0 + w_a z / (1+z)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cs2_de</p></td>
+<td><p>real</p></td>
+<td><p>1.0</p></td>
+<td><p>Dark energy sound speed/c</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="output-values">
+<h2>Output values<a class="headerlink" href="#output-values" title="Link to this heading"></a></h2>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Output values</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Section</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>post_friedmann_parameters</p></td>
+<td><p>z</p></td>
+<td><p>real 1d</p></td>
+<td><p>Redshifts of samples</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>k_h</p></td>
+<td><p>real 1d</p></td>
+<td><p>Wavenumber k samples in Mpc/h.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>D</p></td>
+<td><p>real 2d</p></td>
+<td><p>D(k,z) modification to first perturbed Einstein equation</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Q</p></td>
+<td><p>real 2d</p></td>
+<td><p>Q(k,z) modification to second perturbed Einstein equation</p></td>
+</tr>
+<tr class="row-even"><td><p>cosmological_parameters</p></td>
+<td><p>sigma_8</p></td>
+<td><p>real</p></td>
+<td><p>Amplitude of linear matter power at 8/h Mpc at z=0.  Only calculated if mode=all</p></td>
+</tr>
+<tr class="row-odd"><td><p>distances</p></td>
+<td><p>nz</p></td>
+<td><p>int</p></td>
+<td><p>Number of z samples</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>z</p></td>
+<td><p>real 1d</p></td>
+<td><p>Redshifts of samples</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>d_a</p></td>
+<td><p>real 1d</p></td>
+<td><p>Angular diameter distance in Mpc</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>d_m</p></td>
+<td><p>real 1d</p></td>
+<td><p>Co-moving distance in Mpc</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>d_l</p></td>
+<td><p>real 1d</p></td>
+<td><p>Luminosity distance in Mpc</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>mu</p></td>
+<td><p>real 1d</p></td>
+<td><p>Distance modulus</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>h</p></td>
+<td><p>real 1d</p></td>
+<td><p>Hubble parameter with in units of Mpc</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>rho</p></td>
+<td><p>real 1d</p></td>
+<td><p>Matter density, in kg/m^3  Only if mode=all</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>age</p></td>
+<td><p>real</p></td>
+<td><p>Age of universe in GYr</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>zdrag</p></td>
+<td><p>real</p></td>
+<td><p>Redshift where baryons no longer dragged by photons. Only if mode!=background</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>rs_zdrag</p></td>
+<td><p>real</p></td>
+<td><p>Sound horizon size at zdrag. Only if mode!=background</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>zstar</p></td>
+<td><p>real</p></td>
+<td><p>Redshift of unity optical depth.  Only if mode!=background</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>theta</p></td>
+<td><p>real</p></td>
+<td><p>Angular size of sound horizon at zstar. Only if mode!=background</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>chistar</p></td>
+<td><p>real</p></td>
+<td><p>Comoving distance to zstar. Only if mode!=background</p></td>
+</tr>
+<tr class="row-odd"><td><p>matter_power_lin</p></td>
+<td><p>z</p></td>
+<td><p>real 1d</p></td>
+<td><p>Redshifts of samples. Only if mode=all</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>k_h</p></td>
+<td><p>real 1d</p></td>
+<td><p>K wavenumbers of samples in Mpc/h. Only if mode=all</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>p_k</p></td>
+<td><p>real 2d</p></td>
+<td><p>Matter power spectrum at samples in (Mpc/h)^-3. Only if mode=all</p></td>
+</tr>
+<tr class="row-even"><td><p>linear_cdm_transfer</p></td>
+<td><p>z</p></td>
+<td><p>real 1d</p></td>
+<td><p>Redshifts of samples. Only if mode=all</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>k_h</p></td>
+<td><p>real 1d</p></td>
+<td><p>Wavenumber k of samples in Mpc/h. Only if mode=all</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>delta_cdm</p></td>
+<td><p>real 2d</p></td>
+<td><p>Linear CDM transfer function at samples. Only if mode=all</p></td>
+</tr>
+<tr class="row-odd"><td><p>cmb_cl</p></td>
+<td><p>ell</p></td>
+<td><p>int 1d</p></td>
+<td><p>Angular frequencies. Only if mode=cmb or all</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>tt</p></td>
+<td><p>real 1d</p></td>
+<td><p>ell * (ell+1) C_ell^TT / 2 pi in mu K^2. Only if mode=cmb or all</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ee</p></td>
+<td><p>real 1d</p></td>
+<td><p>ell * (ell+1) C_ell^EE / 2 pi in mu K^2. Only if mode=cmb or all</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>bb</p></td>
+<td><p>real 1d</p></td>
+<td><p>ell * (ell+1) C_ell^BB / 2 pi in mu K^2. Only if mode=cmb or all</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>te</p></td>
+<td><p>real 1d</p></td>
+<td><p>ell * (ell+1) C_ell^TE / 2 pi in mu K^2. Only if mode=cmb or all</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>PhiPhi</p></td>
+<td><p>real 1d</p></td>
+<td><p>Lensing spectrum; note ell scaling: ell * (ell+1) C_ell^PhiPhi. Only if mode=cmb or all</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="lrg.html" class="btn btn-neutral float-left" title="lrg" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mgs.html" class="btn btn-neutral float-right" title="mgs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, The CosmoSIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

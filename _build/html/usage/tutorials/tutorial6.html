@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial 6: Writing new modules &mdash; CosmoSIS 3.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=26f62d79"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Samplers" href="../samplers.html" />
+    <link rel="prev" title="Tutorial 5: Two-Point Pipelines" href="tutorial5.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CosmoSIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/overview.html">CosmoSIS Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/installation.html">Installing CosmoSIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using CosmoSIS:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials: Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tutorial1.html">Tutorial 1: Computing a single cosmology likelihood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial2.html">Tutorial 2: Running an MCMC sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial3.html">Tutorial 3: Making plots and statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial4.html">Tutorial 4: Building new pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial5.html">Tutorial 5: Two-Point Pipelines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tutorial 6: Writing new modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pipelines-modules">Pipelines &amp; Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-requirements">Module requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#writing-our-new-module">Writing our new module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-setup-function">The Setup Function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-execute-function">The Execute Function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#likelihood-modules">Likelihood modules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../samplers.html">Samplers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parameter_files.html">CosmoSIS Parameter Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_library_overview.html">Standard Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading from the previous CosmoSIS Version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus Features:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features/sampler_features.html">Sampler Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/pipeline_features.html">Pipeline Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/parameter_features.html">Parameter Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/campaign.html">Managing sets of runs with a Campaign</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Writing modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_python.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_c.html">C API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_cpp.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_f90.html">Fortran API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_command_line.html">Command line flags for cosmosis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_campaign.html">cosmosis-campaign</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_configure.html">Command line flags for cosmosis-configure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_extract.html">Command line flags for cosmosis-extract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_sample_fisher.html">Command line flags for cosmosis-sample-fisher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/postprocess_command_line.html">Command line flags for postprocess</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/standard_library_complete.html">Standard Library Complete Listing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/nersc_examples.html">NERSC Submission Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CosmoSIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../tutorials.html">Tutorials: Getting Started</a></li>
+      <li class="breadcrumb-item active">Tutorial 6: Writing new modules</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/usage/tutorials/tutorial6.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tutorial-6-writing-new-modules">
+<h1>Tutorial 6: Writing new modules<a class="headerlink" href="#tutorial-6-writing-new-modules" title="Link to this heading"></a></h1>
+<p>So far we’ve used modules from the CosmoSIS standard library to build our pipeline.  This works fine for many projects, where using or modifying the standard library will be enough.  But we can go further by creating entirely new modules to calculate new observables or include new physics effects in them.</p>
+<section id="pipelines-modules">
+<h2>Pipelines &amp; Modules<a class="headerlink" href="#pipelines-modules" title="Link to this heading"></a></h2>
+<p>CosmoSIS modules are isolated from each other - all the calculations done by a module are stored in a DataBlock, which is passed through the list of modules in the pipeline.  Each module reads what previous modules have done, performs its own calculations, and then adds these to the pipeline.</p>
+<p>Typically, a pipeline is run many times on different sets of input parameters, for an example in an MCMC.</p>
+</section>
+<section id="module-requirements">
+<h2>Module requirements<a class="headerlink" href="#module-requirements" title="Link to this heading"></a></h2>
+<p>CosmoSIS modules can be written in C, C++, Fortran, Python, or (experimentally) Julia.</p>
+<p>In each of these languages the structure of the file you write is the same: you write functions with specific names.  Two of these are required, and one is optional:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setup</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+<span class="c1"># Takes the information from the parameter file as a DataBlock and configures the module.</span>
+<span class="c1"># This is called once, when the pipeline is created.</span>
+
+<span class="n">execute</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+<span class="c1"># Takes a DataBlock (see below) from the values file and any preivous pipeline, and runs the module.</span>
+<span class="c1"># This is called for each set of parameters the pipeline is run on.</span>
+
+<span class="n">cleanup</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+<span class="c1"># (Optional) frees memory allocated in the setup function</span>
+<span class="c1"># This is run once, when the pipeline is deallocated.</span>
+<span class="c1"># We will skip it in this tutorial, as it is rarely needed in python.</span>
+</pre></div>
+</div>
+</section>
+<section id="writing-our-new-module">
+<h2>Writing our new module<a class="headerlink" href="#writing-our-new-module" title="Link to this heading"></a></h2>
+<p>Let’s write our new module in Python, since that’s usually much easier.</p>
+<p>Make a new file.  You can put it anywhere, but to keep things organized it’s usally better to keep your work separate from the existing standard library.</p>
+<p>In that file, put these lines, which represent an empty but runnable CosmoSIS module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cosmosis.datablock</span> <span class="kn">import</span> <span class="n">names</span><span class="p">,</span> <span class="n">option_section</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">options</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{}</span>
+
+<span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</section>
+<section id="the-setup-function">
+<h2>The Setup Function<a class="headerlink" href="#the-setup-function" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">setup</span></code> function is run once per chain, at the beginning of the analysis. It reads options from the parameter file, and then performs any setup required.  For example, it might load some data from files, pre-compute some important values, or just keep a list of all the settings for later.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">option</span></code> argument is an instance of a CosmoSIS DataBlock, containing everything specified in the parameter file. The setup function typically reads from it like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="n">option_section</span><span class="p">,</span> <span class="s2">&quot;name_of_option&quot;</span><span class="p">]</span>
+<span class="c1"># or, for value with a fallback option in case it is not set:</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">get_int</span><span class="p">(</span><span class="n">option_section</span><span class="p">,</span> <span class="s2">&quot;name_of_int_option&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For a full list of the <code class="docutils literal notranslate"><span class="pre">get</span></code> functions see the <a class="reference internal" href="../../api/api_python.html"><span class="doc">Python API</span></a>.</p>
+<p>The constant <code class="docutils literal notranslate"><span class="pre">option_section</span></code> just refers to the section of the datablock that generated this module.  Usually you will want to use it.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">setup</span></code> function can return any object you like; you can use whatever is the most convenient way to store the configuration for your module.  For example, you could return a dictionary, list, or an instance of a class.  Whatever object you return will be passed back to the <code class="docutils literal notranslate"><span class="pre">execute</span></code> function later when it is called.</p>
+</section>
+<section id="the-execute-function">
+<h2>The Execute Function<a class="headerlink" href="#the-execute-function" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">execute</span></code> is the main worker function of a module. It is called for each new set of values that the (MCMC) sampler generates.  The execute functions of all the modules in the pipeline are called one by one, in order, with a single datablock passed from one to the next.  Each module reads values from the block (put there either by the sampler or previous modules), does some calculations, and then puts its own values in the block.</p>
+<p>The second argument, <code class="docutils literal notranslate"><span class="pre">config</span></code>, is whatever the <code class="docutils literal notranslate"><span class="pre">setup</span></code> function returns.</p>
+<p>For example, here is an execute function that calculates <code class="docutils literal notranslate"><span class="pre">D_V</span></code>, a distance measure used in BAO studies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Some values from previous modules</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span><span class="s2">&quot;distances&quot;</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">]</span>
+<span class="n">d_a</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span><span class="s2">&quot;distances&quot;</span><span class="p">,</span> <span class="s2">&quot;D_A&quot;</span><span class="p">]</span>
+<span class="n">H</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span><span class="s2">&quot;distances&quot;</span><span class="p">,</span> <span class="s2">&quot;H&quot;</span><span class="p">]</span>
+
+<span class="c1"># Some constants</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="c1"># compute something derived from the inputs</span>
+<span class="n">d_v</span> <span class="o">=</span> <span class="p">((</span><span class="mf">1.0</span><span class="o">+</span><span class="n">z</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">c</span> <span class="o">*</span> <span class="n">z</span> <span class="o">*</span> <span class="n">d_a</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">H</span> <span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span>
+
+<span class="n">block</span><span class="p">[</span><span class="s2">&quot;distances&quot;</span><span class="p">,</span> <span class="s2">&quot;d_v&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">d_v</span>
+</pre></div>
+</div>
+<p>The full list of methods that a block can run is discussed on the <a class="reference internal" href="../../api/api_python.html"><span class="doc">Python API</span></a> page.</p>
+<p>You can explore what the previous pipeline has put in the block either by running the pipeline with the test sampler and exploring the saved directory from the block, by using the <code class="docutils literal notranslate"><span class="pre">block.keys()</span></code> method, or by reading the documentation for the module on the <a class="reference internal" href="../standard_library_overview.html"><span class="doc">Standard Library Overview</span></a> page.</p>
+<p>Execute functions should return <code class="docutils literal notranslate"><span class="pre">0</span></code> if the succeeded and any non-zero integer if they failed for any reason.</p>
+</section>
+<section id="likelihood-modules">
+<h2>Likelihood modules<a class="headerlink" href="#likelihood-modules" title="Link to this heading"></a></h2>
+<p>Likelihoods are implemented in cosmosis just as another kind of module, but they should put the value of a log-likelihood the “likelihoods” section of the block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">block</span><span class="p">[</span><span class="s2">&quot;likelihoods&quot;</span><span class="p">,</span> <span class="s2">&quot;my_like&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>If your likelihood is a Gaussian you can inherit from <code class="docutils literal notranslate"><span class="pre">cosmosis.GaussianLikelihood</span></code> and override some of the methods there.  See  <a class="reference external" href="https://github.com/joezuntz/cosmosis/blob/main/cosmosis/gaussian_likelihood.py">the Gaussian Likelihood class here</a>  for details; you would usually only have to override the methods <code class="docutils literal notranslate"><span class="pre">extract_theory_points</span></code>, <code class="docutils literal notranslate"><span class="pre">build_data</span></code> and <code class="docutils literal notranslate"><span class="pre">build_covariance</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tutorial5.html" class="btn btn-neutral float-left" title="Tutorial 5: Two-Point Pipelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../samplers.html" class="btn btn-neutral float-right" title="Samplers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, The CosmoSIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

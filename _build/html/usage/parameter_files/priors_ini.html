@@ -1,0 +1,218 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priors Files &mdash; CosmoSIS 3.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=26f62d79"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Standard Library Overview" href="../standard_library_overview.html" />
+    <link rel="prev" title="Values Files" href="values_ini.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CosmoSIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/overview.html">CosmoSIS Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/installation.html">Installing CosmoSIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using CosmoSIS:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials: Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../samplers.html">Samplers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../parameter_files.html">CosmoSIS Parameter Files</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../parameter_files.html#parameter-files">Parameter files</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="params_ini.html">Parameter Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="values_ini.html">Values Files</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Priors Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#implicit-priors">Implicit Priors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#additional-priors">Additional Priors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#uniform-priors">Uniform Priors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gaussian-priors">Gaussian Priors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exponential-priors">Exponential Priors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-priors">Custom Priors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#the-ini-format">The ini format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#case">Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#comments">Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#include-statements">Include statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#environment-variables">Environment variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#interpolation">Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#the-default-section">The default section</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_library_overview.html">Standard Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading from the previous CosmoSIS Version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus Features:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features/sampler_features.html">Sampler Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/pipeline_features.html">Pipeline Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/parameter_features.html">Parameter Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/campaign.html">Managing sets of runs with a Campaign</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Writing modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_python.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_c.html">C API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_cpp.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_f90.html">Fortran API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_command_line.html">Command line flags for cosmosis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_campaign.html">cosmosis-campaign</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_configure.html">Command line flags for cosmosis-configure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_extract.html">Command line flags for cosmosis-extract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_sample_fisher.html">Command line flags for cosmosis-sample-fisher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/postprocess_command_line.html">Command line flags for postprocess</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/standard_library_complete.html">Standard Library Complete Listing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/nersc_examples.html">NERSC Submission Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CosmoSIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../parameter_files.html">CosmoSIS Parameter Files</a></li>
+      <li class="breadcrumb-item active">Priors Files</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/usage/parameter_files/priors_ini.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="priors-files">
+<h1>Priors Files<a class="headerlink" href="#priors-files" title="Link to this heading"></a></h1>
+<p>The priors file is optional, and if desired can be set in the <code class="code docutils literal notranslate"><span class="pre">[pipeline]</span></code> section of the main parameter file. The path to it may be specified in the <code class="code docutils literal notranslate"><span class="pre">[pipeline]</span></code> section of the main parameter file, using the syntax <code class="code docutils literal notranslate"><span class="pre">priors</span> <span class="pre">=</span> <span class="pre">path/to/values.ini</span></code>.</p>
+<p>Like the other parameter files it is in the <code class="code docutils literal notranslate"><span class="pre">ini</span></code> format.  All parameters should be in named <code class="code docutils literal notranslate"><span class="pre">[section]s</span></code>.</p>
+<section id="implicit-priors">
+<h2>Implicit Priors<a class="headerlink" href="#implicit-priors" title="Link to this heading"></a></h2>
+<p>Parameters that appear in the values file always have an implicit uniform prior between the lower and upper limits that you specify there.</p>
+<p>Priors that you specify in the priors ini file act as <em>additional</em> priors - for example, if you specify a Gaussian prior here for a parameter then the overall priors will be a Gaussian, truncated at the lower and upper bounds.</p>
+</section>
+<section id="additional-priors">
+<h2>Additional Priors<a class="headerlink" href="#additional-priors" title="Link to this heading"></a></h2>
+<p>Priors to include in addition to the implicit ones are set in the priors ini file.  Here is an example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">cosmological_parameters</span><span class="p">]</span>
+<span class="n">omega_m</span> <span class="o">=</span> <span class="n">uniform</span> <span class="mf">0.0</span> <span class="mf">0.2</span>
+<span class="n">h0</span> <span class="o">=</span> <span class="n">gaussian</span> <span class="mf">0.72</span> <span class="mf">0.08</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="n">exponential</span> <span class="mf">0.05</span>
+</pre></div>
+</div>
+<p>As in the values file all parameters must be in a corresponding section.  Priors that are set here but refer to parameters not mentioned in the values file will be ignored.</p>
+<p>Currently only independent priors can be specified in CosmoSIS.</p>
+</section>
+<section id="uniform-priors">
+<h2>Uniform Priors<a class="headerlink" href="#uniform-priors" title="Link to this heading"></a></h2>
+<p>Uniform priors specified in the priors file can be used to further restrict parameters compared to their allowed range in the values file.  Otherwise they are a little pointless.</p>
+<p>They are specified in the form: <code class="code docutils literal notranslate"><span class="pre">param_name</span> <span class="pre">=</span> <span class="pre">uniform</span>&#160; <span class="pre">&lt;lower_limit&gt;</span>&#160; <span class="pre">&lt;upper_limit&gt;</span></code>.</p>
+</section>
+<section id="gaussian-priors">
+<h2>Gaussian Priors<a class="headerlink" href="#gaussian-priors" title="Link to this heading"></a></h2>
+<p>Gaussian priors specified here combine with the implicit priors in the values section to form truncated Gaussian priors. The normalization is correctly adjusted.</p>
+<p>They are specified in the form: <code class="code docutils literal notranslate"><span class="pre">param_name</span> <span class="pre">=</span> <span class="pre">gaussian</span>&#160; <span class="pre">&lt;mean&gt;</span>&#160; <span class="pre">&lt;std_dev&gt;</span></code>.</p>
+</section>
+<section id="exponential-priors">
+<h2>Exponential Priors<a class="headerlink" href="#exponential-priors" title="Link to this heading"></a></h2>
+<p>Again, exponential priors are truncated by the limits in the values file.</p>
+<p>The exponential distribution has the form <span class="math notranslate nohighlight">\(P(X=x) = \frac{1}{\beta} \exp{(-x/\beta)}\)</span> for the parameter <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
+<p>They are specified in the form: <code class="code docutils literal notranslate"><span class="pre">param_name</span> <span class="pre">=</span> <span class="pre">exponential</span>&#160; <span class="pre">&lt;beta&gt;</span></code>.</p>
+</section>
+<section id="custom-priors">
+<h2>Custom Priors<a class="headerlink" href="#custom-priors" title="Link to this heading"></a></h2>
+<p>You can specify a custom prior by loading it from a text file.  The file should contain two columns, the first being the parameter value in ascending order and the second the prior probability density.  The prior will be linearly interpolated between the points you specify.</p>
+<p>They are specified in the form: <code class="code docutils literal notranslate"><span class="pre">param_name</span> <span class="pre">=</span> <span class="pre">load</span>&#160; <span class="pre">&lt;filename&gt;</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="values_ini.html" class="btn btn-neutral float-left" title="Values Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../standard_library_overview.html" class="btn btn-neutral float-right" title="Standard Library Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, The CosmoSIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

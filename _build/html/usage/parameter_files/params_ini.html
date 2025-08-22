@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parameter Files &mdash; CosmoSIS 3.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=26f62d79"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Values Files" href="values_ini.html" />
+    <link rel="prev" title="CosmoSIS Parameter Files" href="../parameter_files.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CosmoSIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/overview.html">CosmoSIS Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/installation.html">Installing CosmoSIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using CosmoSIS:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials: Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../samplers.html">Samplers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../parameter_files.html">CosmoSIS Parameter Files</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../parameter_files.html#parameter-files">Parameter files</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Parameter Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#runtime-options">Runtime Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sampler-options">Sampler Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output-options">Output Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pipeline-options">Pipeline Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-options">Module Options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="values_ini.html">Values Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="priors_ini.html">Priors Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#the-ini-format">The ini format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#case">Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#comments">Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#include-statements">Include statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#environment-variables">Environment variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#interpolation">Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parameter_files.html#the-default-section">The default section</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_library_overview.html">Standard Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading from the previous CosmoSIS Version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus Features:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features/sampler_features.html">Sampler Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/pipeline_features.html">Pipeline Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/parameter_features.html">Parameter Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/campaign.html">Managing sets of runs with a Campaign</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Writing modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_python.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_c.html">C API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_cpp.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_f90.html">Fortran API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_command_line.html">Command line flags for cosmosis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_campaign.html">cosmosis-campaign</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_configure.html">Command line flags for cosmosis-configure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_extract.html">Command line flags for cosmosis-extract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_sample_fisher.html">Command line flags for cosmosis-sample-fisher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/postprocess_command_line.html">Command line flags for postprocess</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/standard_library_complete.html">Standard Library Complete Listing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/nersc_examples.html">NERSC Submission Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CosmoSIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../parameter_files.html">CosmoSIS Parameter Files</a></li>
+      <li class="breadcrumb-item active">Parameter Files</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/usage/parameter_files/params_ini.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="parameter-files">
+<h1>Parameter Files<a class="headerlink" href="#parameter-files" title="Link to this heading"></a></h1>
+<section id="runtime-options">
+<h2>Runtime Options<a class="headerlink" href="#runtime-options" title="Link to this heading"></a></h2>
+<p>A section called <code class="code docutils literal notranslate"><span class="pre">[runtime]</span></code> must be present in the parameter file.  It has one mandatory parameter, <code class="code docutils literal notranslate"><span class="pre">sampler</span></code>, and one optional one, <code class="code docutils literal notranslate"><span class="pre">root</span></code>.</p>
+<p>The <code class="code docutils literal notranslate"><span class="pre">sampler</span></code> parameter must be one of the CosmoSIS samplers.  It determines how the parameter space is explored.</p>
+<p>The <code class="code docutils literal notranslate"><span class="pre">root</span></code> parameter changes how paths to modules in the parameter file are looked for.  All paths are defined relative to the root.</p>
+<p>The <code class="code docutils literal notranslate"><span class="pre">verbosity</span></code> setting can be used to control how much output is printed to the screen.  It can either be set to a number from 0 to 50,
+where 50 is the noisiest and 0 is silent, or to one of the following strings:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">debug</span> <span class="mi">40</span> <span class="o">-</span> <span class="n">extra</span> <span class="n">information</span> <span class="n">on</span> <span class="n">proposals</span> <span class="n">will</span> <span class="n">be</span> <span class="n">printed</span> <span class="k">for</span> <span class="n">some</span> <span class="n">samplers</span>
+<span class="n">noisy</span> <span class="o">=</span> <span class="mi">35</span> <span class="o">-</span> <span class="n">extra</span> <span class="n">information</span> <span class="n">will</span> <span class="n">be</span> <span class="n">printed</span> <span class="n">about</span> <span class="n">pipeline</span> <span class="n">stage</span> <span class="n">progress</span>
+<span class="n">standard</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">-</span> <span class="n">likelihood</span> <span class="n">will</span> <span class="n">be</span> <span class="n">printed</span> <span class="k">for</span> <span class="n">every</span> <span class="n">evaluated</span> <span class="n">parameter</span> <span class="nb">set</span>
+<span class="n">quiet</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">-</span> <span class="n">likelihoods</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">printed</span> <span class="n">but</span> <span class="n">general</span> <span class="n">progress</span> <span class="n">will</span>
+<span class="n">muted</span> <span class="mi">10</span> <span class="o">-</span> <span class="n">no</span> <span class="n">general</span> <span class="n">progress</span> <span class="n">will</span> <span class="n">be</span> <span class="n">printed</span>
+<span class="n">silent</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span> <span class="n">nothing</span> <span class="n">will</span> <span class="n">be</span> <span class="n">printed</span> <span class="n">during</span> <span class="n">sampling</span>
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">runtime</span><span class="p">]</span>
+<span class="n">sampler</span> <span class="o">=</span> <span class="n">metropolis</span>
+<span class="p">;</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">default</span> <span class="n">value</span> <span class="n">of</span> <span class="n">root</span><span class="p">:</span>
+<span class="n">root</span> <span class="o">=</span> <span class="o">.</span>
+<span class="n">verbosity</span> <span class="o">=</span> <span class="n">quiet</span>
+</pre></div>
+</div>
+</section>
+<section id="sampler-options">
+<h2>Sampler Options<a class="headerlink" href="#sampler-options" title="Link to this heading"></a></h2>
+<p>The specific sampler that you chose in the <code class="code docutils literal notranslate"><span class="pre">[runtime]</span></code> section must also be configured in a section.</p>
+<p>Different samplers have different options - some mandatory and some which take a default value if you don’t set them. The pages for the individual samplers describe what parameter they can take.  For example, the emcee sampler might take these parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">emcee</span><span class="p">]</span>
+<span class="n">walkers</span> <span class="o">=</span> <span class="mi">64</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</section>
+<section id="output-options">
+<h2>Output Options<a class="headerlink" href="#output-options" title="Link to this heading"></a></h2>
+<p>All the samplers except the test sampler generate output chain files. You can choose where this should go and what format it should have in the <code class="code docutils literal notranslate"><span class="pre">output</span></code> section.   The only mandatory parameter is <code class="code docutils literal notranslate"><span class="pre">filename</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">output</span><span class="p">]</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="n">my_output_chain</span><span class="o">.</span><span class="n">txt</span>
+<span class="p">;</span> <span class="n">the</span> <span class="n">default</span> <span class="nb">format</span> <span class="ow">is</span> <span class="s2">&quot;text&quot;</span><span class="o">.</span>  <span class="n">It</span> <span class="n">can</span> <span class="n">also</span> <span class="n">be</span> <span class="nb">set</span> <span class="n">to</span> <span class="s2">&quot;fits&quot;</span><span class="p">,</span> <span class="n">but</span> <span class="n">we</span> <span class="n">don</span><span class="s1">&#39;t recommend that.</span>
+<span class="nb">format</span> <span class="o">=</span> <span class="n">text</span>
+</pre></div>
+</div>
+</section>
+<section id="pipeline-options">
+<h2>Pipeline Options<a class="headerlink" href="#pipeline-options" title="Link to this heading"></a></h2>
+<p>The mandatory <code class="code docutils literal notranslate"><span class="pre">pipeline</span></code> section defines the pipeline that you want to run to generate a likelihood.</p>
+<p>It must have these parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">pipeline</span><span class="p">]</span>
+<span class="n">modules</span> <span class="o">=</span> <span class="n">consistency</span> <span class="n">camb</span> <span class="n">jla</span> <span class="n">riess11</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">demos</span><span class="o">/</span><span class="n">values5</span><span class="o">.</span><span class="n">ini</span>
+<span class="n">likelihoods</span> <span class="o">=</span> <span class="n">jla</span> <span class="n">riess</span>
+<span class="n">debug</span><span class="o">=</span><span class="n">F</span>
+<span class="n">timing</span><span class="o">=</span><span class="n">F</span>
+<span class="n">extra_output</span> <span class="o">=</span> <span class="n">cosmological_parameters</span><span class="o">/</span><span class="n">Yhe</span>
+</pre></div>
+</div>
+<p>The <strong>modules</strong> parameter must contain a sequence of the modules that make up the pipeline.  Each module is a single collection of code that performs a piece of the calculation.  See also the overview section for more information on the concept modules, the list of CosmoSIS standard modules, and details on how to make your own modules.  The names used in this option can be absolutely anything, as long as there is a correspondingly named section somewhere else in the file (see Module Options below).</p>
+<p>The <strong>values</strong> parameter must point to the values file, which defines what parameters are put in to the start of the pipeline.  The path is relative to the current working directory, not to the parameter file.</p>
+<p>The <strong>likelihoods</strong> parameter defines which likelihoods are extracted from the pipeline.  After running the pipeline CosmoSIS looks in the data block for parameters called <code class="code docutils literal notranslate"><span class="pre">X_LIKE</span></code> for each X in the list given here. If this parameter is not set then all available likelihoods are used.</p>
+<p>The <strong>debug</strong> parameter can be set to “T” to print out more detailed debugging output if the pipeline fails.  It will print out the complete list of all things written to and read from the pipeline.</p>
+<p>The <strong>timing</strong> parameter can be set to “T” to print out how long each stage in the pipeline takes to configure and run.</p>
+<p>The <strong>extra_output</strong> parameter can be used to save derived parameters in the output chain.  Set it to a sequence of strings each of the form <code class="code docutils literal notranslate"><span class="pre">section/name</span></code>, and after the pipeline is run each these will be extracted from the output as a new column.</p>
+</section>
+<section id="module-options">
+<h2>Module Options<a class="headerlink" href="#module-options" title="Link to this heading"></a></h2>
+<p>Every entry found in the <code class="code docutils literal notranslate"><span class="pre">modules</span></code> option in the <code class="code docutils literal notranslate"><span class="pre">pipeline</span></code> section (see above) must have a section with the same name in the parameter file.</p>
+<p>That section must have at least one mandatory parameter in it, <code class="code docutils literal notranslate"><span class="pre">file</span></code>:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[pipeline]</span>
+<span class="c1">; We must include two sections below with these names:</span>
+<span class="na">modules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">my_theory_module   my_likelihood_module</span>
+
+<span class="k">[my_theory_module]</span>
+<span class="na">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">modules/path/to/theory/filename.so</span>
+
+<span class="k">[my_likelihood_module]</span>
+<span class="na">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">modules/path/to/likelihood/filename.py</span>
+</pre></div>
+</div>
+<p>The file option must be the path to either a shared library (.so) or a python (.py) file.  The paths that you need for CosmoSIS standard library modules are described in the reference section for them.  See the documentation on making modules for more information on creating your own new modules.</p>
+<p>In addition to this mandatory parameter, you can also specify other options in the file.  These options can be read in the setup phase of the module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">my_likelihood_module</span><span class="p">]</span>
+<span class="n">file</span> <span class="o">=</span> <span class="n">modules</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">likelihood</span><span class="o">/</span><span class="n">filename</span><span class="o">.</span><span class="n">py</span>
+<span class="n">data_file</span> <span class="o">=</span> <span class="n">some_path_to_a_data_file</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">xxx</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../parameter_files.html" class="btn btn-neutral float-left" title="CosmoSIS Parameter Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="values_ini.html" class="btn btn-neutral float-right" title="Values Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, The CosmoSIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

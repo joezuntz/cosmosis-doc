@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riess21 &mdash; CosmoSIS 3.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=26f62d79"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Sheth-Tormen MF" href="Sheth-Tormen%20MF.html" />
+    <link rel="prev" title="Riess16" href="Riess16.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CosmoSIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/overview.html">CosmoSIS Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/installation.html">Installing CosmoSIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using CosmoSIS:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../usage/tutorials.html">Tutorials: Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage/samplers.html">Samplers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage/parameter_files.html">CosmoSIS Parameter Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage/standard_library_overview.html">Standard Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage/upgrading.html">Upgrading from the previous CosmoSIS Version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus Features:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features/sampler_features.html">Sampler Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/pipeline_features.html">Pipeline Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/parameter_features.html">Parameter Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/campaign.html">Managing sets of runs with a Campaign</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Writing modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_python.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_c.html">C API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_cpp.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_f90.html">Fortran API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cosmosis_command_line.html">Command line flags for cosmosis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmosis_campaign.html">cosmosis-campaign</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmosis_configure.html">Command line flags for cosmosis-configure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmosis_extract.html">Command line flags for cosmosis-extract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmosis_sample_fisher.html">Command line flags for cosmosis-sample-fisher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../postprocess_command_line.html">Command line flags for postprocess</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../standard_library_complete.html">Standard Library Complete Listing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2pt.html">2pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6dFGS.html">6dFGS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BBN.html">BBN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BBN-Consistency.html">BBN-Consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BICEP2.html">BICEP2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BOSS.html">BOSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CRL_Eisenstein_Hu.html">CRL_Eisenstein_Hu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Cluster_mass.html">Cluster_mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CosmicEmu.html">CosmicEmu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EuclidEmulator2.html">EuclidEmulator2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extreme_Value_Statistics.html">Extreme_Value_Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FrankenEmu.html">FrankenEmu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Joachimi_Bridle_alpha.html">Joachimi_Bridle_alpha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="JulloLikelihood.html">JulloLikelihood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NLfactor.html">NLfactor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Press_Schechter_MF.html">Press_Schechter_MF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Riess11.html">Riess11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Riess16.html">Riess16</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Riess21</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#assumptions">Assumptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-parameters">Setup Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#input-values">Input values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-values">Output values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Sheth-Tormen%20MF.html">Sheth-Tormen MF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tinker_MF.html">Tinker_MF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WiggleZBao.html">WiggleZBao</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act-dr6-lens.html">act-dr6-lens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_intrinsic.html">add_intrinsic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_magnification.html">add_magnification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apply_astrophysical_biases.html">apply_astrophysical_biases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="astropy_background.html">astropy_background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bacco_emulator.html">bacco_emulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="balmes.html">balmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="baryonic.html">baryonic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boss_dr12.html">boss_dr12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boss_dr12_lrg_reanalyze.html">boss_dr12_lrg_reanalyze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camb.html">camb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cl_to_corr.html">cl_to_corr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cl_to_xi_nicaea.html">cl_to_xi_nicaea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cl_to_xi_wigner_d.html">cl_to_xi_wigner_d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class.html">class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clerkin.html">clerkin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consistency.html">consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constant_bias.html">constant_bias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copy.html">copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correlated_priors.html">correlated_priors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cosebis.html">cosebis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delete.html">delete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="des-y3-bao.html">des-y3-bao</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desi_dr1_arxiv.html">desi_dr1_arxiv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distances.html">distances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eboss_dr14_lya.html">eboss_dr14_lya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eboss_dr16_elg.html">eboss_dr16_elg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eboss_dr16_lrg.html">eboss_dr16_lrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eboss_dr16_lya.html">eboss_dr16_lya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eboss_dr16_qso.html">eboss_dr16_qso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_growth.html">extract_growth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extrapolate.html">extrapolate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast_pt.html">fast_pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgas.html">fgas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gaussian_window.html">gaussian_window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="growth_factor.html">growth_factor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="h0licow.html">h0licow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hsc_cosmic_shear.html">hsc_cosmic_shear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ia_z_powerlap.html">ia_z_powerlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ia_z_powerlaw.html">ia_z_powerlaw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="isitgr-camb.html">isitgr-camb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jla.html">jla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kappa_beam.html">kappa_beam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kappa_ell_cut.html">kappa_ell_cut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear_alignments.html">linear_alignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_nz.html">load_nz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_nz_fits.html">load_nz_fits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_w_model.html">log_w_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lrg.html">lrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mgcamb.html">mgcamb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mgs.html">mgs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mgs_bao.html">mgs_bao</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no_bias.html">no_bias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nz_multirank.html">nz_multirank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pantheon.html">pantheon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pantheon_plus.html">pantheon_plus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="photoz_bias.html">photoz_bias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planck2018.html">planck2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planck_py.html">planck_py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planck_sz.html">planck_sz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_2d.html">project_2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qso.html">qso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rename.html">rename</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rescale_distances_rdh.html">rescale_distances_rdh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sacc_like.html">sacc_like</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shear_bias.html">shear_bias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sigma8_rescale.html">sigma8_rescale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sigma_cpp.html">sigma_cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sigma_r.html">sigma_r</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smail.html">smail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stop.html">stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strong_lens_time_delays.html">strong_lens_time_delays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdcosmo.html">tdcosmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="w0wa_sum_prior.html">w0wa_sum_prior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wl_spectra.html">wl_spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wl_spectra_ppf.html">wl_spectra_ppf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wmap.html">wmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wmap_shift.html">wmap_shift</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nersc_examples.html">NERSC Submission Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CosmoSIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../standard_library_complete.html">Standard Library Complete Listing</a></li>
+      <li class="breadcrumb-item active">Riess21</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/reference/standard_library/Riess21.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="riess21">
+<h1>Riess21<a class="headerlink" href="#riess21" title="Link to this heading"></a></h1>
+<p>Likelihood of hubble parameter H0 from Riess et al supernova sample</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>File</p></td>
+<td><p>likelihood/riess21/riess21.py</p></td>
+</tr>
+<tr class="row-even"><td><p>Attribution</p></td>
+<td><p>Riess et al (measurement)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>CosmoSIS team (code)</p></td>
+</tr>
+<tr class="row-even"><td><p>URL</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Citations</p></td>
+<td><p>Riess et al, ApJLett, 908, 1</p></td>
+</tr>
+</tbody>
+</table>
+<p>This small module was written for CosmoSIS.</p>
+<p>Supernova type IA measurements are a standard(izable) candle
+that can be used to probe the relation between luminosity distance
+and redshift.  At low redshifts this directly probes the Hubble parameter,
+H0.</p>
+<p>The Riess et al 1% solution measurement of H0 is used in this module.</p>
+<section id="assumptions">
+<h2>Assumptions<a class="headerlink" href="#assumptions" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>FRW cosmological model</p></li>
+<li><p>Riess et al data set</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="setup-parameters">
+<h2>Setup Parameters<a class="headerlink" href="#setup-parameters" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mean</p></td>
+<td><p>real</p></td>
+<td><p>0.732</p></td>
+<td><p>Replace the standard value measurement H0 = 0.732 with a custom one for simulations</p></td>
+</tr>
+<tr class="row-odd"><td><p>sigma</p></td>
+<td><p>real</p></td>
+<td><p>0.013</p></td>
+<td><p>Replace the standard value error on H0 of 0.013 with a custom one</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="input-values">
+<h2>Input values<a class="headerlink" href="#input-values" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Section</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cosmological_parameters</p></td>
+<td><p>h0</p></td>
+<td><p>real</p></td>
+<td></td>
+<td><p>Hubble parameter H0/(100 km/s/Mpc)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="output-values">
+<h2>Output values<a class="headerlink" href="#output-values" title="Link to this heading"></a></h2>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Output values</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Section</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>likelihoods</p></td>
+<td><p>RIESS21_LIKE</p></td>
+<td><p>real</p></td>
+<td><p>Gaussian likelihood value of supplied parameters</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Riess16.html" class="btn btn-neutral float-left" title="Riess16" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Sheth-Tormen%20MF.html" class="btn btn-neutral float-right" title="Sheth-Tormen MF" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, The CosmoSIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

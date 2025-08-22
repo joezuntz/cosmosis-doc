@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial 4: Building new pipelines &mdash; CosmoSIS 3.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=26f62d79"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tutorial 5: Two-Point Pipelines" href="tutorial5.html" />
+    <link rel="prev" title="Tutorial 3: Making plots and statistics" href="tutorial3.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CosmoSIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/overview.html">CosmoSIS Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/installation.html">Installing CosmoSIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using CosmoSIS:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials: Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tutorial1.html">Tutorial 1: Computing a single cosmology likelihood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial2.html">Tutorial 2: Running an MCMC sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial3.html">Tutorial 3: Making plots and statistics</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tutorial 4: Building new pipelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#extending-a-calculation-by-adding-modules">Extending a calculation by adding modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-the-new-module">Adding the new module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-the-module">Configuring the module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-module">Running the module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-complicated-pipelines">More complicated pipelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial5.html">Tutorial 5: Two-Point Pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial6.html">Tutorial 6: Writing new modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../samplers.html">Samplers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parameter_files.html">CosmoSIS Parameter Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standard_library_overview.html">Standard Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading from the previous CosmoSIS Version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus Features:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features/sampler_features.html">Sampler Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/pipeline_features.html">Pipeline Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/parameter_features.html">Parameter Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/campaign.html">Managing sets of runs with a Campaign</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Writing modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_python.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_c.html">C API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_cpp.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/api_f90.html">Fortran API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_command_line.html">Command line flags for cosmosis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_campaign.html">cosmosis-campaign</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_configure.html">Command line flags for cosmosis-configure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_extract.html">Command line flags for cosmosis-extract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cosmosis_sample_fisher.html">Command line flags for cosmosis-sample-fisher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/postprocess_command_line.html">Command line flags for postprocess</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/standard_library_complete.html">Standard Library Complete Listing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/nersc_examples.html">NERSC Submission Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CosmoSIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../tutorials.html">Tutorials: Getting Started</a></li>
+      <li class="breadcrumb-item active">Tutorial 4: Building new pipelines</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/usage/tutorials/tutorial4.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tutorial-4-building-new-pipelines">
+<h1>Tutorial 4: Building new pipelines<a class="headerlink" href="#tutorial-4-building-new-pipelines" title="Link to this heading"></a></h1>
+<p>In CosmoSIS a <em>pipeline</em> is a sequence of <em>modules</em> that computes one or more <em>likelihoods</em>.</p>
+<p>You can build a new pipeline or modify an existing one by choosing which modules to include in the pipeline, and by selecting their configuration.</p>
+<section id="extending-a-calculation-by-adding-modules">
+<h2>Extending a calculation by adding modules<a class="headerlink" href="#extending-a-calculation-by-adding-modules" title="Link to this heading"></a></h2>
+<p>To know which module to add you have to understand the calculation you want to perform, and make sure that all the necessary calculations for it are done at some point in the pipeline.
+You can add modules into the middle of an existing pipeline, or at the end.</p>
+</section>
+<section id="adding-the-new-module">
+<h2>Adding the new module<a class="headerlink" href="#adding-the-new-module" title="Link to this heading"></a></h2>
+<p>In the <code class="code docutils literal notranslate"><span class="pre">[pipeline]</span></code> section of <code class="code docutils literal notranslate"><span class="pre">examples/planck.ini</span></code> you will find:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">pipeline</span><span class="p">]</span>
+<span class="n">modules</span> <span class="o">=</span> <span class="n">consistency</span> <span class="n">camb</span> <span class="n">planck</span>
+</pre></div>
+</div>
+<p>Let’s modify this pipeline, by adding the BOSS DR12 Baryon Acoustic Oscillation measurement.  We can consult the
+<a class="reference internal" href="../standard_library_overview.html"><span class="doc">standard library overview page</span></a> for likelihoods we can include, and the <a class="reference internal" href="../../reference/standard_library/boss_dr12.html"><span class="doc">BOSS DR12 page</span></a> for more details.</p>
+<p>The latter page lists the file we should use for this module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">File</span><span class="p">:</span> <span class="n">likelihood</span><span class="o">/</span><span class="n">boss_dr12</span><span class="o">/</span><span class="n">boss_dr12</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>This means that we make a new section in the parameter file that we are using, with this information in.  We can add new text to the bottom of <code class="code docutils literal notranslate"><span class="pre">examples/planck.ini</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">boss</span><span class="p">]</span>
+<span class="n">file</span> <span class="o">=</span> <span class="n">likelihood</span><span class="o">/</span><span class="n">boss_dr12</span><span class="o">/</span><span class="n">boss_dr12</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</section>
+<section id="configuring-the-module">
+<h2>Configuring the module<a class="headerlink" href="#configuring-the-module" title="Link to this heading"></a></h2>
+<p>The wiki page also tells us what parameters we can use to configure the pipeline, and what inputs the likelihood will need.  The parameters all have default choices, so nothing is mandatory, but we can make some choices.  The main one is to choose which kind of likelihood to use:</p>
+<blockquote>
+<div><p>mode    0 for BAO only, 1 for BAO+FS measurements</p>
+</div></blockquote>
+<p>Let’s use both the BAO and full-shape information, and so set the parameter <code class="code docutils literal notranslate"><span class="pre">mode</span></code> 1.  So our new parameter file section becomes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">boss</span><span class="p">]</span>
+<span class="n">file</span> <span class="o">=</span> <span class="n">cosmosis</span><span class="o">-</span><span class="n">standard</span><span class="o">-</span><span class="n">library</span><span class="o">/</span><span class="n">likelihood</span><span class="o">/</span><span class="n">boss_dr12</span><span class="o">/</span><span class="n">boss_dr12</span><span class="o">.</span><span class="n">py</span>
+<span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+<section id="running-the-module">
+<h2>Running the module<a class="headerlink" href="#running-the-module" title="Link to this heading"></a></h2>
+<p>Right now, nothing will change if we run this pipeline, because we have not told CosmoSIS to use this new module.  We can do so by changing the modules option from above to this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">pipeline</span><span class="p">]</span>
+<span class="n">modules</span> <span class="o">=</span> <span class="n">consistency</span> <span class="n">camb</span> <span class="n">planck</span> <span class="n">boss</span>
+</pre></div>
+</div>
+<p>This tells CosmoSIS to look for a section called “boss” in the parameter file and configure a module based on it.</p>
+<p>It’s fine to include unused modules in the parameter file - it can be useful later when you run different variations of a similar pipeline.</p>
+<p>Once we have this, we can run the module with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cosmosis</span> <span class="n">examples</span><span class="o">/</span><span class="n">planck</span><span class="o">.</span><span class="n">ini</span>
+</pre></div>
+</div>
+<p>and it will now print out both likelihoods, and their total:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Found</span> <span class="n">likelihood</span> <span class="n">named</span> <span class="n">planck2018</span>
+    <span class="n">Likelihood</span> <span class="n">boss_dr12</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.542050189759326</span>
+    <span class="n">Likelihood</span> <span class="n">planck2018</span> <span class="o">=</span> <span class="o">-</span><span class="mf">6288.687206797975</span>
+<span class="n">Likelihood</span> <span class="n">total</span> <span class="o">=</span> <span class="o">-</span><span class="mf">6294.2292569877345</span>
+</pre></div>
+</div>
+</section>
+<section id="more-complicated-pipelines">
+<h2>More complicated pipelines<a class="headerlink" href="#more-complicated-pipelines" title="Link to this heading"></a></h2>
+<p>This was a case where only a simple addition to the pipeline was needed. In more complicated cases we often need more complicated pipelines, and to add more calculation steps along the way.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tutorial3.html" class="btn btn-neutral float-left" title="Tutorial 3: Making plots and statistics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial5.html" class="btn btn-neutral float-right" title="Tutorial 5: Two-Point Pipelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, The CosmoSIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

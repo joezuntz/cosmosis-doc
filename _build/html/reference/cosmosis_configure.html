@@ -1,0 +1,219 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command line flags for cosmosis-configure &mdash; CosmoSIS 3.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=26f62d79"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Command line flags for cosmosis-extract" href="cosmosis_extract.html" />
+    <link rel="prev" title="cosmosis-campaign" href="cosmosis_campaign.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CosmoSIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">CosmoSIS Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/installation.html">Installing CosmoSIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using CosmoSIS:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage/tutorials.html">Tutorials: Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/samplers.html">Samplers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/parameter_files.html">CosmoSIS Parameter Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/standard_library_overview.html">Standard Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/upgrading.html">Upgrading from the previous CosmoSIS Version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus Features:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../features/sampler_features.html">Sampler Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/pipeline_features.html">Pipeline Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/parameter_features.html">Parameter Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/campaign.html">Managing sets of runs with a Campaign</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Writing modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_python.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_c.html">C API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_cpp.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_f90.html">Fortran API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="cosmosis_command_line.html">Command line flags for cosmosis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmosis_campaign.html">cosmosis-campaign</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command line flags for cosmosis-configure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-options">Configuration Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#environment-variables-set">Environment Variables Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#note">Note</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cosmosis_extract.html">Command line flags for cosmosis-extract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmosis_sample_fisher.html">Command line flags for cosmosis-sample-fisher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postprocess_command_line.html">Command line flags for postprocess</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_library_complete.html">Standard Library Complete Listing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nersc_examples.html">NERSC Submission Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CosmoSIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Command line flags for cosmosis-configure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/reference/cosmosis_configure.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="command-line-flags-for-cosmosis-configure">
+<h1>Command line flags for cosmosis-configure<a class="headerlink" href="#command-line-flags-for-cosmosis-configure" title="Link to this heading"></a></h1>
+<p>The <code class="code docutils literal notranslate"><span class="pre">cosmosis-configure</span></code> tool sets up your shell environment for building CosmoSIS and the standard library.</p>
+<p><strong>Important</strong>: This script must be sourced, not executed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">cosmosis</span><span class="o">-</span><span class="n">configure</span>
+
+<span class="c1"># NOT: cosmosis-configure</span>
+</pre></div>
+</div>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading"></a></h2>
+<p>The configure script sets up environment variables needed to compile CosmoSIS modules and the standard library. It configures:</p>
+<ul class="simple">
+<li><p>Compiler settings and flags</p></li>
+<li><p>Library paths for dependencies</p></li>
+<li><p>Build system variables</p></li>
+<li><p>Paths to CosmoSIS tools and utilities</p></li>
+</ul>
+<p>This is required before building any CosmoSIS modules or before using <code class="code docutils literal notranslate"><span class="pre">make</span></code> in the CosmoSIS standard library.</p>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>Source the configure script in your shell:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">cosmosis</span><span class="o">-</span><span class="n">configure</span>
+</pre></div>
+</div>
+<p>You can also pass additional configuration options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">cosmosis</span><span class="o">-</span><span class="n">configure</span> <span class="o">--</span><span class="n">compiler</span><span class="o">=</span><span class="n">gcc</span>
+<span class="n">source</span> <span class="n">cosmosis</span><span class="o">-</span><span class="n">configure</span> <span class="o">--</span><span class="n">debug</span>
+</pre></div>
+</div>
+<p>The script will set up your environment and print a confirmation message when complete.</p>
+</section>
+<section id="configuration-options">
+<h2>Configuration Options<a class="headerlink" href="#configuration-options" title="Link to this heading"></a></h2>
+<p>The configure script supports various options to customize the build environment:</p>
+<ul class="simple">
+<li><p>Compiler selection</p></li>
+<li><p>Debug vs optimized builds</p></li>
+<li><p>Custom library paths</p></li>
+<li><p>Platform-specific settings</p></li>
+</ul>
+<p>Run with <code class="code docutils literal notranslate"><span class="pre">--help</span></code> to see all available options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">cosmosis</span><span class="o">.</span><span class="n">configure</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+</section>
+<section id="environment-variables-set">
+<h2>Environment Variables Set<a class="headerlink" href="#environment-variables-set" title="Link to this heading"></a></h2>
+<p>After sourcing the configure script, several environment variables will be set:</p>
+<ul class="simple">
+<li><p><strong>CC, CXX, FC</strong>: Compiler commands</p></li>
+<li><p><strong>CFLAGS, CXXFLAGS, FFLAGS</strong>: Compiler flags</p></li>
+<li><p><strong>LDFLAGS</strong>: Linker flags</p></li>
+<li><p><strong>COSMOSIS_SRC_DIR</strong>: Path to CosmoSIS source</p></li>
+<li><p><strong>Various library paths</strong>: For GSL, CFITSIO, FFTW, etc.</p></li>
+</ul>
+</section>
+<section id="note">
+<h2>Note<a class="headerlink" href="#note" title="Link to this heading"></a></h2>
+<p>You need to source this script in each new shell session where you plan to build CosmoSIS code. Many users add the source command to their <code class="code docutils literal notranslate"><span class="pre">.bashrc</span></code> or similar shell startup file.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cosmosis_campaign.html" class="btn btn-neutral float-left" title="cosmosis-campaign" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cosmosis_extract.html" class="btn btn-neutral float-right" title="Command line flags for cosmosis-extract" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, The CosmoSIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

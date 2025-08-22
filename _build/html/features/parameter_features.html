@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parameter Features &mdash; CosmoSIS 3.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=26f62d79"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Debugging" href="debugging.html" />
+    <link rel="prev" title="Pipeline Features" href="pipeline_features.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CosmoSIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">CosmoSIS Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/installation.html">Installing CosmoSIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using CosmoSIS:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage/tutorials.html">Tutorials: Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/samplers.html">Samplers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/parameter_files.html">CosmoSIS Parameter Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/standard_library_overview.html">Standard Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/upgrading.html">Upgrading from the previous CosmoSIS Version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus Features:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sampler_features.html">Sampler Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline_features.html">Pipeline Features</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Parameter Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#environment-variables">Environment Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#default-parameters-interpolation">Default Parameters &amp; Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#including-other-parameters-files">Including other parameters files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-overrides">Command Line Overrides</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="campaign.html">Managing sets of runs with a Campaign</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Writing modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_python.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_c.html">C API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_cpp.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_f90.html">Fortran API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cosmosis_command_line.html">Command line flags for cosmosis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cosmosis_campaign.html">cosmosis-campaign</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cosmosis_configure.html">Command line flags for cosmosis-configure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cosmosis_extract.html">Command line flags for cosmosis-extract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cosmosis_sample_fisher.html">Command line flags for cosmosis-sample-fisher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/postprocess_command_line.html">Command line flags for postprocess</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/standard_library_complete.html">Standard Library Complete Listing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/nersc_examples.html">NERSC Submission Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CosmoSIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Parameter Features</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/features/parameter_features.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="parameter-features">
+<h1>Parameter Features<a class="headerlink" href="#parameter-features" title="Link to this heading"></a></h1>
+<p>CosmoSIS has several features for modifying the values read from parameter and other files.</p>
+<section id="environment-variables">
+<h2>Environment Variables<a class="headerlink" href="#environment-variables" title="Link to this heading"></a></h2>
+<p>Parameter files in CosmoSIS can replace environment variables used in parameter files with their vaules.  Use curly brackets like this to do so:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[runtime]</span>
+<span class="na">sampler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">${SAMPLER}</span>
+</pre></div>
+</div>
+<p>In this case the sampler will be chosen depending on the environment variable <code class="docutils literal notranslate"><span class="pre">$SAMPLER</span></code>.</p>
+<p>Variables that are not found in the environment will not be replaced, so you should explicitly set empty values if that is what you want.</p>
+</section>
+<section id="default-parameters-interpolation">
+<h2>Default Parameters &amp; Interpolation<a class="headerlink" href="#default-parameters-interpolation" title="Link to this heading"></a></h2>
+<p>Files in the <code class="docutils literal notranslate"><span class="pre">ini</span></code> format have a standard feature that you can use in CosmoSIS: you can use the values of variables inside other variables.  For example, if you have a filename that you use repeatedly through a section, then you can specify it once and re-used it elsewhere.</p>
+<p>They also have a special section called <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> whose parameters are available throughout the file.  You can combine these like so:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[DEFAULT]</span>
+<span class="na">data_directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">path/to/data_file.fits</span>
+
+<span class="na">...</span>
+
+<span class="k">[number_density]</span>
+<span class="na">data_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">%(data_directory)s/number_density.fits</span>
+
+<span class="na">...</span>
+
+<span class="k">[likelihood]</span>
+<span class="na">data_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">%(data_directory)s/data.fits</span>
+</pre></div>
+</div>
+</section>
+<section id="including-other-parameters-files">
+<h2>Including other parameters files<a class="headerlink" href="#including-other-parameters-files" title="Link to this heading"></a></h2>
+<p>CosmoSIS parameter files can use this command to incorporate another file into their contents:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">...</span>
+<span class="na">%include path_to_other.ini</span>
+<span class="na">...</span>
+</pre></div>
+</div>
+<p>This has the effect of “pasting” in the other file into the current one.</p>
+<p>In general if you use a parameter in an ini file twice the later value will take precedence, so you depending where you put the include directive you can override previous parameters.</p>
+<p>The path is looked up relative to the current working directory, not to the first parameter file.</p>
+</section>
+<section id="command-line-overrides">
+<h2>Command Line Overrides<a class="headerlink" href="#command-line-overrides" title="Link to this heading"></a></h2>
+<p>It can be useful to override parameters specified in the configuration files on the command line - this can let you launch a variety of different runs with the same file.  The <code class="code docutils literal notranslate"><span class="pre">-p</span></code> and <code class="code docutils literal notranslate"><span class="pre">-v</span></code> flags let you override parameters in the main (params.ini) and values files respectively.</p>
+<p>You can override any number of parameters in the main parameter file like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cosmosis</span> <span class="n">params</span><span class="o">.</span><span class="n">ini</span> <span class="o">-</span><span class="n">p</span> <span class="n">section1</span><span class="o">.</span><span class="n">name1</span><span class="o">=</span><span class="n">value</span>  <span class="n">section2</span><span class="o">.</span><span class="n">name2</span><span class="o">=</span><span class="n">value</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>For example, this command would change the sampler being used to emcee instead of its current value:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cosmosis</span> <span class="n">params</span><span class="o">.</span><span class="n">ini</span> <span class="o">-</span><span class="n">p</span> <span class="n">runtime</span><span class="o">.</span><span class="n">sampler</span><span class="o">=</span><span class="n">test</span>
+</pre></div>
+</div>
+<p>The <code class="code docutils literal notranslate"><span class="pre">-v</span></code> command is used exactly the same way but for the values file, for example, this would change one of the parameter ranges in the pantheon example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cosmosis</span> <span class="n">examples</span><span class="o">/</span><span class="n">pantheon</span><span class="o">.</span><span class="n">ini</span>  <span class="o">-</span><span class="n">v</span> <span class="n">cosmological_parameters</span><span class="o">.</span><span class="n">omega_m</span><span class="o">=</span><span class="s2">&quot;0.2 0.3 0.5&quot;</span>
+</pre></div>
+</div>
+<p>Note the quotations marks above, which are needed when there are spaces in the parameter value.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pipeline_features.html" class="btn btn-neutral float-left" title="Pipeline Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="debugging.html" class="btn btn-neutral float-right" title="Debugging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, The CosmoSIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

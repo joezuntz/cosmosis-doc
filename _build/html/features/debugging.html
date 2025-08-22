@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debugging &mdash; CosmoSIS 3.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=26f62d79"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Managing sets of runs with a Campaign" href="campaign.html" />
+    <link rel="prev" title="Parameter Features" href="parameter_features.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CosmoSIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/overview.html">CosmoSIS Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/installation.html">Installing CosmoSIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using CosmoSIS:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage/tutorials.html">Tutorials: Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/samplers.html">Samplers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/parameter_files.html">CosmoSIS Parameter Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/standard_library_overview.html">Standard Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/upgrading.html">Upgrading from the previous CosmoSIS Version</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus Features:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sampler_features.html">Sampler Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline_features.html">Pipeline Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter_features.html">Parameter Features</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-test-sampler">The Test Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameter-file-options">Parameter file options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-errors">Python errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-stop-standard-library-module">The STOP standard-library module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-in-debug-mode">Compiling in debug mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#crashes-in-c-c-fortran-code">Crashes in C/C++/Fortran code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#special-samplers">Special Samplers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#memory-monitoring">Memory monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#profiling">Profiling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="campaign.html">Managing sets of runs with a Campaign</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Writing modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_python.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_c.html">C API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_cpp.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/api_f90.html">Fortran API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cosmosis_command_line.html">Command line flags for cosmosis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cosmosis_campaign.html">cosmosis-campaign</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cosmosis_configure.html">Command line flags for cosmosis-configure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cosmosis_extract.html">Command line flags for cosmosis-extract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cosmosis_sample_fisher.html">Command line flags for cosmosis-sample-fisher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/postprocess_command_line.html">Command line flags for postprocess</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/standard_library_complete.html">Standard Library Complete Listing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/nersc_examples.html">NERSC Submission Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CosmoSIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Debugging</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/features/debugging.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="debugging">
+<h1>Debugging<a class="headerlink" href="#debugging" title="Link to this heading"></a></h1>
+<p>CosmoSIS has a number of tools to help you debug problems with your analyses.</p>
+<section id="the-test-sampler">
+<h2>The Test Sampler<a class="headerlink" href="#the-test-sampler" title="Link to this heading"></a></h2>
+<p>The first thing to try when debugging an MCMC failure is the test sampler - try to see if you can recreate the problem when running on a single parameter set.  Then you can switch on the options below for more information about the error.</p>
+<p>You can set the parameter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">test</span><span class="p">]</span>
+<span class="n">fatal_errors</span> <span class="o">=</span> <span class="n">T</span>
+</pre></div>
+</div>
+<p>to get more output on any error in the test sampler.</p>
+</section>
+<section id="parameter-file-options">
+<h2>Parameter file options<a class="headerlink" href="#parameter-file-options" title="Link to this heading"></a></h2>
+<p>You can set several options in the CosmoSIS parameter file to find problems more easily:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[runtime]</span>
+<span class="na">verbosity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">debug</span>
+
+<span class="k">[pipeline]</span>
+<span class="na">debug</span><span class="o">=</span><span class="s">T</span>
+</pre></div>
+</div>
+<p>Setting the verbosity to its maximum debug setting will print out lots of general information</p>
+<p>Setting <code class="code docutils literal notranslate"><span class="pre">debug=T</span></code> will, after an error, print out a log of all the values saved to the CosmoSIS data block - if you are getting an error saying that some value has not been found in the block then this can be useful to figure out why.</p>
+<p>Note that this setting prints out a lot of text <em>after</em> any other errors are reported, so you may need to scroll up past it to look for any other messages.</p>
+</section>
+<section id="python-errors">
+<h2>Python errors<a class="headerlink" href="#python-errors" title="Link to this heading"></a></h2>
+<p>If you are finding a crash in a Python function then you can use the <code class="code docutils literal notranslate"><span class="pre">--pdb</span></code> flag on the command line to enter the <a class="reference external" href="https://docs.python.org/2/library/pdb.html#debugger-commands//">Python Debugger</a>. When the program crashes you will be dropped into an interactive debugger shell and you can print the values of parameters or run functions to try to determine the source of the error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cosmosis</span> <span class="n">my_params</span><span class="o">.</span><span class="n">ini</span> <span class="o">--</span><span class="n">pdb</span>
+</pre></div>
+</div>
+<p>To do this in the test sampler you may need to set the parameter <code class="code docutils literal notranslate"><span class="pre">fatal_errors=T</span></code>  in the <code class="code docutils literal notranslate"><span class="pre">[test]</span></code> section of the parameter file.</p>
+<p>This option doesn’t work when running in parallel.</p>
+</section>
+<section id="the-stop-standard-library-module">
+<h2>The STOP standard-library module<a class="headerlink" href="#the-stop-standard-library-module" title="Link to this heading"></a></h2>
+<p>The standard lib has a module called “stop”, which you can use to pause your pipeline whenever it is reached and put you into the python debugger:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[stop]</span>
+<span class="na">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">cosmosis-standard-library/utility/stop/stop.py</span>
+</pre></div>
+</div>
+<p>You can then explore what data is in the block interactively.</p>
+</section>
+<section id="compiling-in-debug-mode">
+<h2>Compiling in debug mode<a class="headerlink" href="#compiling-in-debug-mode" title="Link to this heading"></a></h2>
+<p>You can compile all CosmoSIS code in debug mode to make finding errors in compiled code easier.  To do so, run these commands in the main directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">COSMOSIS_DEBUG</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">make</span> <span class="n">clean</span>
+<span class="n">make</span>
+</pre></div>
+</div>
+</section>
+<section id="crashes-in-c-c-fortran-code">
+<h2>Crashes in C/C++/Fortran code<a class="headerlink" href="#crashes-in-c-c-fortran-code" title="Link to this heading"></a></h2>
+<p>If you are seeing a crash in C/C++/Fortran code you can use this command line flag  to try to track it down:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cosmosis</span> <span class="n">my_params</span><span class="o">.</span><span class="n">ini</span> <span class="o">--</span><span class="n">segfaults</span>
+</pre></div>
+</div>
+<p>On a crash this should print out a traceback revealing in which function the error ocurred.</p>
+</section>
+<section id="special-samplers">
+<h2>Special Samplers<a class="headerlink" href="#special-samplers" title="Link to this heading"></a></h2>
+<p>CosmoSIS has several samplers that explore the parameter space in ways that help debug or compare to other code.</p>
+<p>The <em>apriori</em> sampler samples points from throughout the prior.   It can be useful if your error is only triggered by extreme parameters.</p>
+<p>The <em>list</em> sampler takes a list of parameter sets to evaluate one by one.  It can be useful if you have a set of possible parameters that might cause errors, or which you want to compare to another code.</p>
+<p>The <em>star</em> sampler samples a set of 1D parameters slices in each parameter direction through the central point.  It can be useful to compare to the output of another code.</p>
+</section>
+<section id="memory-monitoring">
+<h2>Memory monitoring<a class="headerlink" href="#memory-monitoring" title="Link to this heading"></a></h2>
+<p>If your code seems to be running out of memory, you can help track things down using this flag:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cosmosis</span> <span class="n">my_params</span><span class="o">.</span><span class="n">ini</span> <span class="o">--</span><span class="n">mem</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>This will print a memory report every 3 seconds, telling you how much memory cosmosis has used (the physical memory).</p>
+<p>This requires the <code class="docutils literal notranslate"><span class="pre">psutil</span></code> python module, which you can install with pip.</p>
+</section>
+<section id="profiling">
+<h2>Profiling<a class="headerlink" href="#profiling" title="Link to this heading"></a></h2>
+<p>If your code is taking a long time to run, you can profile it to find out which functions are slow:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cosmosis</span> <span class="n">my_params</span><span class="o">.</span><span class="n">ini</span> <span class="o">--</span><span class="n">profile</span> <span class="n">profile</span><span class="o">.</span><span class="n">stats</span>
+</pre></div>
+</div>
+<p>This will print out a record of the time taken in each function, and also save it to profile.stats so you can explore it more later.</p>
+<p>See the <a class="reference external" href="https://docs.python.org/3/library/profile.html">Python Profiler documentation</a> for more details of how to interpret the results.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="parameter_features.html" class="btn btn-neutral float-left" title="Parameter Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="campaign.html" class="btn btn-neutral float-right" title="Managing sets of runs with a Campaign" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, The CosmoSIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
