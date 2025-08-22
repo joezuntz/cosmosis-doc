@@ -22,7 +22,9 @@ MCMC Samplers
     :maxdepth: 1
 
      emcee: Ensemble walker sampling <../reference/samplers/emcee>
+     zeus: Ensemble slice sampling <../reference/samplers/zeus>
      metropolis: Classic Metropolis-Hastings sampling <../reference/samplers/metropolis>
+     pymc: PyMC integration <../reference/samplers/pymc>
      importance: Importance sampling <../reference/samplers/importance>
      kombine: Clustered KDE <../reference/samplers/kombine>
      pmc: Adaptive Importance Sampling <../reference/samplers/pmc>
@@ -37,6 +39,7 @@ Nested Samplers
      multinest: Nested sampling for Bayesian Evidence <../reference/samplers/multinest>
      polychord: Ensemble nested sampling for Bayesian Evidence <../reference/samplers/polychord>
      nautilus: ML-enhanced nested sampling for Bayesian Evidence <../reference/samplers/nautilus>
+     dynesty: Dynamic nested sampling for Bayesian Evidence <../reference/samplers/dynesty>
 
 
 Optimizers
@@ -46,6 +49,7 @@ Optimizers
     :maxdepth: 1
 
      maxlike: Find the maximum likelihood using various methods in scipy <../reference/samplers/maxlike>
+     pmaxlike: Parallel maximum likelihood estimation <../reference/samplers/pmaxlike>
      minuit sampler MPI-aware maxlike sampler from the ROOT package. <../reference/samplers/minuit>
      gridmax: Naive grid maximum-posterior <../reference/samplers/gridmax>
 
@@ -69,4 +73,5 @@ Specialist Samplers
      fisher: Fisher matrix calculation <../reference/samplers/fisher>
      star: Simple star sampler <../reference/samplers/star>
      apriori: Draw samples from the prior and evaluate the likelihood <../reference/samplers/apriori>
+     abc: Approximate Bayesian Computing <../reference/samplers/abc>
 

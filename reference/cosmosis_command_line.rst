@@ -55,3 +55,29 @@ Note the quotations marks above, which are needed when there are spaces in the p
 
 
 You can also use the flag :code:`--only section--name` to fix all parameters except for the one called :code:`name` in :code:`section` to their default values.
+
+
+Pipeline Visualization
+======================
+
+CosmoSIS can generate a graphical representation of your pipeline showing how data flows between modules using the :code:`--graph` option::
+
+    cosmosis params.ini --graph pipeline.dot
+
+This creates a graphviz "dot" format file that shows the pipeline structure and data dependencies. You can then convert this to a visual format using graphviz tools::
+
+    dot -Tpng pipeline.dot -o pipeline.png
+
+This feature requires the pygraphviz Python library to be installed.
+
+
+Performance Profiling
+=====================
+
+CosmoSIS includes built-in CPU profiling capabilities using the :code:`--profile` option::
+
+    cosmosis params.ini --profile profile_output.stats
+
+This saves detailed timing information about which functions are taking the most time during execution. The profile data can be analyzed using Python's :code:`pstats` module or viewed using tools like :code:`snakeviz`.
+
+When running in parallel, separate profile files are created for each process (e.g., :code:`profile_output.stats.0`, :code:`profile_output.stats.1`, etc.).

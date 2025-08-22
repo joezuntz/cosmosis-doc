@@ -53,6 +53,10 @@ For help with CosmoSIS you can `open an issue <https://github.com/joezuntz/cosmo
    :caption: Reference:
 
    reference/cosmosis_command_line
+   reference/cosmosis_campaign
+   reference/cosmosis_configure
+   reference/cosmosis_extract
+   reference/cosmosis_sample_fisher
    reference/postprocess_command_line
    reference/standard_library_complete
 
