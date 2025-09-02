@@ -1,4 +1,5 @@
 import os
+import sys
 import yaml
 import glob
 import tabulate
@@ -101,10 +102,9 @@ def generate_overview(infos):
 	pass
 
 
-def main():
+def main(dirname):
 	#get the base dir to work from
-	src=os.environ['COSMOSIS_SRC_DIR']
-	sampler_dir=os.path.join(src, "samplers")
+	sampler_dir=os.path.join(dirname, "cosmosis", "samplers")
 	#Find and parse all the files
 	search_path = f"{sampler_dir}/*/sampler.yaml"
 	yaml_files = glob.glob(search_path)
@@ -117,4 +117,4 @@ def main():
 
 
 if __name__ == '__main__':
-	main()
+	main(sys.argv[1])
