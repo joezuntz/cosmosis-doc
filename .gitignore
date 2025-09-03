@@ -12,3 +12,4 @@ cosmosis-intro.pdf
 cosmosis_packages.pdf
 astro_packages.pdf
 _build/
+__pycache__
