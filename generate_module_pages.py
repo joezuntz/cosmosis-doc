@@ -43,16 +43,28 @@ structure = {
     "sigma_cpp",
     "sigma_r",
     "NLfactor",
+
 }
 
 twopoint_maths = {
     "cl_to_corr",
     "cl_to_xi_nicaea",
     "cl_to_xi_wigner_d",
+    "cl_to_xi_fullsky",
+
     "project_2d",
     "cosebis",
     "wl_spectra",
     "wl_spectra_ppf",
+    "hmcode_eta",
+    "pyhmcode",
+}
+
+baryons = {
+    "baryonic",
+    "owls",
+    "amod",
+
 }
 
 twopoint_sys = {
@@ -67,7 +79,10 @@ twopoint_sys = {
     "no_bias",
     "clerkin",
     "add_magnification",
-    "baryonic",
+    "add_gammat_point_mass",
+    "binwise_bias",
+    "tatt",
+    "additive_systematic",
 }
 
 sample_properties = {
@@ -75,52 +90,87 @@ sample_properties = {
     "gaussian_window",
     "load_nz",
     "load_nz_fits",
+    "load_nz_sacc",
     "photoz_bias",
+    "photoz_distortion",
     "smail",
     "nz_multirank",
 }
 
-likelihoods = {
-    "2pt",
-    "6dFGS",
-    "act-dr6-lens",
-    "BBN",
+cmb_likelihoods = {
     "BICEP2",
-    "BOSS",
-    "Cluster_mass",
-    "desi_dr1_arxiv",
-    "JulloLikelihood",
-    "Riess11",
-    "Riess16",
-    "WiggleZBao",
-    "balmes",
-    "boss_dr12",
-    "fgas",
-    "h0licow",
-    "hsc_cosmic_shear",
-    "jla",
-    "mgs_bao",
-    "pantheon",
-    "pantheon_plus",
-    "planck2018",
-    "planck_py",
-    "planck_sz",
-    "strong_lens_time_delays",
+    "candl",
     "wmap",
     "wmap_shift",
+    "planck2018",
+    "planck_py",
+    "planck_npipe",
+    "planck_sz",
+    "lollipop",
+    "hillipop",
+    "act_dr6",
+    "act-dr6-lens",
+    "act_dr6_lite",
+
+}
+
+bao_likelihoods = {
+    "BOSS",
+    "boss_dr12",
+    "WiggleZBao",
+    "6dFGS",
+    "mgs_bao",
     "eboss_dr16_lrg",
     "eboss_dr16_qso",
-    "mgs",
     "boss_dr12_lrg_reanalyze",
     "eboss_dr16_elg",
     "eboss_dr16_lya",
-    "Riess21",
-    "sacc_like",
+    "mgs",
     "lrg",
     "qso",
     "eboss_dr14_lya",
     "des-y3-bao",
+    "des-y6-bao",
+    "des-y6-bao-5bins",
+    "desi_dr1",
+    "desi_dr1_arxiv",
+    "desi_dr2",
+}
+
+supernova_likelihoods = {
+    "jla",
+    "pantheon",
+    "pantheon_plus",
+    "des-y5-sn",
+    "salt2",
+}
+
+cepheid_likelihoods = {
+    "Riess11",
+    "Riess16",
+    "Riess21",
+}
+
+lensing_clustering_likelihoods = {
+    "2pt",
+    "sacc_like",
+    "hsc_cosmic_shear",
+    "simple_like",
+
+}
+
+strong_lensing_likelihoods = {
+    "h0licow",
+    "strong_lens_time_delays",
     "tdcosmo",
+    "balmes",
+}
+
+likelihoods = {
+    "BBN",
+    "Cluster_mass",
+    "JulloLikelihood",
+    "fgas",
 }
 
 
@@ -136,19 +186,36 @@ misc = {
     "copy",
     "rename",
     "correlated_priors",
+    "random_fail",
+}
+
+uncategorized = {
+    "generate_observable_cls",
+    "add_colours",
+    "flexible_grid",
+    "choose_ia",
+    "fiducial_cl",
 }
 
 
 categories = {
     "Background": background,
+    "Baryons": baryons,
     "Boltzmann": boltzmann,
     "Emulators": emulators,
     "Structure": structure,
     "Two-point Mathemetics": twopoint_maths,
     "Two-point Systematics": twopoint_sys,
     "Sample Properties": sample_properties,
-    "Likelihoods": likelihoods,
-    "Misc & Utilities": misc
+    "CMB Likelihoods": cmb_likelihoods,
+    "BAO Likelihoods": bao_likelihoods,
+    "Supernova Likelihoods": supernova_likelihoods,
+    "Cepheid Likelihoods": cepheid_likelihoods,
+    "Lensing and Clustering Likelihoods": lensing_clustering_likelihoods,
+    "Strong Lensing Likelihoods": strong_lensing_likelihoods,
+    "Other Likelihoods": likelihoods,
+    "Misc & Utilities": misc,
+    "Others": uncategorized,
 }
 
 
@@ -156,12 +223,20 @@ category_blurb = {
     "Background": "These modules calculate quantities related to the average background expansion of the Universe.",
     "Boltzmann": "Boltzmann codes evolve cosmic perturbations from the early Universe through recombination and to late times, and power spectra of matter, the CMB, and other quantities.",
     "Emulators": "These modules emulate aspects of cosmic structure based on fits to simulations.",
+    "Baryons": "These modules modify matter power spectra to account for the effects of baryonic physics.",
     "Structure": "These modules compute aspects of cosmic structure, for example by integrating over cosmic structure, or calculating halo model quantities.",
     "Two-point Mathemetics": "These modules perform mathematical claculations associated with two-point statistics, mostly on a sphere.",
     "Two-point Systematics": "These modules compute and apply quantities associated with systematics errors on two-point (and potentially other) quantities.",
     "Sample Properties": "These modules compute properties, mostly number density, of galaxy samples.",
-    "Likelihoods": "These module provide likelihoods that compare theory predictions to data",
+    "CMB Likelihoods": "These modules provide likelihoods that compare theory predictions to CMB data",
+    "BAO Likelihoods": "These modules provide likelihoods that compare theory predictions to BAO data",
+    "Supernova Likelihoods": "These modules provide likelihoods that compare theory predictions to supernova data",
+    "Cepheid Likelihoods": "These modules provide likelihoods that compare theory predictions to Cepheid data",
+    "Lensing and Clustering Likelihoods": "These modules provide likelihoods that compare theory predictions to weak lensing and clustering data",
+    "Strong Lensing Likelihoods": "These modules provide likelihoods that compare theory predictions to strong lensing data",
+    "Other Likelihoods": "These module provide likelihoods that compare theory predictions to other data",
     "Misc & Utilities": "These modules supply special utilities or calculation tools",
+    "Others": "Modules that may be obsolete or only useful for a very specific project",
 }
 
 
@@ -286,7 +361,7 @@ def make_page_text(info):
     param_lines = ""
     for name, p in info['params'].items():
         p['name'] = name
-        if p['default'] is None:
+        if p.get('default', None) is None:
             p['default'] = ''
 
         param_lines += """   * - {name}
@@ -301,7 +376,7 @@ def make_page_text(info):
         for i, (name, p) in enumerate(keys.items()):
             p['section'] = section if i == 0 else ""
             p['name'] = name
-            if p['default'] is None:
+            if p.get('default', None) is None:
                 p['default'] = ''
             input_lines += """   * - {section}
      - {name}
@@ -362,12 +437,12 @@ def make_overview(purposes):
     for cat, cat_set in categories.items():
         module_lines = []
         blurb = category_blurb[cat]
-        for name in cat_set:
+        for name in sorted(cat_set):
             purpose = purposes.get(name)
             if purpose is None:
                 print(f"Did not find yaml for module: {name}")
                 continue
-            link = f":doc:`{name} <../reference/standard_library/{name}>` "
+            link = f":doc:`{name} <../reference/standard_library/{name}>`"
             module_lines.append(f"   * - {link}")
             module_lines.append(f"     - {purpose}")
         module_lines = "\n".join(module_lines)
@@ -406,7 +481,9 @@ def main(source_dir):
                 if name in cat_set:
                     break
             else:
-                print("Note: module has no category and will not appear in listing:", name, yaml_path)
+                print("Note: module has no category and will appear as uncategorized:", name, yaml_path)
+                uncategorized.add(name)
+
 
     make_overview(purposes)
 

@@ -10,3 +10,8 @@ sphinx:
 python:
   install:
   - requirements: requirements.txt
+
+build:
+  jobs:
+    pre_build:
+      - python generate_pages.py

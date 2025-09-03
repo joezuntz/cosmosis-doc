@@ -2,3 +2,4 @@ ipykernel
 nbsphinx
 recommonmark
 sphinx-rtd-theme
+tabulate
