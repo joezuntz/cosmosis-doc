@@ -84,7 +84,6 @@ And example is shown below:
 Making a pipeline from a single likelihood function
 ----------------------------------------------------
 
-*New in version 3.3*
 
 If you have a single likelihood function that you want to use as a pipeline (so that you are really just using CosmoSIS for its sampling features), then you can do it like this:
 

@@ -13,3 +13,4 @@ cosmosis_packages.pdf
 astro_packages.pdf
 _build/
 __pycache__
+cosmosis_version.py
