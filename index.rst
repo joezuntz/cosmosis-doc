@@ -7,7 +7,7 @@ It is a framework for structuring cosmological parameter estimation with a focus
 
 CosmoSIS is described in `Zuntz et al <http://arxiv.org/abs/1409.3409>`_ - if you make use of it in your research, please cite that paper and include the URL of this repository in your acknowledgments. Thanks!
 
-For help with CosmoSIS you can `open an issue <https://github.com/joezuntz/cosmosis>`_
+For help with CosmoSIS you can `open an issue <https://github.com/cosmosis-developers/cosmosis>`_
 
 
 .. toctree::

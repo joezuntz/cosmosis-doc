@@ -93,7 +93,7 @@ There is a globally-accessible CosmoSIS installation for the NERSC machine Perlm
 
 This will set all the necessary environment variables; you can then clone the cosmosis-standard-library and the make command should work::
 
-    git clone https://github.com/joezuntz/cosmosis-standard-library
+    git clone https://github.com/cosmosis-developers/cosmosis-standard-library
     cd cosmosis-standard-library
     make
 
@@ -109,7 +109,7 @@ That will make a new environment in the ./env directory, which you can start usi
 
 You can then pip or conda install things in your new environment.
 
-If your dependency may be generally useful please open an issue and we can install it centrally also: https://github.com/joezuntz/cosmosis/issues/
+If your dependency may be generally useful please open an issue and we can install it centrally also: https://github.com/cosmosis-developers/cosmosis/issues/
 
 Jupyter at NERSC
 ================
@@ -161,10 +161,10 @@ and run::
 Then clone and build the standard library repository::
 
     source cosmosis-configure
-    git clone https://github.com/joezuntz/cosmosis-standard-library
+    git clone https://github.com/cosmosis-developers/cosmosis-standard-library
     cd cosmosis-standard-library
     make
 
-Please `open an issue <https://github.com/joezuntz/cosmosis/issues/new>`_ if you have installation problems.
+Please `open an issue <https://github.com/cosmosis-developers/cosmosis/issues/new>`_ if you have installation problems.
 
 The ``cosmosis-configure`` command can also set you up to use HomeBrew to install things: ``source cosmosis-configure --brew``

@@ -15,7 +15,7 @@ File Format
 -----------
 
 The campaign file is in the YAML format. You can find an
-`example campaign file in the CosmoSIS standard library <https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/des-campaign.yml>`_.
+`example campaign file in the CosmoSIS standard library <https://github.com/cosmosis-developers/cosmosis-standard-library/blob/main/examples/des-campaign.yml>`_.
 
 General settings
 ****************

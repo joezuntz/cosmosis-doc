@@ -103,7 +103,7 @@ Likelihoods are implemented in cosmosis just as another kind of module, but they
 
     block["likelihoods", "my_like"] = -0.5 * (x - mu)**2 / sigma**2
 
-If your likelihood is a Gaussian you can inherit from ``cosmosis.GaussianLikelihood`` and override some of the methods there.  See  `the Gaussian Likelihood class here <https://github.com/joezuntz/cosmosis/blob/main/cosmosis/gaussian_likelihood.py>`_  for details; you would usually only have to override the methods ``extract_theory_points``, ``build_data`` and ``build_covariance``.
+If your likelihood is a Gaussian you can inherit from ``cosmosis.GaussianLikelihood`` and override some of the methods there.  See  `the Gaussian Likelihood class here <https://github.com/cosmosis-developers/cosmosis/blob/main/cosmosis/gaussian_likelihood.py>`_  for details; you would usually only have to override the methods ``extract_theory_points``, ``build_data`` and ``build_covariance``.
 
 
 

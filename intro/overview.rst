@@ -8,7 +8,7 @@ Concepts Notebook
 
 
 You can explore the concepts described here in the 
-`CosmoSIS intro notebook <https://github.com/joezuntz/cosmosis/blob/main/examples/cosmosis-introduction.ipynb>`_.
+`CosmoSIS intro notebook <https://github.com/cosmosis-developers/cosmosis/blob/main/examples/cosmosis-introduction.ipynb>`_.
 
 
 

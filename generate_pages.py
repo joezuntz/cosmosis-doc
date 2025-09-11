@@ -12,11 +12,11 @@ def main():
     os.makedirs("reference/samplers", exist_ok=True)
     with tempfile.TemporaryDirectory() as tmpdir:
         cosmosis_dir = os.path.join(tmpdir, 'cosmosis')
-        shallow_clone('https://github.com/joezuntz/cosmosis', cosmosis_dir)
+        shallow_clone('https://github.com/cosmosis-developers/cosmosis', cosmosis_dir)
         generate_sampler_pages.main(cosmosis_dir)
 
         csl_dir = os.path.join(tmpdir, 'cosmosis-standard-library')
-        shallow_clone('https://github.com/joezuntz/cosmosis-standard-library', csl_dir)
+        shallow_clone('https://github.com/cosmosis-developers/cosmosis-standard-library', csl_dir)
         generate_module_pages.main(csl_dir)
 
 if __name__ == '__main__':
