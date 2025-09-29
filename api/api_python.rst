@@ -90,9 +90,9 @@ datablock.
 Setting Values
 --------------
 
-The usual way to get values from the block is simply::
+The usual way to set a value in the block is simply::
 
-    x = block[section, name]
+    block[section, name] = x
 
 The methods below give more fine-grained type control.  The square
 brackets method above will also replace existing values, but the replacement must
