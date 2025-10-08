@@ -1,4 +1,4 @@
-CosmoPower training and usege within CosmoSIS
+CosmoPower training and usage within CosmoSIS
 =============================================
 
 CosmoSIS also has a capability to use CosmoPower to train emulators for any module in the pipeline, and then use those emulators in place of the original module. 
